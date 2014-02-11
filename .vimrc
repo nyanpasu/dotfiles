@@ -3,6 +3,7 @@
 " navigate.
 
 " Main Config
+
 " Windows only config
 if has("gui_running")
     set guifont=PragmataPro
@@ -10,10 +11,9 @@ endif
 
 set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
 filetype indent plugin on
-filetype off              " required for windows
+" required for windows
+" filetype off
 syntax on
-
-set omnifunc=syntaxcomplete#Complete
 
 set t_Co          =256    " enable 256-color mode.
 
@@ -35,14 +35,12 @@ set winaltkeys=no
 set smartcase             " smart searching. Lowercase -> case insensitive search; Uppercase -> case sensitive search
 set hlsearch
 
-" NOTE: Gives problems with gvim.
 " set listchars=eol:￢,extends:>,precedes:<
+set listchars=eol:¬,extends:>,precedes:<
 
 "End of Main Config
 
 " Keybinds
-
-" Function keybind
 map <F3> :NERDTreeToggle<CR>
 map <F4> :bd<CR>
 map <F5> :bprev!<CR>
@@ -68,7 +66,6 @@ nnoremap <Leader>t "=strftime("%H:%M:%S")<CR>P
 
 set pastetoggle=<F2>
 
-" Tabularize hotheys
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
   vmap <Leader>a= :Tabularize /=<CR>
@@ -78,10 +75,8 @@ endif
 
 imap ` <Esc> " Map backtick to escape
 
-" End of keybinds
-
 " Plugins
-set rtp+=$HOME/vimfiles/bundle/vundle " Modified for windows path
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " The package manager plugin itself
@@ -91,30 +86,36 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
+Bundle 'wlue/vim-dm-syntax'
 
 " Utility plugins
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'msanders/snipmate.vim'
+"Bundle 'msanders/snipmate.vim' "Replaced by UltiSnips
+Bundle 'SirVer/ultisnips'
+"Bundle 'ervandew/supertab' " Replaced by YouCompleteMe
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-surround'
 Bundle 'xolox/vim-misc'
-"Bundle 'xolox/vim-easytags'
-"Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/c.vim'
+Bundle 'xolox/vim-easytags'
+Bundle 'vim-scripts/taglist.vim'
+"Bundle 'vim-scripts/c.vim'
+Bundle 'SirVer/ultisnips'
 
 " Plugins config
 let g:SuperTabDefaultCompletionType = "context"
 
 " End of plugins
-
 " Rice
+
 " Colorscheme
 colorscheme solarized
-set bg=light
+set bg=dark
+
 set cursorline
 
 " vim-airline configs
@@ -129,11 +130,8 @@ syntax on
 " but set the LineNumber background to black for some contrast.
 filetype plugin indent on
 
-" End of Rice config
-
 " Miscellaneous
 " Save folds
 autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent loadview
 "End of Miscellaneous
-
