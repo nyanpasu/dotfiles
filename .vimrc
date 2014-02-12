@@ -3,13 +3,20 @@
 " navigate.
 
 " Main Config
+set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
 
 " Windows only config
 if has("gui_running")
     set guifont=PragmataPro
 endif
 
-set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
+" Load vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" This line should be called after vundle is loaded.
+" Vundle is required to have filetype off before loading.
 filetype indent plugin on
 " required for windows
 " filetype off
@@ -47,7 +54,7 @@ map <F5> :bprev!<CR>
 map <F6> :bnext!<CR>
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
-nnoremap <silent> <F9> :TlistToggle<CR>
+" nnoremap <silent> <F9> :TlistToggle<CR>
 
 " Save shortcut
 nnoremap \w :w<CR>
@@ -75,9 +82,7 @@ endif
 
 imap ` <Esc> " Map backtick to escape
 
-" Plugins
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Vundle config
 
 " The package manager plugin itself
 Bundle 'gmarik/vundle'
@@ -90,8 +95,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'wlue/vim-dm-syntax'
 
 " Utility plugins
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
+"Bundle 'MarcWeber/vim-addon-mw-utils' " Required by snipmate
+"Bundle 'tomtom/tlib_vim' " Required by snipmate
 "Bundle 'msanders/snipmate.vim' "Replaced by UltiSnips
 Bundle 'SirVer/ultisnips'
 "Bundle 'ervandew/supertab' " Replaced by YouCompleteMe
@@ -101,13 +106,21 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-surround'
 Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
-Bundle 'vim-scripts/taglist.vim'
+"Bundle 'xolox/vim-easytags'
+"Bundle 'vim-scripts/taglist.vim'
 "Bundle 'vim-scripts/c.vim'
-Bundle 'SirVer/ultisnips'
 
 " Plugins config
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
+
+let g:ycm_warning_symbol = '⚠'
+let g:ycm_use_ultisnips_completer = 1
+
+let g:UltiSnipsUsePythonVersion = 2 " Holy shit, I spent two hours trying to get this to just werk.
+                                    " Yes. I am indeed retarded.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " End of plugins
 " Rice
@@ -126,9 +139,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Change the fill character for vertical borders (Note: might want to use │)
 set fillchars+=vert:\ 
-syntax on
 " but set the LineNumber background to black for some contrast.
-filetype plugin indent on
 
 " Miscellaneous
 " Save folds
