@@ -17,10 +17,10 @@ Assumes you have python+ruby+lua support as well as the iset script installed.
 Realtime config for [Zsh](www.zsh.org/), an alternative to bash. 
 
 Breakdown of what it does:
--Assigns modern keyboard keys (HOME/END/PGUP/PGDOWN etc.)
--Allows you to do bash-like movements (ctrl+<left/right> to move between words)
--Sets up vim as an editor, so you can ^[ to execute vi-like commands *in zsh*
--Enables colours for ```ls``` and ```man```
+- Assigns modern keyboard keys (HOME/END/PGUP/PGDOWN etc.)
+- Allows you to do bash-like movements (ctrl+<left/right> to move between words)
+- Sets up vim as an editor, so you can ^[ to execute vi-like commands *in zsh*
+- Enables colours for ```ls``` and ```man```
 
 ###.config/bspwm
 Tiling window manager I currently use.
