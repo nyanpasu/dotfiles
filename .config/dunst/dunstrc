@@ -1,5 +1,5 @@
 [global]
-    font = PragmataPro 9
+    font = Tewi 11
 
     # allow a small subset of html markup:
     # <b>bold</b>
@@ -121,11 +121,11 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # browser for opening urls in context menu
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/firefox-nightly -new-tab
 
 [frame]
-    width = 3
-    color = "#aaaaaa"
+    width = 0
+    color = "#222222"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -150,18 +150,18 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
     background = "#222222"
-    foreground = "#888888"
-    timeout = 10
+    foreground = "#eee8d5"
+    timeout = 3
 
 [urgency_normal]
-    background = "#285577"
-    foreground = "#ffffff"
-    timeout = 10
+    background = "#eee8d5"
+    foreground = "#002b36"
+    timeout = 3
 
 [urgency_critical]
     background = "#900000"
     foreground = "#ffffff"
-    timeout = 0
+    timeout = 3
 
 
 # Every section that isn't one of the above is interpreted as a rules
