@@ -117,6 +117,8 @@ let g:ycm_warning_symbol = '⚠'
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_complete_in_comments = 0
+let g:ycm_collect_identifiers_from_tags_files = 0
 
 let g:UltiSnipsUsePythonVersion = 2 " Holy shit, I spent two hours trying to get this to just werk.
                                     " Yes. I am indeed retarded.
