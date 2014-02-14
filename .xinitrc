@@ -26,7 +26,7 @@ xset r rate 200 30
 
 # Reload font cache.
 # (Note: Is this even necessary?)
-xset +fp /usr/share/fonts/local
+xset +fp /usr/share/fonts/
 xset fp rehash
 
 # Copy and paste fix
@@ -46,6 +46,7 @@ nitrogen --restore &
 #compton -f &
 tint2 &
 #conky -p 10 &
+dunst &
 
 sxhkd &
 
