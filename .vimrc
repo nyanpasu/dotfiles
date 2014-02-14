@@ -120,9 +120,9 @@ let g:ycm_add_preview_to_completeopt = 1
 
 let g:UltiSnipsUsePythonVersion = 2 " Holy shit, I spent two hours trying to get this to just werk.
                                     " Yes. I am indeed retarded.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger="<c-y>"
+let g:UltiSnipsJumpForwardTrigger="<c-y>"
+let g:UltiSnipsJumpBackwardTrigger="<c_u>"
 
 " End of plugins
 " Rice
