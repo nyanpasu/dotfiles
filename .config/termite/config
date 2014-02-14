@@ -33,13 +33,15 @@ browser                                                           = firefox-nigh
 #word_chars                                                        = -A-Za-z0-9,./?%&#:_ = +@~
 
 [colors]
-foreground                                                         = #839496
-foreground_bold                                                    = #657b83
-foreground_dim                                                     = #002b36
+### Backgrounds
 # Light.
 #background                                                         = #eee8d5
 # Dark.
 background                                                         = #002b36
+
+foreground                                                         = #839496
+foreground_bold                                                    = #657b83
+foreground_dim                                                     = #002b36
 cursor                                                             = #93a1a1
 
 # if unset, will reverse foreground and background
@@ -80,7 +82,7 @@ color14                                                            = #93a1a1
 color15                                                            = #fdf6e3
 
 [hints]
-#font                                                              = PragmatasPro
+#font                                                              = PragmataPro
 #foreground                                                        = #dcdccc
 #background                                                        = #3f3f3f
 #padding                                                           = 2
