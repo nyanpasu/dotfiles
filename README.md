@@ -1,14 +1,14 @@
-# A miserable hobo's configuration files.
+# A degenerate ricer's configuration files.
 
-All configs currently used.
-I usually use git to keep my partition( particularly between my persistent usb install and main linux distribution ) configs synced and to show people how my configs are written.
+A repo configs currently used.
+I usually use git to keep my partition( particularly between my portable usb linux partition and main linux distribution ) configs synced and to show people how my configs are written.
 
 Harsh criticism is warmly accepted. (Encouraged, really.)
 
 ## Files
 ###.vimrc
 Requires [vundle](www.github.com/gmarik/vundle), which is an amazing package manager that in
-turn requires [git](www.github.com)
+turn requires [git](www.github.com).
 
 ###.weechat
 Assumes you have python+ruby+lua support as well as the iset script installed.

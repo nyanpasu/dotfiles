@@ -45,6 +45,8 @@ set hlsearch
 " set listchars=eol:￢,extends:>,precedes:<
 set listchars=eol:¬,extends:>,precedes:<
 
+set tags +=/usr/include
+
 "End of Main Config
 
 " Keybinds
@@ -106,7 +108,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-surround'
 Bundle 'xolox/vim-misc'
-"Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-easytags'
 "Bundle 'vim-scripts/taglist.vim'
 "Bundle 'vim-scripts/c.vim'
 
@@ -115,10 +117,11 @@ Bundle 'xolox/vim-misc'
 
 let g:ycm_warning_symbol = '⚠'
 let g:ycm_use_ultisnips_completer = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_complete_in_comments = 0
-let g:ycm_collect_identifiers_from_tags_files = 0
+let g:ycm_complete_in_comments = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 let g:UltiSnipsUsePythonVersion = 2 " Holy shit, I spent two hours trying to get this to just werk.
                                     " Yes. I am indeed retarded.
