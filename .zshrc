@@ -96,6 +96,8 @@ export EDITOR=vim
 export VISUAL=vim
 
 # Miscellaneous
+# Automatically cd into a dir if typed without anything.
+setopt AUTO_CD
 
 # History search
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
