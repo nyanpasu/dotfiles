@@ -31,13 +31,13 @@ super + bracket{left,right}
     bspc cycle_desktop {prev,next}
 
 super + ctrl + {h,j,k,l}
-    bspc window focused--presel {left,down,up,right}
+    bspc window --presel {left,down,up,right}
 
-super + alt + {h,j,k,l}
-    bspc window focused--edge {left,down,up,right} +5
+super + {h,j,k,l}
+    bspc window --edge {left,down,up,right} +5
 
 super + alt + shift + {h,j,k,l}
-    bspc window focused--edge {left,down,up,right} -5
+    bspc window focused --edge {left,down,up,right} -5
 
 super + ctrl + {1-9}
     bspc ratio 0.{1-9}
@@ -45,8 +45,8 @@ super + ctrl + {1-9}
 super + {1-9}
     bspc desktop --focus ^{1,2,3,4,5,6,7,8,9}
 
-super + {h,j,k,l}
-    bspc window focused -f {left,down,up,right}
+super + alt + {h,j,k,l}
+    bspc window -f {left,down,up,right}
 
 ~button1
     bspc pointer -g focus
@@ -58,7 +58,7 @@ super + !button{1-3}
     bspc pointer -t %i %i
 
 super + shift + {h,j,k,l}
-    bspc window --swap {left,down,up,right}
+    bspc window focused --swap {left,down,up,right}
 
 super + alt + control + {h,j,k,l} ; {0-9}
     bspc window -e {left,down,up,right} 0.{0-9}
