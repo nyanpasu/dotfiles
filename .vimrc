@@ -50,12 +50,13 @@ set tags +=/usr/include
 "End of Main Config
 
 " Keybinds
-map <F3> :NERDTreeToggle<CR>
 map <F4> :bd<CR>
 map <F5> :bprev!<CR>
 map <F6> :bnext!<CR>
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
+map <F9> :NERDTreeToggle<CR>
+map <F10> :TlistToggle<CR>
 " nnoremap <silent> <F9> :TlistToggle<CR>
 
 " Save shortcut
@@ -109,7 +110,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-surround'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
-"Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/taglist.vim'
 "Bundle 'vim-scripts/c.vim'
 
 " Plugins config
