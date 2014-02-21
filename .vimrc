@@ -130,6 +130,7 @@ let g:UltiSnipsExpandTrigger="<c-y>"
 let g:UltiSnipsJumpForwardTrigger="<c-y>"
 let g:UltiSnipsJumpBackwardTrigger="<c_u>"
 
+let Tlist_Use_Right_Window = 1
 " End of plugins
 " Rice
 
