@@ -67,7 +67,7 @@ super + alt + p
     bspc config focus_follows_pointer {true,false}
 
 super + shift + {1-9}
-    bspc window focused --to-desktop {1,2,3,4,5,6,7,8,9}
+    bspc window focused --to-desktop {1-9}
 
 #super + button{1,2,3}
 #    bspc grab_pointer {move,resize_side,resize_corner}
