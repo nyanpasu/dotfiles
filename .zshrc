@@ -31,6 +31,9 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"    backward-char
 [[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"   forward-char
 
+# Add current dir to PATH
+export PATH=$PATH:.
+
 # Enable word manipulation outside of vim
 local WORDCHARS="${WORDCHARS:s#/#}"
 bindkey "^[Oc"  forward-word
@@ -69,7 +72,7 @@ export LS_COLORS='no=00:fi=00:di=34:ow=34;40:ln=35:pi=30;44:so=35;44:do=35;44:bd
 # Powerline config
 autoload -U colors && colors
 function powerline_precmd() {
-   export PS1="$(~/bin/powerline-shell.py $? --shell zsh)"
+   export PS1="$(~/bin/powerline-shell.py $? --shell zsh --cwd-only)"
 }
 
 function install_powerline_precmd() {
