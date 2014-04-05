@@ -26,8 +26,8 @@ xset r rate 200 30
 
 # Reload font cache.
 # (Note: Is this even necessary?)
-xset +fp /usr/share/fonts/
-xset fp rehash
+#xset +fp /usr/share/fonts/
+#xset fp rehash
 
 # Copy and paste fix
 #autocutsel -fork &
