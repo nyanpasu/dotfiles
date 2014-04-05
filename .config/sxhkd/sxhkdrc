@@ -12,6 +12,9 @@ super + w
 super + t
     bspc cycle_layout
 
+super + tab
+    bspc desktop -f last
+
 super + {s,f}
     bspc window --toggle {floating,fullscreen}
 
@@ -19,7 +22,7 @@ super + {grave,Tab}
     bspc {alternate,alternate_desktop}
 
 super + {h,j,k,l}
-    bspc focus {left,down,up,right}
+    bspc window -f {left,down,up,right}
 
 super + shift + {h,j,k,l}
     bspc window focused -s {left,down,up,right}
