@@ -12,14 +12,14 @@ super + w
 super + t
     bspc cycle_layout
 
-super + tab
+super + Tab
     bspc desktop -f last
 
 super + {s,f}
     bspc window --toggle {floating,fullscreen}
 
-super + {grave,Tab}
-    bspc {alternate,alternate_desktop}
+#super + {grave,Tab}
+#    bspc {alternate,alternate_desktop}
 
 super + {h,j,k,l}
     bspc window -f {left,down,up,right}

@@ -83,7 +83,7 @@ if exists(":Tabularize")
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
-imap ` <Esc> " Map backtick to escape
+"imap ` <Esc> " Map backtick to escape
 
 " Vundle config
 
@@ -103,13 +103,14 @@ Bundle 'wlue/vim-dm-syntax'
 "Bundle 'msanders/snipmate.vim' "Replaced by UltiSnips
 Bundle 'SirVer/ultisnips'
 "Bundle 'ervandew/supertab' " Replaced by YouCompleteMe
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-surround'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
+Bundle 'tpope/vim-fugitive'
+"Bundle 'xolox/vim-misc'
+"Bundle 'xolox/vim-easytags'
 Bundle 'vim-scripts/taglist.vim'
 "Bundle 'vim-scripts/c.vim'
 
@@ -129,6 +130,8 @@ let g:UltiSnipsUsePythonVersion = 2 " Holy shit, I spent two hours trying to get
 let g:UltiSnipsExpandTrigger="<c-y>"
 let g:UltiSnipsJumpForwardTrigger="<c-y>"
 let g:UltiSnipsJumpBackwardTrigger="<c_u>"
+
+"let g:easytags_updatetime_min= 8000
 
 let Tlist_Use_Right_Window = 1
 " End of plugins

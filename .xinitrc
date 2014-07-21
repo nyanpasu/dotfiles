@@ -42,13 +42,17 @@ xset m 0 0
 
 # Run start up programs
 numlockx &
-nitrogen --restore &
+# FIXME Nitrogen doesn't work anymore. TMP using feh
+#nitrogen --restore &
+feh  --bg-fill '/root/Downloads/images/wallpaper/solarized dark.png'
 #compton -f &
 tint2 &
 #conky -p 10 &
 dunst &
-
-sxhkd &
+cd ~/.config/bspwm/
+./panel &
+cd ~/
 
 # Start window manager
+sxhkd &
 exec bspwm
