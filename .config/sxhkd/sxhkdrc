@@ -88,6 +88,13 @@ super + shift + {1-9}
 # wm independent hotkeys
 #
 
+# Move between desktops using the arrow keys
+super + Right
+    bspc desktop -f next
+
+super + Left
+    bspc desktop -f prev
+
 super + Return
     termite
 
