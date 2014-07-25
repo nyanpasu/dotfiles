@@ -29,8 +29,3 @@ Config sets up 5 desktops [1 - 5]
 
 ###.config/sxhkd
 The hotkey daemon that was pretty much developed alongside bspwm and goes pretty well together.
-
-
-## Comments
-me
->hue
