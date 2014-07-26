@@ -43,7 +43,7 @@ super + alt + shift + {h,j,k,l}
     bspc window focused --edge {left,down,up,right} -5
 
 super + ctrl + {1-9}
-    bspc ratio 0.{1-9}
+    bspc window -r 0.{1-9}
 
 super + {1-9}
     bspc desktop --focus ^{1,2,3,4,5,6,7,8,9}
