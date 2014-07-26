@@ -33,8 +33,8 @@ super + {c,shift + c}
 super + bracket{left,right}
     bspc cycle_desktop {prev,next}
 
-super + ctrl + {h,j,k,l}
-    bspc window --presel {left,down,up,right}
+super + ctrl + {h,j,k,l,c}
+    bspc window --presel {left,down,up,right,cancel}
 
 super + {h,j,k,l}
     bspc window --edge {left,down,up,right} +5
