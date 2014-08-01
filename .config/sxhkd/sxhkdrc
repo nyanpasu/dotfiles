@@ -12,11 +12,17 @@ super + w
 super + t
     bspc cycle_layout
 
+#button{4,5}
+#bspc desktop -f {next,prev}
+
 super + Tab
     bspc desktop -f last
 
-super + {s,f}
-    bspc window --toggle {floating,fullscreen}
+super + {s,f,p}
+    bspc window --toggle {floating,fullscreen,pseudo_tiled}
+
+super + {m,shift + m}
+    bspc desktop -l {monocle,tiled}
 
 #super + {grave,Tab}
 #    bspc {alternate,alternate_desktop}
@@ -36,11 +42,11 @@ super + bracket{left,right}
 super + ctrl + {h,j,k,l,c}
     bspc window --presel {left,down,up,right,cancel}
 
-super + {h,j,k,l}
-    bspc window --edge {left,down,up,right} +5
+super +alt + {h,j,k,l}
+    bspc window focused --edge {left,down,up,right} +15
 
-super + alt + shift + {h,j,k,l}
-    bspc window focused --edge {left,down,up,right} -5
+super + alt + shift + {l,k,j,h}
+    bspc window focused --edge {left,down,up,right} -15
 
 super + ctrl + {1-9}
     bspc window -r 0.{1-9}
@@ -72,28 +78,16 @@ super + alt + p
 super + shift + {1-9}
     bspc window focused --to-desktop {1-9}
 
-#super + button{1,2,3}
-#    bspc grab_pointer {move,resize_side,resize_corner}
-#
-#super + !button{1,2,3}
-#    bspc {track_pointer,track_pointer,track_pointer} %i %i
-#
-#super + @button{1,2,3}
-#    bspc {ungrab_pointer,ungrab_pointer,ungrab_pointer}
-#
-#super + alt + button1
-#    bspc grab_pointer focus
-
-#
-# wm independent hotkeys
-#
-
 # Move between desktops using the arrow keys
 super + Right
     bspc desktop -f next
 
 super + Left
     bspc desktop -f prev
+
+#
+# wm independent hotkeys
+#
 
 super + Return
     termite
