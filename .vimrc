@@ -4,6 +4,31 @@
 
 " Main Config
 set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
+syntax on
+set nowrap                " don't wrap text
+set number
+
+set incsearch             " But do highlight as you type your search.
+set expandtab             " use spaces instead of tabs
+set shiftwidth    =8
+set tabstop       =8      " tab spacing
+set softtabstop   =8      " unify
+set smarttab              " use tabs at the start of a line, spaces elsewhere
+set autoindent
+set smartindent
+
+set shortmess     +=|
+set winaltkeys=no
+
+set t_Co          =256    " enable 256-color mode.
+
+set smartcase             " smart searching. Lowercase -> case insensitive search; Uppercase -> case sensitive search
+set hlsearch
+
+"set listchars=eol:¬,extends:>,precedes:<
+set listchars=tab:┊\  
+
+set tags +=/usr/include
 
 " Windows only config
 if has("gui_running")
@@ -20,33 +45,6 @@ call vundle#rc()
 filetype indent plugin on
 " required for windows
 " filetype off
-syntax on
-
-set t_Co          =256    " enable 256-color mode.
-
-set incsearch             " But do highlight as you type your search.
-set expandtab             " use spaces instead of tabs
-set shiftwidth    =8
-set tabstop       =8      " tab spacing
-set softtabstop   =8      " unify
-set smarttab              " use tabs at the start of a line, spaces elsewhere
-set autoindent
-set smartindent
-
-set nowrap                " don't wrap text
-set number
-
-set shortmess     +=|
-set winaltkeys=no
-
-set smartcase             " smart searching. Lowercase -> case insensitive search; Uppercase -> case sensitive search
-set hlsearch
-
-" set listchars=eol:￢,extends:>,precedes:<
-set listchars=eol:¬,extends:>,precedes:<
-
-set tags +=/usr/include
-
 "End of Main Config
 
 " Keybinds
@@ -56,7 +54,7 @@ map <F6> :bnext!<CR>
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
 map <F9> :NERDTreeToggle<CR>
-map <F10> :TlistToggle<CR>
+map <F10> :TagbarToggle<CR>
 " nnoremap <silent> <F9> :TlistToggle<CR>
 
 " Save shortcut
@@ -88,45 +86,59 @@ endif
 " Vundle config
 
 " The package manager plugin itself
-Bundle 'gmarik/vundle'
+        Plugin 'gmarik/vundle'
 
 " Vim ricing; all customizations plugins
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
-Bundle 'scrooloose/nerdtree'
-"Bundle 'scrooloose/syntastic'
-Bundle 'wlue/vim-dm-syntax'
+         "Essential file browser
+        " Pretty status
+        "Plugin 'scrooloose/syntastic'
+        Plugin 'altercation/vim-colors-solarized'
+        Plugin 'bling/vim-airline'
+        Plugin 'jaxbot/semantic-highlight.vim'
+        Plugin 'nanotech/jellybeans.vim'
+        Plugin 'scrooloose/nerdtree'
+        Plugin 'tomasr/molokai'
+        Plugin 'vim-scripts/TagHighlight'
 
 " Utility plugins
-"Bundle 'MarcWeber/vim-addon-mw-utils' " Required by snipmate
-"Bundle 'tomtom/tlib_vim' " Required by snipmate
-"Bundle 'msanders/snipmate.vim' "Replaced by UltiSnips
-Bundle 'SirVer/ultisnips'
-"Bundle 'ervandew/supertab' " Replaced by YouCompleteMe
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'godlygeek/tabular'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-"Bundle 'xolox/vim-misc'
-"Bundle 'xolox/vim-easytags'
-Bundle 'vim-scripts/taglist.vim'
-"Bundle 'vim-scripts/c.vim'
+        " Huge bloat; very useful
+        "Plugin 'MarcWeber/vim-addon-mw-utils'
+        "Plugin 'ervandew/supertab'
+        "Plugin 'msanders/snipmate.vim'
+        "Plugin 'tomtom/tlib_vim'
+        "Plugin 'vim-scripts/c.vim'
+        "Plugin 'xolox/vim-easytags'
+        "Plugin 'xolox/vim-misc'
+        "Plugin 'vim-scripts/taglist.vim'
+        Plugin 'Raimondi/delimitMate'
+        Plugin 'SirVer/ultisnips'
+        Plugin 'Valloric/YouCompleteMe'
+        Plugin 'godlygeek/tabular'
+        Plugin 'honza/vim-snippets'
+        Plugin 'kien/ctrlp.vim'
+        Plugin 'tpope/vim-fugitive'
+        Plugin 'tpope/vim-surround'
+        Plugin 'majutsushi/tagbar'
+
+" Miscellaneous
+        Plugin 'wlue/vim-dm-syntax'
 
 " Plugins config
 "let g:SuperTabDefaultCompletionType = "context"
 
-let g:ycm_warning_symbol = '⚠'
-let g:ycm_use_ultisnips_completer = 1
-let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_complete_in_comments = 1
+let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_complete_in_comments = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_auto_trigger = 1
+let g:ycm_warning_symbol = '⚠'
+let g:ycm_errorsymbol = '⚠'
 
 let g:UltiSnipsUsePythonVersion = 2 " Holy shit, I spent two hours trying to get this to just werk.
-                                    " Yes. I am indeed retarded.
 let g:UltiSnipsExpandTrigger="<c-y>"
 let g:UltiSnipsJumpForwardTrigger="<c-y>"
 let g:UltiSnipsJumpBackwardTrigger="<c_u>"
@@ -138,8 +150,11 @@ let Tlist_Use_Right_Window = 1
 " Rice
 
 " Colorscheme
-colorscheme solarized
-set bg=dark
+let g:rehash256 = 1
+colorscheme molokai
+let g:molokai_original = 1
+let g:semanticColors = { 0x00: '72d572', 0x01: 'c5e1a5', 0x02: 'e6ee9c', 0x03: 'fff59d', 0x04: 'ffe082', 0x05: 'ffcc80', 0x06: 'ffab91', 0x07: 'bcaaa4', 0x08: 'b0bec5', 0x09: 'ffa726', 0x0a: 'ff8a65', 0x0b: 'f9bdbb', 0x0c: 'f9bdbb', 0x0d: 'f8bbd0', 0x0e: 'e1bee7', 0x0f: 'd1c4e9', 0x10: 'ffe0b2', 0x11: 'c5cae9', 0x12: 'd0d9ff', 0x13: 'b3e5fc', 0x14: 'b2ebf2', 0x15: 'b2dfdb', 0x16: 'a3e9a4', 0x17: 'dcedc8' , 0x18: 'f0f4c3', 0x19: 'ffb74d' }
+"set bg=dark
 
 set cursorline
 
@@ -151,7 +166,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Change the fill character for vertical borders (Note: might want to use │)
 set fillchars+=vert:\ 
-" but set the LineNumber background to black for some contrast.
 
 " Miscellaneous
 " Save folds
