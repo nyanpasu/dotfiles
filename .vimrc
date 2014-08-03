@@ -8,6 +8,8 @@ syntax on
 set nowrap                " don't wrap text
 set number
 
+set mouse=a
+
 set incsearch             " But do highlight as you type your search.
 set expandtab             " use spaces instead of tabs
 set shiftwidth    =8
