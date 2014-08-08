@@ -3,6 +3,38 @@ compinit
 zstyle ':completion:*' menu select
 promptinit
 
+# Aliases
+alias mk='make'
+alias mkc='make clean'
+alias cc99='gcc -O3 -std=c99 -Wall -Wno-unused-parameter -Wextra'
+alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
+alias df='df -kth'
+alias profile='vim ~/.zshrc'
+alias vmi='vim'
+alias vimrc='vim ~/.vimrc'
+alias lg='ls | grep'
+alias ll='ls -l'
+alias la='ls -al'
+alias nginxconf='vim /usr/local/etc/nginx/nginx.conf'
+alias nginxreload='sudo nginx -s reload'
+
+alias gi='git init'
+alias ga='git add'
+alias gd='git diff'
+alias gdmom='git diff master origin/master'
+alias gp='git push'
+alias gpom='git push origin master'
+alias gb='git branch'
+alias gck='git checkout'
+alias gckb='git checkout -b'
+alias grao='git remote add origin'
+alias grau='git remote add upstream'
+alias gfu='git fetch upstream'
+alias gmum='git merge upstream/master'
+alias gcln='git clone'
+alias gmv='git mv'
+alias gr='git reset'
+
 # Hotkeys
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
