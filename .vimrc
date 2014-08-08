@@ -121,6 +121,7 @@ endif
         Plugin 'tpope/vim-fugitive'
         Plugin 'tpope/vim-surround'
         Plugin 'majutsushi/tagbar'
+        Plugin 'steffanc/cscopemaps.vim'
 
 " Miscellaneous
         Plugin 'wlue/vim-dm-syntax'
@@ -168,6 +169,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Change the fill character for vertical borders (Note: might want to use │)
 set fillchars+=vert:\ 
+
+" Fold text
+set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')
+set fillchars+=fold:\ 
 
 " Miscellaneous
 " Save folds
