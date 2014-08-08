@@ -31,7 +31,8 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"    backward-char
 [[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"   forward-char
 
-# Add current dir to PATH
+# Add PATH variables
+export PATH=$PATH:/root/.gem/ruby/2.1.0/bin
 export PATH=$PATH:.
 
 # Enable word manipulation outside of vim
