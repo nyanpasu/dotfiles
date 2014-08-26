@@ -47,10 +47,10 @@ eval $(cat ~/.fehbg)
 tint2 &
 #conky -p 10 &
 dunst &
-cd ~/.config/bspwm/
-./panel &
-cd ~/
-
+#cd ~/.config/bspwm/
+#./panel &
+#cd ~/
+#
 # Start window manager
 sxhkd &
 exec bspwm
