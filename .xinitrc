@@ -42,9 +42,7 @@ xset m 0 0
 
 # Run start up programs
 numlockx &
-# FIXME Nitrogen doesn't work anymore. TMP using feh
-#nitrogen --restore &
-feh  --bg-fill '/root/Downloads/images/wallpaper/solarized dark.png'
+eval $(cat ~/.fehbg)
 #compton -f &
 tint2 &
 #conky -p 10 &
