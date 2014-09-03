@@ -9,11 +9,20 @@ allow_bold                                                         = true
 dynamic_title                                                      = true
 urgent_on_bell                                                     = true
 clickable_url                                                      = true
-font                                                               = PragmataPro 9
 scrollback_lines                                                   = 1000
 search_wrap                                                        = true
-icon_name                                                         = terminal
-#geometry                                                          = 640x480
+icon_name                                                          = terminal
+geometry                                                           = 320x120
+font                                                               = DejaVu Sans Mono for Powerline 9
+#font                                                               = Literation Mono Powerline 10
+#font                                                               = Anonymice Powerline 10
+#font                                                               = Monaco for Powerline 9
+#font                                                               = Oxygen Mono 10
+#font                                                               = PragmataPro 9
+#font                                                               = SourceCodePro 9
+#font                                                               = Consolas 9
+#font                                                               = FantasqueSansMono 10
+#font                                                               = M+1p 10
 
 # 0.0: opaque, 1.0: transparent
 transparency                                                       = 0.0
