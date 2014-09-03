@@ -6,9 +6,9 @@ promptinit
 # Aliases
 alias mk='make'
 alias mkc='make clean'
+alias em='emacs'
 alias cc99='gcc -O3 -std=c99 -Wall -Wno-unused-parameter -Wextra'
 alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
-alias df='df -kth'
 alias profile='vim ~/.zshrc'
 alias vmi='vim'
 alias vimrc='vim ~/.vimrc'
