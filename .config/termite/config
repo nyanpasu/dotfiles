@@ -41,23 +41,15 @@ browser                                                           = firefox-nigh
 # (default if unset: all graphic non-punctuation/space characters)
 #word_chars                                                        = -A-Za-z0-9,./?%&#:_ = +@~
 
-[colors]
-### Backgrounds
-# Light.
-#background                                                         = #eee8d5
-# Dark.
-background                                                         = #002b36
+# COLOURS
 
-foreground                                                         = #839496
-foreground_bold                                                    = #657b83
-foreground_dim                                                     = #002b36
-cursor                                                             = #93a1a1
-
-# if unset, will reverse foreground and background
-highlight                                                         = #2f2f2f
+#
+# SOLARIZED
+#
 
 ###########
 # SOLARIZED REF.
+#
 #S_base03        #002b36
 #S_base02        #073642
 #S_base01        #586e75
@@ -71,6 +63,18 @@ highlight                                                         = #2f2f2f
 #foreground:            S_base00
 #####
 
+[colors]
+foreground                                                         = #839496
+foreground_bold                                                    = #657b83
+foreground_dim                                                     = #002b36
+# Light.
+#background                                                         = #eee8d5
+# Dark.
+background                                                         = #002b36
+cursor                                                             = #93a1a1
+
+# if unset, will reverse foreground and background
+highlight                                                         = #2f2f2f
 
 # colors from color0 to color254 can be set
 color0                                                             = #073642
@@ -90,6 +94,47 @@ color13                                                            = #6c71c4
 color14                                                            = #93a1a1
 color15                                                            = #fdf6e3
 
+#
+# END SOLARIZED
+#
+
+#
+# MOLOKAI
+#
+
+# terminal colours
+foreground           = #CCCCCC
+background           = #272721
+
+#black darkgray
+color0               = #1B1D1E
+color8               = #808080
+#darkred red
+color1               = #FF0044
+color9               = #F92672
+#darkgreen green
+color2               = #82B414
+color10              = #A6E22E
+#darkyellow yellow
+color3               = #FD971F
+color11              = #E6DB74
+#darkblue blue
+color4               = #266C98
+color12              = #7070F0
+#darkmagenta magenta
+color5               = #AC0CB1
+color13              = #D63AE1
+#darkcyan cyan
+color6               = #AE81FF
+color14              = #66D9EF
+#gray white
+color7               = #CCCCCC
+color15              = #F8F8F2
+
+#
+# END MOLOKAI
+#
+
 [hints]
 #font                                                              = PragmataPro
 #foreground                                                        = #dcdccc
@@ -99,4 +144,4 @@ color15                                                            = #fdf6e3
 #border_width                                                      = 0.5
 #roundness                                                         = 2.0
 
-# vim: ft                                                          = dosini
+vim: ft                                                          = dosini
