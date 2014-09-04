@@ -1,30 +1,32 @@
 (global-font-lock-mode 1)
-; Set default emacs configuration
+; Emacs config
 (set-language-environment "UTF-8")
 (setq gdb-many-windows t)
 (setq-default tab-width 8)
 (setq-default indent-tabs-mode t)
-(global-set-key (kbd "DEL") 'backward-delete-char)
 (setq-default c-backspace-function 'backward-delete-char)
 (setq-default c-basic-offset 4)
 (setq-default c-default-style "linux")
 (setq-default tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60
                              64 68 72 76 80 84 88 92 96 100 104 108 112 116 120))
 
+; Keybindings
+(global-set-key (kbd "DEL") 'backward-delete-char)
+
 ; Package sources
 (require 'package)
+
 (add-to-list 'package-archives
   '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-; What does this do?
-(package-initialize)
-
 ; Package preamble
 (setq evil-want-C-u-scroll t) ; Because vim > emacs
 
 ; Load packages
+(package-initialize)
+
 (require 'auto-complete)
 (require 'auto-complete-config)
 (require 'evil)
