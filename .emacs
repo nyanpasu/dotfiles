@@ -34,6 +34,7 @@
 (require 'zlc)
 
 ; Nethack
+(add-to-list 'load-path "~/.emacs.d/nethack_el/")
 (autoload 'nethack "nethack" "Play Nethack." t)
 (setq nethack-program "/usr/bin/nethack")
 
