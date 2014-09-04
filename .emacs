@@ -71,11 +71,17 @@
  (add-to-list 'achead:include-directories '"/usr/include")
 )
 
+; Hooks
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
 
 (add-hook 'c-mode-hook 'my:add-semantic-to-autocomplete)
 (add-hook 'c++-mode-hook 'my:add-semantic-to-autocomplete)
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+              (ggtags-mode 1))))
 
 ; Rice
 ; - GUI
