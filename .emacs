@@ -91,6 +91,12 @@
 (menu-bar-mode -1)
 (fringe-mode 1)
 
+; Increase the padding of linum
+(defun linum-format-func (line)
+  (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
+     (propertize (format (format "%%%dd  " w) line) 'face 'linum)))
+(setq linum-format 'linum-format-func)
+
 (setq gdb-many-windows t)
 
 ; - Other
