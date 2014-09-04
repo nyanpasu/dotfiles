@@ -36,6 +36,10 @@
 (require 'yascroll)
 (require 'zlc)
 
+; Nethack
+(autoload 'nethack "nethack" "Play Nethack." t)
+(setq nethack-program "/usr/bin/nethack")
+
 ; Package config
 (evil-mode 1)
 (ac-config-default)
