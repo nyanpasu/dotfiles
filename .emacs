@@ -78,6 +78,7 @@
 (add-hook 'c++-mode-hook 'my:add-semantic-to-autocomplete)
 
 ; Rice
+; - GUI
 (load-theme 'monokai t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -85,7 +86,10 @@
 (fringe-mode 1)
 
 (setq gdb-many-windows t)
+
+; - Other
 (show-paren-mode 1)
+(hl-line-mode 1)
 
 (custom-set-faces '(default ((t (:family "PragmataPro" :foundry "unknown" :slant normal :weight normal :height 90 :width normal)))))
 
