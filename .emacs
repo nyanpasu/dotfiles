@@ -1,7 +1,6 @@
 (global-font-lock-mode 1)
 ; Emacs config
 (set-language-environment "UTF-8")
-(setq gdb-many-windows t)
 (setq-default tab-width 8)
 (setq-default indent-tabs-mode t)
 (setq-default c-backspace-function 'backward-delete-char)
@@ -81,6 +80,7 @@
 (menu-bar-mode -1)
 (fringe-mode 1)
 
+(setq gdb-many-windows t)
 (show-paren-mode 1)
 
 (custom-set-faces '(default ((t (:family "PragmataPro" :foundry "unknown" :slant normal :weight normal :height 90 :width normal)))))
