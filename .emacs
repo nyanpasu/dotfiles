@@ -21,6 +21,9 @@
 ; What does this do?
 (package-initialize)
 
+; Package preamble
+(setq evil-want-C-u-scroll t) ; Because vim > emacs
+
 ; Load packages
 (require 'auto-complete)
 (require 'auto-complete-config)
