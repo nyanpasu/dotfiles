@@ -5,10 +5,7 @@
 (setq-default tab-width 8)
 (setq-default indent-tabs-mode t)
 (setq-default c-backspace-function 'backward-delete-char)
-(setq-default c-basic-offset 4)
 (setq-default c-default-style "linux")
-(setq-default tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60
-                             64 68 72 76 80 84 88 92 96 100 104 108 112 116 120))
 
 ; Keybindings
 (global-set-key (kbd "DEL") 'backward-delete-char)
@@ -81,6 +78,19 @@
 (set-default 'truncate-lines t)
 (setq scroll-step            1
       scroll-conservatively  10000)
+
+;; change mode-line color by evil state
+(lexical-let ((default-color (cons (face-background 'mode-line)
+				   (face-foreground 'mode-line))))
+  (add-hook 'post-command-hook
+    (lambda ()
+      (let ((color (cond ((minibufferp) default-color)
+			 ((evil-insert-state-p) '("#e80000" . "#ffffff"))
+			 ((evil-emacs-state-p)  '("#444488" . "#ffffff"))
+			 ((buffer-modified-p)   '("#006fa0" . "#ffffff"))
+			 (t default-color))))
+	(set-face-background 'mode-line (car color))
+	(set-face-foreground 'mode-line (cdr color))))))
 
 ; Disable startup screen
 (setq inhibit-startup-message t)
