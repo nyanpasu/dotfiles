@@ -104,6 +104,7 @@
 (hl-line-mode 1)
 
 (custom-set-faces '(default ((t (:family "PragmataPro" :foundry "unknown" :slant normal :weight normal :height 90 :width normal)))))
+(custom-set-faces '(linum ((t (:inherit (shadow default) :background "gray11" :foreground "goldenrod")))))
 
 (set-default 'truncate-lines t)
 (setq scroll-step            1
