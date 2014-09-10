@@ -43,17 +43,21 @@ super + {Right,Left}
 super + shift + {Left,Right}
     bspc desktop -s {prev,next}
 
+# Split: Choose
 super + ctrl + {h,j,k,l,c}
     bspc window --presel {left,down,up,right,cancel}
 
-super +alt + {h,j,k,l}
-    bspc window focused --edge {left,down,up,right} +15
-
-super + alt + shift + {l,k,j,h}
-    bspc window focused --edge {left,down,up,right} -15
-
+# Split: Resize
 super + ctrl + {1-9}
     bspc window -r 0.{1-9}
+
+# Resize windows: Increase
+super + alt + {h,j,k,l}
+    bspc window focused --edge {left,down,up,right} +15
+
+# Resize windows: Decrease
+super + alt + shift + {h,j,k,l}
+    bspc window focused --edge {left,down,up,right} -15
 
 super + {1-9}
     bspc desktop --focus ^{1,2,3,4,5,6,7,8,9}
