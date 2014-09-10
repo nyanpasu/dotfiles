@@ -1,5 +1,3 @@
-TERM=xterm
-
 autoload -U compinit promptinit
 compinit
 zstyle ':completion:*' menu select
