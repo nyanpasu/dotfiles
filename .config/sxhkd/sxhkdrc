@@ -9,7 +9,7 @@ super + Tab
 	bspc desktop -f last
 
 # Toggle desktop type
-super + f
+super + ctrl + f
 	bspc desktop --toggle floating
 
 # Toggle window type
