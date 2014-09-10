@@ -78,6 +78,9 @@ super + alt + p
 super + shift + {1-9}
     bspc window focused --to-desktop {1-9}
 
+super + b
+    bspc desktop -B
+
 # Move between desktops using the arrow keys
 super + Right
     bspc desktop -f next
