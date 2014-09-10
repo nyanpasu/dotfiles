@@ -9,9 +9,6 @@ super + alt + Escape
 super + w
     bspc window -c
 
-super + t
-    bspc cycle_layout
-
 #button{4,5}
 #bspc desktop -f {next,prev}
 
@@ -33,11 +30,16 @@ super + {h,j,k,l}
 super + shift + {h,j,k,l}
     bspc window focused -s {left,down,up,right}
 
+# Cycle windows
 super + {c,shift + c}
-    bspc cycle {next,prev}
+    bspc desktop -C {forward,backward}
 
+# Cycle desktops
 super + bracket{left,right}
     bspc cycle_desktop {prev,next}
+
+super + t
+    bspc cycle_layout
 
 super + ctrl + {h,j,k,l,c}
     bspc window --presel {left,down,up,right,cancel}
