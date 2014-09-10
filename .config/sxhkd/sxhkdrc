@@ -34,12 +34,17 @@ super + shift + {h,j,k,l}
 super + {c,shift + c}
     bspc desktop -C {forward,backward}
 
-# Cycle desktops
-super + bracket{left,right}
-    bspc cycle_desktop {prev,next}
-
+# Cycle layouts
 super + {t,shift + t}
     bspc desktop -l {next,prev}
+
+# Cycle desktops
+super + {Right,Left}
+    bspc desktop -f {next,prev}
+
+# Swap desktops
+super + shift + {Left,Right}
+    bspc desktop -s {prev,next}
 
 super + ctrl + {h,j,k,l,c}
     bspc window --presel {left,down,up,right,cancel}
@@ -82,13 +87,6 @@ super + shift + {1-9}
 
 super + b
     bspc desktop -B
-
-# Move between desktops using the arrow keys
-super + Right
-    bspc desktop -f next
-
-super + Left
-    bspc desktop -f prev
 
 #
 # wm independent hotkeys
