@@ -106,10 +106,17 @@
 
 ; - Other
 (show-paren-mode 1)
-(hl-line-mode 1)
+(global-hl-line-mode 1) ; Note: Might want to disable, because I have a prog-mode-hook for it already.
 
-(custom-set-faces '(default ((t (:family "PragmataPro" :foundry "unknown" :slant normal :weight normal :height 90 :width normal)))))
-(custom-set-faces '(linum ((t (:inherit (shadow default) :background "gray11" :foreground "goldenrod")))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "PragmataPro" :foundry "unknown" :slant normal :weight normal :height 90 :width normal))))
+ '(hl-line ((t (:inherit t :background "#3E3D31"))))
+ '(linum ((t (:inherit (shadow default) :background "gray11" :foreground "goldenrod")))))
+
 
 (set-default 'truncate-lines t)
 (setq scroll-step            1
