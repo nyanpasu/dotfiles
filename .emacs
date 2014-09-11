@@ -93,6 +93,9 @@
 (menu-bar-mode -1)
 (fringe-mode 1)
 
+; View tabs
+(standard-display-ascii ?\t "┊\t")
+
 ; Increase the padding of linum
 (defun linum-format-func (line)
   (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
