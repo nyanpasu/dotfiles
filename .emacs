@@ -71,7 +71,7 @@
  (add-to-list 'achead:include-directories '"/usr/include")
 )
 
-; Hooks
+; Hooks (And rice)
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
 
@@ -82,6 +82,8 @@
           (lambda ()
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
               (ggtags-mode 1))))
+
+(add-hook 'prog-mode-hook 'hl-line-mode )
 
 ; Rice
 ; - GUI
