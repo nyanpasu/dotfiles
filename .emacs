@@ -27,6 +27,7 @@
 (require 'auto-complete-config)
 (require 'evil)
 (require 'ggtags)
+(require 'lockstep)
 (require 'powerline)
 (require 'multiple-cursors)
 (require 'yasnippet)
