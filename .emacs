@@ -6,6 +6,17 @@
 (setq-default c-backspace-function 'backward-delete-char)
 (setq-default c-default-style "linux")
 
+; Backups and autosaves
+(setq backup-directory-alist `(("." . "~/.emacs/saves")))
+; Stop multiple backups
+(setq delete-old-versions t
+  backup-by-copying t
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t
+  auto-save-default nil ; Disable auto-saves
+)
+
 ; Keybindings
 (global-set-key (kbd "DEL") 'backward-delete-char)
 
