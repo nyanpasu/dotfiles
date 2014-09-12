@@ -37,6 +37,7 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (require 'evil)
+(require 'evil-surround)
 (require 'ggtags)
 (require 'powerline)
 (require 'multiple-cursors)
@@ -59,6 +60,7 @@
 
 ; Package config
 (evil-mode 1)
+(global-evil-surround-mode 1)
 (ac-config-default)
 (yas-global-mode 1)
 (powerline-default-theme)
