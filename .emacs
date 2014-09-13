@@ -1,4 +1,5 @@
 (global-font-lock-mode 1)
+
 ; Emacs config
 (set-language-environment "UTF-8")
 (setq-default tab-width 8)
@@ -7,7 +8,7 @@
 (setq-default c-default-style "linux")
 
 ; Backups and autosaves
-(setq backup-directory-alist `(("." . "~/.emacs/saves")))
+(setq backup-directory-alist `(("." . "~/.emacs.d/saves")))
 ; Stop multiple backups
 (setq delete-old-versions t
   backup-by-copying t
