@@ -39,6 +39,8 @@
 (require 'auto-complete-config)
 (require 'evil)
 (require 'evil-surround)
+(require 'rudel-mode)
+(require 'rudel-obby)
 (require 'ggtags)
 (require 'powerline)
 (require 'multiple-cursors)
