@@ -58,11 +58,11 @@ super + ctrl + {1-9}
 
 # Resize windows: Increase
 super + alt + {h,j,k,l}
-	bspc window focused --edge {left,down,up,right} +15
+	bspc window focused --edge {left,down,up,right} +40
 
 # Resize windows: Decrease
 super + alt + shift + {h,j,k,l}
-	bspc window focused --edge {left,down,up,right} -15
+	bspc window focused --edge {left,down,up,right} -40
 
 super + {1-9}
 	bspc desktop --focus ^{1,2,3,4,5,6,7,8,9}
