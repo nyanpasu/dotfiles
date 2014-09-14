@@ -21,6 +21,12 @@
 ; Keybindings
 (global-set-key (kbd "DEL") 'backward-delete-char)
 
+(define-key evil-normal-state-map (kbd "C-w t") 'elscreen-create) ;create tab
+(define-key evil-normal-state-map (kbd "C-w x") 'elscreen-kill)   ;kill tab
+
+(define-key evil-normal-state-map "gT" 'elscreen-previous)	;previous tab
+(define-key evil-normal-state-map "gt" 'elscreen-next)		;next tab
+
 ; Package sources
 (require 'package)
 
@@ -37,6 +43,7 @@
 
 (require 'auto-complete)
 (require 'auto-complete-config)
+(require 'elscreen)
 (require 'evil)
 (require 'evil-surround)
 (require 'rudel-mode)
