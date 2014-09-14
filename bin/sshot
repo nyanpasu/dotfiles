@@ -1,0 +1,1 @@
+scrot ~/hue.png && ~/bin/puush ~/hue.png | xclip && notify-send "Shot taken!" && rm ~/hue.png
