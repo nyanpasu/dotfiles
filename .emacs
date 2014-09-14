@@ -18,36 +18,29 @@
   auto-save-default nil ; Disable auto-saves
 )
 
-; Keybindings
-(global-set-key (kbd "DEL") 'backward-delete-char)
-
-(define-key evil-normal-state-map (kbd "C-w t") 'elscreen-create) ;create tab
-(define-key evil-normal-state-map (kbd "C-w x") 'elscreen-kill)   ;kill tab
-
-(define-key evil-normal-state-map "gT" 'elscreen-previous)	;previous tab
-(define-key evil-normal-state-map "gt" 'elscreen-next)		;next tab
+; Has to be called before evil is loaded. Use vim's C-u instead of emac's
+(setq evil-want-C-u-scroll t) ; Because vim > emacs
 
 ; Package sources
 (require 'package)
 
-(add-to-list 'package-archives
-  '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;(add-to-list 'package-archives
+;  '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-; Package preamble
-(setq evil-want-C-u-scroll t) ; Because vim > emacs
 
 ; Load packages
 (package-initialize)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
-(require 'elscreen)
+;(require 'auto-complete-c-headers) ; Called from my:ac-c-header-init
+;(require 'elscreen)
 (require 'evil)
 (require 'evil-surround)
 (require 'rudel-mode)
 (require 'rudel-obby)
+(require 'iedit)
 (require 'ggtags)
 (require 'powerline)
 (require 'multiple-cursors)
@@ -63,18 +56,13 @@
 (define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
 (define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
 
-; Nethack
-(add-to-list 'load-path "~/.emacs.d/nethack_el/")
-(autoload 'nethack "nethack" "Play Nethack." t)
-(setq nethack-program "/usr/bin/nethack")
-
 ; Package config
 (evil-mode 1)
 (global-evil-surround-mode 1)
-(ac-config-default)
+
 (yas-global-mode 1)
-(powerline-default-theme)
-(global-yascroll-bar-mode 1)
+(ac-config-default)
+
 (zlc-mode t)
 (cua-mode t)
 
@@ -84,6 +72,18 @@
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode)
 (semantic-mode 1)
 
+; - CEDET
+(global-ede-mode t)
+
+; Keybindings
+(global-set-key (kbd "DEL") 'backward-delete-char)
+
+;(define-key evil-normal-state-map (kbd "C-w t") 'elscreen-create) ;create tab
+;(define-key evil-normal-state-map (kbd "C-w x") 'elscreen-kill)   ;kill tab
+
+;(define-key evil-normal-state-map "gT" 'elscreen-previous) ;previous tab
+;(define-key evil-normal-state-map "gt" 'elscreen-next)     ;next tab
+
 ; Functions
 (defun my:add-semantic-to-autocomplete()
   (add-to-list 'ac-sources 'ac-source-semantic))
@@ -92,13 +92,13 @@
  (require 'auto-complete-c-headers)
  (add-to-list 'ac-sources 'ac-source-c-headers)
  (add-to-list 'achead:include-directories '"/usr/include")
+ (add-to-list 'achead:include-directories '"/usr/include/c++/4.9.1") ; Could cause a lot of annoying lag.
 )
 
-; Hooks (And rice)
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
+; Hooks
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
-
 (add-hook 'c-mode-hook 'my:add-semantic-to-autocomplete)
+(add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c++-mode-hook 'my:add-semantic-to-autocomplete)
 
 (add-hook 'c-mode-common-hook
@@ -116,10 +116,17 @@
 (menu-bar-mode -1)
 (fringe-mode 1)
 
-; View tabs
+; - Client
+(global-hl-line-mode 1) ; Note: Might want to disable, because I have a prog-mode-hook for it already.
+(show-paren-mode 1)
+
+(powerline-default-theme)
+(global-yascroll-bar-mode 1)
+
+; - View tab chars
 (standard-display-ascii ?\t "┊\t")
 
-; Increase the padding of linum
+; - Increase the padding of linum
 (defun linum-format-func (line)
   (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
      (propertize (format (format "%%%dd  " w) line) 'face 'linum)))
@@ -127,19 +134,14 @@
 
 (setq gdb-many-windows t)
 
-; - Other
-(show-paren-mode 1)
-(global-hl-line-mode 1) ; Note: Might want to disable, because I have a prog-mode-hook for it already.
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "PragmataPro" :foundry "unknown" :slant normal :weight normal :height 90 :width normal))))
+ '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 90 :width normal))))
  '(hl-line ((t (:inherit t :background "#3E3D31"))))
  '(linum ((t (:inherit (shadow default) :background "gray11" :foreground "goldenrod")))))
-
 
 (set-default 'truncate-lines t)
 (setq scroll-step            1
