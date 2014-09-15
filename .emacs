@@ -38,6 +38,7 @@
 ;(require 'elscreen)
 (require 'evil)
 (require 'evil-surround)
+(require 'irony)
 (require 'rudel-mode)
 (require 'rudel-obby)
 (require 'iedit)
