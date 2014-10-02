@@ -14,15 +14,14 @@ bspc config focus_follows_pointer true
 
 bspc config top_padding 15
 
-bspc rule -a Gimp desktop=^8 floating=on
 bspc rule -a Chromium desktop=^2
-bspc rule -a mplayer2 floating=on
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
 bspc rule -a Dwarf\ Fortress floating=on
-bspc rule -a spring desktop=5 floating=on
-bspc rule -a NO$GBA floating=on
+bspc rule -a Firefox desktop=^2
+bspc rule -a Gimp desktop=^8 floating=on
 bspc rule -a No$gba\ Emulator floating=on
+bspc rule -a mplayer2 floating=on
+bspc rule -a mpv floating=on
+bspc rule -a spring desktop=5 floating=on
 
 bspc config active_border_color #12333C
 bspc config normal_border_color #12333C
