@@ -1,17 +1,17 @@
-" Hikayu's vimrc 2014
-" Remember to use :mkview and :loadview to restore folds and make it easier to
-" navigate.
+" Nyanpasu's vimrc 2014
 
 " Main Config
 set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
+
 syntax on
 set nowrap                " don't wrap text
-set number
+set relativenumber
 
 set mouse=a
 
-set incsearch             " But do highlight as you type your search.
-set expandtab             " use spaces instead of tabs
+set incsearch             " Highlight as you type your search.
+
+set expandtab             " Use spaces instead of tabs
 set shiftwidth    =8
 set tabstop       =8      " tab spacing
 set softtabstop   =8      " unify
@@ -37,15 +37,13 @@ if has("gui_running")
 endif
 
 " Load vundle
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"filetype off
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
 " This line should be called after vundle is loaded.
 " Vundle is required to have filetype off before loading.
 filetype indent plugin on
-" required for windows
-" filetype off
 "End of Main Config
 
 " Keybinds
@@ -56,16 +54,6 @@ map <F7> :tabp<CR>
 map <F8> :tabn<CR>
 map <F9> :NERDTreeToggle<CR>
 map <F10> :TagbarToggle<CR>
-" nnoremap <silent> <F9> :TlistToggle<CR>
-
-" Save shortcut
-nnoremap \w :w<CR>
-nnoremap <C-s> :w<CR>
-inoremap <c-s> <Esc>:w<CR>a
-
-" Insert single character
-nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
-nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 nnoremap <silent> <C-l> : <C-u> nohlsearch <CR><C-l>
 
@@ -75,6 +63,61 @@ nnoremap <Leader>t "=strftime("%H:%M:%S")<CR>P
 
 set pastetoggle=<F2>
 
+function! BuildYCM(info)
+        " info is a dictionary with 3 fields
+        " - name:   name of the plugin
+        " - status: 'installed', 'updated', or 'unchanged'
+        " - force:  set on PlugInstall! or PlugUpdate!
+        if a:info.status == 'installed' || a:info.force
+                !./install.sh
+        endif
+endfunction
+
+" The package manager plugin itself
+" To install: curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+call plug#begin('~/.vim/plugged')
+
+" Vim ricing; all customizations plugins
+         "Essential file browser
+        " Pretty status
+        "Plug 'scrooloose/syntastic'
+        Plug 'altercation/vim-colors-solarized'
+        Plug 'bling/vim-airline'
+        Plug 'jaxbot/semantic-highlight.vim'
+        Plug 'nanotech/jellybeans.vim'
+        Plug 'scrooloose/nerdtree'
+        Plug 'tomasr/molokai'
+        Plug 'vim-scripts/TagHighlight'
+
+" Utility plugins
+        " Huge bloat; very useful
+        "Plug 'MarcWeber/vim-addon-mw-utils'
+        "Plug 'ervandew/supertab'
+        "Plug 'msanders/snipmate.vim'
+        "Plug 'tomtom/tlib_vim'
+        "Plug 'vim-scripts/c.vim'
+        "Plug 'vim-scripts/taglist.vim'
+        "Plug 'xolox/vim-easytags'
+        "Plug 'xolox/vim-misc'
+        Plug 'Raimondi/delimitMate'
+        Plug 'SirVer/ultisnips'
+        Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM')}
+        Plug 'godlygeek/tabular'
+        Plug 'honza/vim-snippets'
+        Plug 'kien/ctrlp.vim'
+        Plug 'majutsushi/tagbar'
+        Plug 'steffanc/cscopemaps.vim'
+        Plug 'tpope/vim-fugitive'
+        Plug 'tpope/vim-surround'
+
+" Miscellaneous
+        Plug 'wlue/vim-dm-syntax'
+
+call plug#end()
+
+" Plugins config
+
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
   vmap <Leader>a= :Tabularize /=<CR>
@@ -82,50 +125,6 @@ if exists(":Tabularize")
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
-"imap ` <Esc> " Map backtick to escape
-
-" Vundle config
-
-" The package manager plugin itself
-        Plugin 'gmarik/vundle'
-
-" Vim ricing; all customizations plugins
-         "Essential file browser
-        " Pretty status
-        "Plugin 'scrooloose/syntastic'
-        Plugin 'altercation/vim-colors-solarized'
-        Plugin 'bling/vim-airline'
-        Plugin 'jaxbot/semantic-highlight.vim'
-        Plugin 'nanotech/jellybeans.vim'
-        Plugin 'scrooloose/nerdtree'
-        Plugin 'tomasr/molokai'
-        Plugin 'vim-scripts/TagHighlight'
-
-" Utility plugins
-        " Huge bloat; very useful
-        "Plugin 'MarcWeber/vim-addon-mw-utils'
-        "Plugin 'ervandew/supertab'
-        "Plugin 'msanders/snipmate.vim'
-        "Plugin 'tomtom/tlib_vim'
-        "Plugin 'vim-scripts/c.vim'
-        "Plugin 'xolox/vim-easytags'
-        "Plugin 'xolox/vim-misc'
-        "Plugin 'vim-scripts/taglist.vim'
-        Plugin 'Raimondi/delimitMate'
-        Plugin 'SirVer/ultisnips'
-        Plugin 'Valloric/YouCompleteMe'
-        Plugin 'godlygeek/tabular'
-        Plugin 'honza/vim-snippets'
-        Plugin 'kien/ctrlp.vim'
-        Plugin 'tpope/vim-fugitive'
-        Plugin 'tpope/vim-surround'
-        Plugin 'majutsushi/tagbar'
-        Plugin 'steffanc/cscopemaps.vim'
-
-" Miscellaneous
-        Plugin 'wlue/vim-dm-syntax'
-
-" Plugins config
 "let g:SuperTabDefaultCompletionType = "context"
 
 let g:ycm_add_preview_to_completeopt = 1
