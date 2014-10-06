@@ -6,19 +6,19 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #EEE8D5 100
+background_color = #12333C 100
 border_color = #FFFFFF 0
 
 # ID 2
 rounded = 0
 border_width = 0
-background_color = #DD7930 100
+background_color = #648187 100
 border_color = #FFFFFF 40
 
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #D9D9D9 100
+background_color = #2F4D54 100
 border_color = #BBBBBB 60
 
 # Panel
@@ -28,7 +28,7 @@ panel_size = 1440 20
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 1
-wm_menu = 0
+wm_menu = 1
 panel_layer = top
 panel_background_id = 1
 
@@ -47,24 +47,24 @@ taskbar_active_background_id = 0
 
 # Tasks
 urgent_nb_of_blink = 2
-task_icon = 0
-task_text = 1
+task_icon = 1
+task_text = 0
 task_centered = 1
 task_maximum_size = 150 35
-task_padding = 0 0
+task_padding = 0 3
 task_background_id = 3
 task_active_background_id = 2
 task_urgent_background_id = 2
 task_iconified_background_id = 3
 
 # Task Icons
-task_icon_asb = 70 0 0
+task_icon_asb = 100 -10 -20
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
 # Fonts
-task_font = PragmataPro 9
+task_font = PragmataPro 7
 task_font_color = #696969 100
 task_active_font_color = #000000 100
 task_urgent_font_color = #FFFFFF 80
@@ -80,20 +80,20 @@ systray_icon_size = 16
 systray_icon_asb = 70 0 0
 
 # Clock
-time1_format = %H:%M  (%a %d %b '%y)
-time1_font = PragmataPro 9
+time1_format = %H:%M [%a %d %b]
+time1_font = DejaVu Sans Mono Bold 8
 clock_font_color = #839496 100
-clock_padding = 0 0
+clock_padding = 0 4
 clock_background_id = 0
 
 # Tooltips
-tooltip = 0
+tooltip = 1
 tooltip_padding = 2 2
 tooltip_show_timeout = 0.7
 tooltip_hide_timeout = 0.3
 tooltip_background_id = 1
 tooltip_font = sans 10
-tooltip_font_color = #000000 80
+tooltip_font_color = #FFFFFF 80
 
 # Mouse
 mouse_middle = none

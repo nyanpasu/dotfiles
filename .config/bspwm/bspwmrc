@@ -12,11 +12,12 @@ bspc config adaptative_raise    true
 
 bspc config focus_follows_pointer true
 
-bspc config top_padding 15
+bspc config top_padding 22
 
 bspc rule -a Chromium desktop=^2
 bspc rule -a Clementine desktop=^9
 bspc rule -a Dwarf\ Fortress floating=on
+bspc rule -a Eclipse desktop=^3
 bspc rule -a Firefox desktop=^2
 bspc rule -a Gimp desktop=^8 floating=on
 bspc rule -a No$gba\ Emulator floating=on
