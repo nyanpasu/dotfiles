@@ -177,8 +177,8 @@ set fillchars+=fold:\
 " Miscellaneous
 
 " Save folds
-autocmd BufWinLeave *.* mkview!
-autocmd BufWinEnter *.* silent loadview
+"autocmd BufWinLeave *.* mkview!
+"autocmd BufWinEnter *.* silent loadview
 
 " Function to right align
 function! RightAlignVisual() range
