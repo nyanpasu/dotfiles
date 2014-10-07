@@ -5,6 +5,7 @@ set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
 
 syntax on
 set nowrap                " don't wrap text
+set number
 set relativenumber
 
 set mouse=a
