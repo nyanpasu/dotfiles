@@ -147,35 +147,35 @@ highlight = #2f2149
 foreground      = #3e2b62
 foreground_bold = #3e2b62
 cursor          = #3e2b62
-background      = #e2dbdb
+background      = #d9dde0
 
 # black
 color0  = #1c1c24
 color8  = #303030
 
 # red
-color1  = #ff0000
+color1  = #e81b1b
 color9  = #da2424
 
 # green
-color2  = #005522
-color10 = #07b600
+color2  = #009304
+color10 = #3f9b3b
 
 # yellow
 color3  = #8c5334
 color11 = #a18a6e
 
 # blue
-color4  = #184b6c
-color12 = #607e91
+color4  = #126193
+color12 = #4f96c3
 
 # magenta
 color5  = #2f2149
 color13 = #523267
 
 # cyan
-color6  = #11433c
-color14 = #387c72
+color6  = #0c4d44
+color14 = #139683
 
 # white
 color7  = #021d2b
