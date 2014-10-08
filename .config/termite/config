@@ -135,6 +135,56 @@ color15              = #F8F8F2
 # END MOLOKAI
 #
 
+#
+# SUWAKO
+#
+
+highlight = #2f2149
+
+[colors]
+
+# special
+foreground      = #3e2b62
+foreground_bold = #3e2b62
+cursor          = #3e2b62
+background      = #e2dbdb
+
+# black
+color0  = #1c1c24
+color8  = #303030
+
+# red
+color1  = #ff0000
+color9  = #da2424
+
+# green
+color2  = #005522
+color10 = #07b600
+
+# yellow
+color3  = #8c5334
+color11 = #a18a6e
+
+# blue
+color4  = #184b6c
+color12 = #607e91
+
+# magenta
+color5  = #2f2149
+color13 = #523267
+
+# cyan
+color6  = #11433c
+color14 = #387c72
+
+# white
+color7  = #021d2b
+color15 = #1b545e
+
+#
+# END SUWAKO
+#
+
 [hints]
 #font                                                              = PragmataPro
 #foreground                                                        = #dcdccc

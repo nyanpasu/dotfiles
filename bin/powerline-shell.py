@@ -18,7 +18,7 @@ class Powerline:
             #'separator': u'\u2B80',
             #'separator_thin': u'\u2B81'
             'separator': u'',
-            'separator_thin': u'\u276F'
+            'separator_thin': u''
         },
         'flat': {
             'separator': '',
@@ -119,16 +119,16 @@ class Color:
     USERNAME_BG = 240
 
     HOSTNAME_FG = 250
-    HOSTNAME_BG = 238
+    HOSTNAME_BG = 3 # dark yellow
 
-    PATH_BG = 237  # dark grey
+    PATH_BG = 11  # light yellow
     PATH_FG = 250  # light grey
     CWD_FG = 254  # nearly-white grey
     SEPARATOR_FG = 244
 
     REPO_CLEAN_BG = 148  # a light green color
     REPO_CLEAN_FG = 0  # black
-    REPO_DIRTY_BG = 161  # pink/red
+    REPO_DIRTY_BG = 9  # pink/red
     REPO_DIRTY_FG = 15  # white
 
     CMD_PASSED_BG = 236
@@ -390,7 +390,7 @@ def add_root_indicator_segment():
         bg = Color.CMD_FAILED_BG
     powerline.append(root_indicators[powerline.args.shell], fg, bg)
 
-add_root_indicator_segment()
+#add_root_indicator_segment()
 
 
 sys.stdout.write(powerline.draw())

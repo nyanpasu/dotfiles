@@ -6,20 +6,26 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #12333C 100
+background_color = #4E3167 100
 border_color = #FFFFFF 0
 
 # ID 2
 rounded = 0
-border_width = 0
-background_color = #648187 100
-border_color = #FFFFFF 40
+border_width = 1
+background_color = #7A6358 100
+border_color = #513264 100
 
 # ID 3
 rounded = 0
 border_width = 0
-background_color = #2F4D54 100
+background_color = #382B30 100
 border_color = #BBBBBB 60
+
+# ID 4
+rounded = 0
+border_width = 0
+background_color = #2D2D2D 100
+border_color = #FFFFFF 100
 
 # Panel
 panel_monitor = all
@@ -73,9 +79,9 @@ font_shadow = 0
 
 # System Tray
 systray = 1
-systray_padding = 1 01 0
+systray_padding = 4 4 0
 systray_sort = ascending
-systray_background_id = 0
+systray_background_id = 4
 systray_icon_size = 0
 systray_icon_asb = 100 0 0
 
