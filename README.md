@@ -1,9 +1,10 @@
 # Dotifles
-Personal dotfiles accumulated over time.
+Personal dotfiles
 
 ## Files
 ###.vimrc
-Requires [vundle](www.github.com/gmarik/vundle)
+~~Requires [vundle](www.github.com/gmarik/vundle)~~
+Requires [Plug](https://github.com/junegunn/vim-plug)
 
 ###.emacs
 Still pretty vanilla
