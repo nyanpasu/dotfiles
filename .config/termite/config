@@ -1,41 +1,41 @@
 [options]
-resize_grip                                                        = false
-scroll_on_output                                                   = false
-scroll_on_keystroke                                                = true
-audible_bell                                                       = false
-visible_bell                                                       = false
-mouse_autohide                                                     = false
-allow_bold                                                         = true
-dynamic_title                                                      = true
-urgent_on_bell                                                     = true
-clickable_url                                                      = true
-scrollback_lines                                                   = 1000
-search_wrap                                                        = true
-icon_name                                                          = terminal
-geometry                                                           = 720x360
-font                                                               = DejaVu Sans Mono for Powerline 10
-#font                                                               = Literation Mono Powerline 10
-#font                                                               = Anonymice Powerline 10
-#font                                                               = Monaco for Powerline 9
-#font                                                               = Oxygen Mono 10
-#font                                                               = PragmataPro 9
-#font                                                               = SourceCodePro 9
-#font                                                               = Consolas 9
-#font                                                               = FantasqueSansMono 10
-#font                                                               = M+1p 10
+resize_grip         = false
+scroll_on_output    = false
+scroll_on_keystroke = true
+audible_bell        = false
+visible_bell        = false
+mouse_autohide      = false
+allow_bold          = true
+dynamic_title       = true
+urgent_on_bell      = true
+clickable_url       = true
+scrollback_lines    = 1000
+search_wrap         = true
+icon_name           = terminal
+geometry            = 635x347
+font                = DejaVuSansMono 9
+#font               = Literation Mono Powerline 10
+#font               = Anonymice Powerline 10
+#font               = Monaco for Powerline 9
+#font               = Oxygen Mono 10
+#font               = PragmataPro 9
+#font               = SourceCodePro 9
+#font               = Consolas 9
+#font               = FantasqueSansMono 10
+#font               = M+1p 10
 
 # 0.0: opaque, 1.0: transparent
-transparency                                                       = 0.0
-pseudo_transparency                                                = false
+transparency        = 0.0
+pseudo_transparency = false
 
 # "system", "on" or "off"
-cursor_blink                                                       = system
+cursor_blink = system
 
 # "block", "underline" or "ibeam"
-cursor_shape                                                       = block
+cursor_shape = block
 
 # $BROWSER is used by default
-browser                                                           = firefox-nightly
+browser = firefox
 
 # word characters used for word selection
 # (default if unset: all graphic non-punctuation/space characters)
@@ -143,43 +143,45 @@ highlight = #2f2149
 
 [colors]
 
+[colors]
+
 # special
 foreground      = #3e2b62
 foreground_bold = #3e2b62
 cursor          = #3e2b62
-background      = #d9dde0
+background      = #e1e5e8
 
 # black
 color0  = #1c1c24
 color8  = #303030
 
 # red
-color1  = #e81b1b
-color9  = #da2424
+color1  = #e22828
+color9  = #e24444
 
 # green
-color2  = #009304
-color10 = #3f9b3b
+color2  = #008604
+color10 = #398d36
 
 # yellow
-color3  = #8c5334
-color11 = #a18a6e
+color3  = #7d4a2f
+color11 = #998368
 
 # blue
-color4  = #126193
-color12 = #4f96c3
+color4  = #105986
+color12 = #4787b0
 
 # magenta
-color5  = #2f2149
-color13 = #523267
+color5  = #6730cd
+color13 = #8a22ce
 
 # cyan
-color6  = #0c4d44
-color14 = #139683
+color6  = #093932
+color14 = #118574
 
 # white
-color7  = #021d2b
-color15 = #1b545e
+color7  = #2c3f49
+color15 = #466d74
 
 #
 # END SUWAKO
