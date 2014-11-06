@@ -1,11 +1,11 @@
-" Nyanpasu's vimrc 2014
+" 2014
 
-" Plugins
+" {{{ Plugins 
 " To install vim-plug: curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 call plug#begin('~/.vim/plugged')
 
-" Vim ricing; all customizations plugins
+" Rice
         Plug 'altercation/vim-colors-solarized'
         Plug 'bling/vim-airline'
         Plug 'jaxbot/semantic-highlight.vim'
@@ -15,8 +15,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'vim-scripts/TagHighlight'
         Plug 'nyanpasu/suwako'
 
-" Utility plugins
-        " Huge bloat; very useful
+" Utility
         Plug 'Raimondi/delimitMate'
         Plug 'SirVer/ultisnips'
         Plug 'Valloric/YouCompleteMe'
@@ -34,7 +33,8 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-" Main Config
+" }}}
+" {{{ General
 set nocompatible   " Get rid of Vi compatibility mode. SET FIRST!
 syntax on          " Enable syntax highlighting
 set nowrap         " Don't wrap text
@@ -54,14 +54,12 @@ set t_Co=256       " Enable 256-color mode.
 set smartcase      " Smart searching. Lowercase -> case insensitive search; Uppercase -> case sensitive search
 set hlsearch       " Highlight as you search
 
-set listchars=tab:┊\ ,eol:¬,extends:>,precedes:<
 set tags +=/usr/include
 
 filetype indent plugin on
 
-"End of Main Config
-
-" Keybinds
+" }}}
+" {{{ Keybinds
 " View Highlight group under cursor
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
                         \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -82,7 +80,8 @@ nnoremap <Leader>t "=strftime("%H:%M:%S")<CR>P
 
 set pastetoggle=<F2>
 
-" Plugins config
+" }}}
+" {{{ Plugins config
 
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
@@ -114,9 +113,8 @@ let Tlist_Use_Right_Window = 1
 let g:airline_powerline_fonts            = 1
 let g:airline#extensions#tabline#enabled = 1
 
-" End of plugins
-" 
-" Rice
+" }}}
+" {{{ Rice
 
 let g:rehash256 = 1
 colorscheme suwako
@@ -131,10 +129,13 @@ set laststatus=2
 " Change fill character for vertical borders (Note: might want to use │)
 set fillchars+=vert:\ 
 
-set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')
+set listchars=tab:┊\ ,eol:¬,extends:>,precedes:<
+
+set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{\{{\\d\\=','','g')
 set fillchars+=fold:\ 
 
-" Miscellaneous
+" }}}
+" {{{ Custom functions
 
 " Function to right align
 function! RightAlignVisual() range
@@ -148,4 +149,4 @@ function! StrPadLeft(s, w)
         return repeat(' ', a:w - strwidth(s)) . s
 endfunction
 
-"End of Miscellaneous
+" }}}
