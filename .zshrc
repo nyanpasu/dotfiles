@@ -6,22 +6,29 @@ promptinit
 # Aliases
 alias mk='make'
 alias mkc='make clean'
-alias em='emacs'
+
 alias cc99='gcc -O3 -std=c99 -Wall -Wno-unused-parameter -Wextra'
 alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
-alias profile='vim ~/.zshrc'
+alias c11="gcc --std=c11"
+
 alias vmi='vim'
 alias vimrc='vim ~/.vimrc'
+
 alias zshrc='vim ~/.zshrc'
+
 alias lg='ls | grep'
 alias ll='ls -l'
 alias la='ls -al'
-alias nginxconf='vim /usr/local/etc/nginx/nginx.conf'
-alias nginxreload='sudo nginx -s reload'
-alias x='startx'
-alias emacsc='emacsclient -c'
 
-# - Git
+alias x='startx'
+
+alias emacsc='emacsclient -c'
+alias em='emacs'
+
+alias tart="tar -tvf"
+alias tarx="tar -xvf"
+
+# TODO Consider removing and use git's native aliasing
 alias ga='git add'
 alias gb='git branch'
 alias gck='git checkout'
