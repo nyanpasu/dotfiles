@@ -17,7 +17,6 @@ export X_RUNNING=true
 #setxkbmap -layout "us" -variant "colemak"
 setxkbmap -option ctrl:swapcaps
 
-
 # Keyboard repeat rate
 xset r rate 200 30
 
@@ -47,10 +46,7 @@ eval $(cat ~/.fehbg)
 tint2 &
 #conky -p 10 &
 dunst &
-#cd ~/.config/bspwm/
-#./panel &
-#cd ~/
-#
+
 # Start window manager
 sxhkd &
 exec bspwm
