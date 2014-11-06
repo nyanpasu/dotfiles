@@ -1,4 +1,5 @@
 " 2014
+" vim:set et fdm=marker:
 
 " {{{ Plugins 
 " To install vim-plug: curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -35,7 +36,7 @@ call plug#end()
 
 " }}}
 " {{{ General
-set nocompatible   " Get rid of Vi compatibility mode. SET FIRST!
+set nocompatible   " Get rid of vi compatibility mode
 syntax on          " Enable syntax highlighting
 set nowrap         " Don't wrap text
 set number         " Show current line number
@@ -53,6 +54,7 @@ set shortmess+=|   " Disable hit-enter prompts
 set t_Co=256       " Enable 256-color mode.
 set smartcase      " Smart searching. Lowercase -> case insensitive search; Uppercase -> case sensitive search
 set hlsearch       " Highlight as you search
+set modeline       " Enabled modeline
 
 set tags +=/usr/include
 

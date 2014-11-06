@@ -1,3 +1,5 @@
+# 2014
+# vim:set et fdm=marker:
 # {{{ Initialisation 
 autoload -U compinit promptinit
 compinit
