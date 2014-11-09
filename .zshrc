@@ -8,6 +8,7 @@ promptinit
 
 # }}}
 # {{{ Aliases 
+# Programming
 alias mk='make'
 alias mkc='make clean'
 
@@ -16,8 +17,10 @@ alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
 alias c11="gcc --std=c11"
 
 alias vmi='vim'
-alias vimrc='vim ~/.vimrc'
+alias emacsc='emacsclient -c'
+alias em='emacs'
 
+alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 
 alias lg='ls | grep'
@@ -26,11 +29,10 @@ alias la='ls -al'
 
 alias x='startx'
 
-alias emacsc='emacsclient -c'
-alias em='emacs'
-
 alias tart="tar -tvf"
 alias tarx="tar -xvf"
+
+alias clr="clear"
 
 # TODO Consider removing and use git's native aliasing
 alias ga='git add'
