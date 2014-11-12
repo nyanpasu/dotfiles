@@ -87,7 +87,7 @@ systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %H:%M, %a %d %b %Y
-time1_font = DejaVu Sans Mono Bold 8
+time1_font = Open Sans Condensed, Bold Condensed 9
 clock_font_color = #9E8F97 100
 clock_padding = 5 4
 clock_background_id = 0
