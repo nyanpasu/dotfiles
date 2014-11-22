@@ -42,7 +42,7 @@ set nowrap         " Don't wrap text
 set number         " Show current line number
 set relativenumber " Relative number line
 set mouse=a        " Enable mouse
-set incsearch      " Highlight as you type your search.
+set incsearch      " Highlight as you type your search
 set expandtab      " Use spaces instead of tabs
 set shiftwidth=8   " How large an indent is
 set tabstop=8      " How large a tab is displayed
@@ -51,7 +51,7 @@ set smarttab       " Use tabs at the start of a line, spaces elsewhere
 set autoindent     " Copy indent from current line when starting new line
 set smartindent    " Indent inserted after: line ending in {, keyword, before line starting with
 set shortmess+=|   " Disable hit-enter prompts
-set t_Co=256       " Enable 256-color mode.
+set t_Co=256       " Enable 256-color mode
 set smartcase      " Smart searching. Lowercase -> case insensitive search; Uppercase -> case sensitive search
 set ignorecase     " So that smart searching works
 set hlsearch       " Highlight as you search
