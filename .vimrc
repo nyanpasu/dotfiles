@@ -53,6 +53,7 @@ set smartindent    " Indent inserted after: line ending in {, keyword, before li
 set shortmess+=|   " Disable hit-enter prompts
 set t_Co=256       " Enable 256-color mode.
 set smartcase      " Smart searching. Lowercase -> case insensitive search; Uppercase -> case sensitive search
+set ignorecase     " So that smart searching works
 set hlsearch       " Highlight as you search
 set modeline       " Enabled modeline
 
