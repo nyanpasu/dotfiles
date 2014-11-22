@@ -168,16 +168,16 @@ color3  = #7d4a2f
 color11 = #998368
 
 # blue
-color4  = #105986
-color12 = #4787b0
+color4  = #0d6499
+color12 = #3795d2
 
 # magenta
 color5  = #6730cd
 color13 = #8a22ce
 
 # cyan
-color6  = #093932
-color14 = #118574
+color6  = #1b8374
+color14 = #1edabf
 
 # white
 color7  = #2c3f49
