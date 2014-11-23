@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'vim-scripts/TagHighlight'      " Hightlight functions and class variables
 
 " Utility
-        Plug 'Raimondi/delimitMate'    " Really crappy automatic closing (TODO replace)
+        Plug 'jiangmiao/auto-pairs'    " Handle pairs
         Plug 'SirVer/ultisnips'        " Superb snippet support
         Plug 'Valloric/YouCompleteMe'  " Semantic autocompleter and diagnostic server
         Plug 'godlygeek/tabular'       " Meh alignment plugin (TODO replace with vim-easy-align)
@@ -29,6 +29,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'tmhedberg/matchit'       " Superb extension for % commands
         Plug 'tpope/vim-fugitive'      " Best vim git wrapper
         Plug 'tpope/vim-surround'      " Powerful plugin to man handle surroundings
+        Plug 'tpope/vim-commentary'    " Commenting on steroids
 
 " Miscellaneous
         Plug 'wlue/vim-dm-syntax' " Dream maker syntax
