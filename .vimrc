@@ -6,31 +6,32 @@
 
 call plug#begin('~/.vim/plugged')
 
-" Rice
+" Colourschemes
         Plug 'altercation/vim-colors-solarized'
-        Plug 'bling/vim-airline'
-        Plug 'jaxbot/semantic-highlight.vim'
-        Plug 'nanotech/jellybeans.vim'
-        Plug 'scrooloose/nerdtree'
-        Plug 'tomasr/molokai'
-        Plug 'vim-scripts/TagHighlight'
         Plug 'nyanpasu/suwako'
+        Plug 'tomasr/molokai'
+
+" Rice
+        Plug 'bling/vim-airline'             " Status line
+        Plug 'jaxbot/semantic-highlight.vim' " Highlight variables with rainbow diarrhea
+        Plug 'vim-scripts/TagHighlight'      " Hightlight functions and class variables
 
 " Utility
-        Plug 'Raimondi/delimitMate'
-        Plug 'SirVer/ultisnips'
-        Plug 'Valloric/YouCompleteMe'
-        Plug 'godlygeek/tabular'
-        Plug 'honza/vim-snippets'
-        Plug 'kien/ctrlp.vim'
-        Plug 'majutsushi/tagbar'
-        Plug 'steffanc/cscopemaps.vim'
-        Plug 'tpope/vim-fugitive'
-        Plug 'tpope/vim-surround'
-        Plug 'tmhedberg/matchit'
+        Plug 'Raimondi/delimitMate'    " Really crappy automatic closing (TODO replace)
+        Plug 'SirVer/ultisnips'        " Superb snippet support
+        Plug 'Valloric/YouCompleteMe'  " Semantic autocompleter and diagnostic server
+        Plug 'godlygeek/tabular'       " Meh alignment plugin (TODO replace with vim-easy-align)
+        Plug 'honza/vim-snippets'      " Complement to ultisnips that provide actual snippets (TODO fork and apply own snippets)
+        Plug 'kien/ctrlp.vim'          " Fuzzy based file search
+        Plug 'majutsushi/tagbar'       " Display buffer tags in window
+        Plug 'scrooloose/nerdtree'     " Neato file browser for when ctrl-P and file explorer suck
+        Plug 'steffanc/cscopemaps.vim' " cscope vim key mappings
+        Plug 'tmhedberg/matchit'       " Superb extension for % commands
+        Plug 'tpope/vim-fugitive'      " Best vim git wrapper
+        Plug 'tpope/vim-surround'      " Powerful plugin to man handle surroundings
 
 " Miscellaneous
-        Plug 'wlue/vim-dm-syntax'
+        Plug 'wlue/vim-dm-syntax' " Dream maker syntax
 
 call plug#end()
 
