@@ -78,19 +78,18 @@ map <F10> :TagbarToggle<CR>
 nnoremap <silent> <C-l> :set hls!<CR>
 " Toggle listchars
 nnoremap <silent> <C-k> :set list!<CR>
-nnoremap <Leader>t "=strftime("%H:%M:%S")<CR>P
 
 set pastetoggle=<F2>
 
+if exists(":Tabularize")
+  nmap <Leader>t= :Tabularize /=<CR>
+  vmap <Leader>t= :Tabularize /=<CR>
+  nmap <Leader>t: :Tabularize /:\zs<CR>
+  vmap <Leader>t: :Tabularize /:\zs<CR>
+endif
+
 " }}}
 " {{{ Plugins config
-
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
 
 let g:ycm_add_preview_to_completeopt                = 1
 let g:ycm_auto_trigger                              = 1
