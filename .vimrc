@@ -54,7 +54,6 @@ set shortmess+=|   " Disable hit-enter prompts
 set t_Co=256       " Enable 256-color mode
 set smartcase      " Smart searching. Lowercase -> case insensitive search; Uppercase -> case sensitive search
 set ignorecase     " So that smart searching works
-set hlsearch       " Highlight as you search
 set modeline       " Enabled modeline
 
 set tags +=/usr/include
@@ -75,8 +74,8 @@ map <F8> :tabn<CR>
 
 map <F9> :NERDTreeToggle<CR>
 map <F10> :TagbarToggle<CR>
-" Disable search highlights
-nnoremap <silent> <C-l> : <C-u> nohlsearch <CR><C-l>
+" Toggle search highlights
+nnoremap <silent> <C-l> :set hls!<CR>
 " Toggle listchars
 nnoremap <silent> <C-k> :set list!<CR>
 nnoremap <Leader>t "=strftime("%H:%M:%S")<CR>P
