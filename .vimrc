@@ -100,9 +100,11 @@ let g:ycm_complete_in_comments                      = 1
 let g:ycm_confirm_extra_conf                        = 0
 let g:ycm_error_symbol                              = '⛔'
 let g:ycm_warning_symbol                            = '⛔'
+let g:ycm_enable_diagnostic_signs                   = 1
 let g:ycm_global_ycm_extra_conf                     = '~/.ycm_extra_conf.py'
 let g:ycm_seed_identifiers_with_syntax              = 1
 let g:ycm_use_ultisnips_completer                   = 1
+let g:ycm_filepath_completion_use_working_dir       = 0
 
 let g:UltiSnipsUsePythonVersion    = 2 " Holy shit, I spent two hours trying to get this to just werk.
 let g:UltiSnipsExpandTrigger       = "<c-y>"
