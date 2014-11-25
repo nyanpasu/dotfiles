@@ -9,7 +9,6 @@ fi
 # Some missing env variable
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
-export LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:*.deb=90'
 export X_RUNNING=true
 
 # Keyboard layout
