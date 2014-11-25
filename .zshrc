@@ -182,8 +182,8 @@ setopt AUTO_CD
 # {{{ Custom functions 
 # Stream to Twitch
 function streaming() {
-        INRES="1400x900" # input resolution
-        OUTRES="1400x900" # output resolution
+        INRES="1920x1080" # input resolution
+        OUTRES="1920x1080" # output resolution
         FPS="15" # target FPS
         GOP="30" # i-frame interval, should be double of FPS, 
         GOPMIN="15" # min i-frame interval, should be equal to fps, 
@@ -192,9 +192,13 @@ function streaming() {
         QUALITY="ultrafast"  # one of the many FFMPEG preset
         AUDIO_RATE="44100"
         STREAM_KEY="$1" # use the terminal command Streaming streamkeyhere to stream your video to twitch or justin
-        SERVER="live-sin-backup" # twitch server in frankfurt, see http://bashtech.net/twitch/ingest.php for list
+        SERVER="live-sin-backup"
 
-        ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i :0.0 -f alsa -i default -f flv -ac 2 -ar $AUDIO_RATE \
+        #ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i :1.0 -f alsa -i default -f flv -ac 2 -ar $AUDIO_RATE \
+        #        -vcodec libx264 -g $GOP -keyint_min $GOPMIN -b:v $CBR -minrate $CBR -maxrate $CBR -pix_fmt yuv420p\
+        #        -s $OUTRES -preset $QUALITY -tune film -acodec libmp3lame -threads $THREADS -strict normal \
+        #        -bufsize $CBR "rtmp://$SERVER.twitch.tv/app/$STREAM_KEY"
+        ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i :1.0 -f flv -ac 2 -ar $AUDIO_RATE \
                 -vcodec libx264 -g $GOP -keyint_min $GOPMIN -b:v $CBR -minrate $CBR -maxrate $CBR -pix_fmt yuv420p\
                 -s $OUTRES -preset $QUALITY -tune film -acodec libmp3lame -threads $THREADS -strict normal \
                 -bufsize $CBR "rtmp://$SERVER.twitch.tv/app/$STREAM_KEY"
