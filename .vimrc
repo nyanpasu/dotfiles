@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'tpope/vim-fugitive'      " Best vim git wrapper
         Plug 'tpope/vim-surround'      " Powerful plugin to man handle surroundings
         Plug 'tpope/vim-commentary'    " Commenting on steroids
+        Plug 'michaeljsmith/vim-indent-object'
 
 " Miscellaneous
         Plug 'wlue/vim-dm-syntax' " Dream maker syntax
