@@ -161,27 +161,27 @@ color9  = #e24444
 
 # green
 color2  = #066006
-color10 = #30b330
+color10 = #afd700
 
 # yellow
 color3  = #885740
 color11 = #a18e77
 
 # blue
-color4  = #0d6499
+color4  = #007bb9
 color12 = #3795d2
 
 # magenta
-color5  = #6730cd
-color13 = #883088
+color5  = #663366
+color13 = #886688
 
 # cyan
 color6  = #1b8374
-color14 = #29c5c9
+color14 = #22cccc
 
 # white
-color7  = #2c3f49
-color15 = #466d74
+color7  = #aa88dd
+color15 = #ccbbee
 
 [hints]
 #font                                                              = PragmataPro
