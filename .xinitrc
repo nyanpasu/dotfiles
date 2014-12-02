@@ -42,7 +42,6 @@ xset m 0 0
 numlockx &
 eval $(cat ~/.fehbg)
 #compton -f &
-tint2 &
 #conky -p 10 &
 dunst &
 
