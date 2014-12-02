@@ -47,5 +47,4 @@ tint2 &
 dunst &
 
 # Start window manager
-sxhkd &
-exec bspwm
+exec herbstluftwm --locked
