@@ -1,30 +1,18 @@
-!  Xcursor
+! vim: fdm=marker
+! {{{ Xcursor
 Xcursor.theme: Vanilla-DMZ
 Xcursor.size:  4 
-
-! Transparency settings of urxvt
-! URxvt.transparent: true
-! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
-URxvt.shading: 20
-
-! Clickable URLs! Yay~
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/firefox-nightly
-URxvt.matcher.button: 1
-
-! Font settings
-URxvt.font: xft:PragmataPro:pixelsize=13,xft:PowerlineSymbols:pixelsize=13
-!URxvt.boldFont: xft:Sauce\ Code\ Powerline\ Bold.otf:pixelsize=10
-!URxvt.letterSpace: -2
-
-! Font fixes
-Xft.autohint: 	0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
-Xft.hinting: 	1
-Xft.antialias: 	1
-Xft.rgba: 	    rgb
-
+! }}}
+! {{{ Font fixes
+Xft.antialias: 1
+Xft.autohint:  0
+Xft.dpi:       96
+Xft.hinting:   0
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba:      rgb
+! }}}
+! {{{ Urxvt rice
 URxvt.fading: false
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
@@ -38,7 +26,41 @@ URxvt*inputMethod: SCIM
 
 URxvt*externalBorder: 2
 
-! Solarized colourscheme
+URxvt.perl-lib: /root/.config/urxvt
+URxvt.perl-ext: default,matcher, tabbed
+
+URxvt.colorUL: #c48181
+
+URxvt*keysym.Home: [1~
+URxvt*keysym.End: [4~
+URxvt*keysym.Delete: [3~
+URxvt*keysym.M-Down:        \033[1;3B
+URxvt*keysym.M-Up:          \033[1;3A
+URxvt*keysym.M-Left:        \033[1;3D
+URxvt*keysym.M-Right:       \033[1;3C
+URxvt*keysym.Control-Up:   \033[1;5A
+URxvt*keysym.Control-Down:    \033[1;5B
+URxvt*keysym.Control-Left:    \033[1;5D
+URxvt*keysym.Control-Right:    \033[1;5C
+
+! Transparency settings of urxvt
+! URxvt.transparent: true
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt.shading: 20
+
+! Clickable URLs!
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/firefox-nightly
+URxvt.matcher.button: 1
+
+! Font settings
+URxvt.font: xft:DejaVuSansMono:pixelsize=13
+!,xft:PowerlineSymbols:pixelsize=13
+!URxvt.boldFont: xft:Sauce\ Code\ Powerline\ Bold.otf:pixelsize=10
+!URxvt.letterSpace: -2
+
+! }}}
+! {{{ Solarized colourscheme
 !
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 !!--------- ------- ---- -------  ----------- ---------- ----------- -----------
@@ -107,20 +129,4 @@ URxvt*pointerColorForeground:S_base1
 !! white dark/light
 *color7: S_base2
 *color15:S_base3
-
-URxvt.perl-lib: /root/.config/urxvt
-URxvt.perl-ext: default,matcher, tabbed
-
-URxvt.colorUL: #c48181
-
-!URxvt*keysym.Home: [1~
-URxvt*keysym.End: [4~
-!URxvt*keysym.Delete: [3~
-!URxvt*keysym.M-Down:        \033[1;3B
-!URxvt*keysym.M-Up:          \033[1;3A
-!URxvt*keysym.M-Left:        \033[1;3D
-!URxvt*keysym.M-Right:       \033[1;3C
-!URxvt*keysym.Control-Up:   \033[1;5A
-!URxvt*keysym.Control-Down:    \033[1;5B
-!URxvt*keysym.Control-Left:    \033[1;5D
-!URxvt*keysym.Control-Right:    \033[1;5C
+! }}}
