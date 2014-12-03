@@ -2,7 +2,9 @@
 # vim: fdm=marker
 
 # Shorthand alias
-hc() { herbstclient "$@" }
+hc() {
+        herbstclient "$@"
+}
 
 # {{{ Initialise
 hc emit_hook reload
@@ -136,6 +138,8 @@ hc set_attr theme.border_width 2
 hc set_attr theme.inner_color black
 hc set_attr theme.inner_width 0
 
+hc pad 0 20
+
 # }}}
 # {{{ Rules
 
@@ -163,11 +167,6 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # hc detect_monitors
 
 # {{{ Panel
-#panel=~/.config/herbstluftwm/panel.sh
-#[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-#for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-#    # start it on each monitor
-#    "$panel" $monitor &
-#done
+tint2 &
 # }}}
 # }}}

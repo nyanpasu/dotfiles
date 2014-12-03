@@ -27,7 +27,6 @@ xsetroot -cursor_name left_ptr &
 eval $(cat ~/.fehbg)
 numlockx &
 dunst &
-tint2 &
 
 # Start window manager
 exec herbstluftwm --locked
