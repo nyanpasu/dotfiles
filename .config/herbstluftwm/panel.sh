@@ -125,9 +125,9 @@ fi
         # }}}
         # {{{ Window titles (Center)
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
-        # small adjustments
         # }}}
         # {{{ Time and date (Right)
+        # small adjustments
         right="$separator^bg() $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..
@@ -142,16 +142,14 @@ fi
         # - Action is taken depending on the event name.
         # - "Special" events (quit_panel/togglehidepanel/reload) are also handled here.
 
-        # wait for next event
+        # Wait for next event
         IFS=$'\t' read -ra cmd || break
-        # find out event origin
+        # Find out event origin
         case "${cmd[0]}" in
             tag*)
-                #echo "resetting tags" >&2
                 IFS=$'\t' read -ra tags <<< "$(hc tag_status $monitor)"
                 ;;
             date)
-                #echo "resetting date" >&2
                 date="${cmd[@]:1}"
                 ;;
             quit_panel)
