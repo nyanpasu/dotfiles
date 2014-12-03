@@ -1,6 +1,8 @@
 #!/bin/bash
 
 hc() { "${herbstclient_command[@]:-herbstclient}" "$@" ;}
+
+# Config
 monitor=${1:-0}
 geometry=( $(herbstclient monitor_rect "$monitor") )
 if [ -z "$geometry" ] ;then
@@ -11,8 +13,8 @@ fi
 x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
-panel_height=16
-font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+panel_height=20
+font=xft:Open\ Sans\ Condensed:style=Bold:size=9
 bgcolor=$(hc get frame_border_normal_color)
 selbg=$(hc get window_border_active_color)
 selfg='#101010'
@@ -20,7 +22,9 @@ selfg='#101010'
 ####
 # Try to find textwidth binary.
 # In e.g. Ubuntu, this is named dzen2-textwidth.
-if which textwidth &> /dev/null ; then
+if which xftwidth &> /dev/null ; then
+    textwidth="xftwidth";
+elif which textwidth &> /dev/null ; then
     textwidth="textwidth";
 elif which dzen2-textwidth &> /dev/null ; then
     textwidth="dzen2-textwidth";
@@ -28,6 +32,7 @@ else
     echo "This script requires the textwidth tool of the dzen2 project."
     exit 1
 fi
+
 ####
 # true if we are using the svn version of dzen2
 # depending on version/distribution, this seems to have version strings like
