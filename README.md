@@ -1,30 +1,37 @@
-# Files
-##.zshrc
-Breakdown of what it does:
+###.zshrc
 - Assigns modern keyboard keys (HOME/END/PGUP/PGDOWN etc.)
 - Allows you to do bash-like movements (ctrl+<left/right> to move between words)
-- Sets up vim as an editor, so you can ^[ to execute vi-like commands
+- Sets up vim as an editor, so you can ^\[ to execute vi-like commands
 - Enables colours for various coreutils
 - Syntax highlighting
 - Powerline prompt
 - Better auto completion
 
-##.vimrc
+###.vimrc
 ~~Requires [vundle](www.github.com/gmarik/vundle)~~
 Requires [Plug](https://github.com/junegunn/vim-plug) for plugin management
+Requires compilation flags that make vim suitable for any year after 1990
 
-##.emacs
-Still pretty vanilla
+###.weechat
+Requires python+ruby+lua support for scripts
 
-##.weechat
-Assumes you have python+ruby+lua support
+###.config/tint2
+Current panel
+Doesn't use crappy bitmap fonts
+Warm theme based on the suwako colourscheme I made
 
-##.config/bspwm
-Tiling window manager I currently use. Probably switching soon.
+###.config/herbstluftwm
+Current window manager
+Still testing and evaluating
 
-##.config/sxhkd
-The hotkey daemon that was pretty much developed alongside bspwm and goes
-pretty well together.
+###.config/bspwm
+Last tiling window manager I used. Configured to support every useful function
+out of the box with sxhkd
 
-##.config/termite/config
-The term emulator I use, contains my colourschemes and old fonts.
+###.config/sxhkd
+The hotkey daemon that was developed alongside bspwm
+
+Contains hotkeys when I used bspwm
+
+###.config/termite/config
+The terminal emulator I use, contains my old colourschemes and fonts.
