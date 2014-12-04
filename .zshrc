@@ -23,12 +23,14 @@ alias em='emacs'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 
+alias l='ls'
 alias lg='ls | grep'
 alias ll='ls -l'
 alias la='ls -al'
 
 alias pc='pacman'
 alias pcs='pacman -S'
+alias pcss='pacman -Ss'
 alias pcsyu='pacman -Syu'
 
 alias x='startx'
@@ -38,12 +40,12 @@ alias tarx="tar -xvf"
 
 alias clr="clear"
 
-# TODO Consider removing and use git's native aliasing
 alias ga='git add'
 alias gb='git branch'
-alias gck='git checkout'
-alias gckb='git checkout -b'
+alias gci='git commit'
 alias gcln='git clone'
+alias gco='git checkout'
+alias gcob='git checkout -b'
 alias gd='git diff'
 alias gdmom='git diff master origin/master'
 alias gfu='git fetch upstream'
@@ -55,9 +57,10 @@ alias gpom='git push origin master'
 alias gr='git reset'
 alias grao='git remote add origin'
 alias grau='git remote add upstream'
+alias gst='git status'
 
 # }}}
-# {{{ Hotkeys 
+# {{{ Keybinds
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -A key
