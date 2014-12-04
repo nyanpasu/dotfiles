@@ -17,6 +17,9 @@ setxkbmap -option ctrl:swapcaps
 # Keyboard repeat rate
 xset r rate 200 30
 
+# Set mouse acceleration to 0
+xset m 0 0
+
 # Load Xresources
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
