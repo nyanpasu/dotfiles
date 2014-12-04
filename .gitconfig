@@ -1,6 +1,6 @@
 [user]
 	name = nyanpasu
-	email = atago@pomf.se
+	email = nyanpasu@pomf.se
 [credential]
 	helper = cache --timeout=3600
 [push]
