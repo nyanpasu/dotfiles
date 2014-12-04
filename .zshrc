@@ -27,6 +27,10 @@ alias lg='ls | grep'
 alias ll='ls -l'
 alias la='ls -al'
 
+alias pc='pacman'
+alias pcs='pacman -S'
+alias pcsyu='pacman -Syu'
+
 alias x='startx'
 
 alias tart="tar -tvf"
