@@ -9,7 +9,9 @@
 
 ###.vimrc
 ~~Requires [vundle](www.github.com/gmarik/vundle)~~
+
 Requires [Plug](https://github.com/junegunn/vim-plug) for plugin management
+
 Requires compilation flags that make vim suitable for any year after 1990
 
 ###.weechat
@@ -17,11 +19,14 @@ Requires python+ruby+lua support for scripts
 
 ###.config/tint2
 Current panel
+
 Doesn't use crappy bitmap fonts
+
 Warm theme based on the suwako colourscheme I made
 
 ###.config/herbstluftwm
 Current window manager
+
 Still testing and evaluating
 
 ###.config/bspwm
