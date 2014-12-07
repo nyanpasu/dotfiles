@@ -38,6 +38,8 @@ alias x='startx'
 alias tart="tar -tvf"
 alias tarx="tar -xvf"
 
+alias uz="unzip"
+
 alias clr="clear"
 
 alias ga='git add'
