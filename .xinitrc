@@ -31,5 +31,8 @@ eval $(cat ~/.fehbg)
 numlockx &
 dunst &
 
+# Hack to run jvm related programs
+wmname LG3D
+
 # Start window manager
 exec herbstluftwm --locked
