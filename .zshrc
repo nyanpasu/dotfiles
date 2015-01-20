@@ -16,6 +16,7 @@ alias cc99='gcc -O3 -std=c99 -Wall -Wno-unused-parameter -Wextra'
 alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
 alias c11="gcc --std=c11"
 
+alias vi='vim'
 alias vmi='vim'
 alias emacsc='emacsclient -c'
 alias em='emacs'
