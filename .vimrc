@@ -85,6 +85,8 @@ nnoremap <silent> <C-k> :set list!<CR>
 
 set pastetoggle=<F2>
 
+imap ZZ <Esc>ZZ
+
 if exists(":Tabularize")
   nmap <Leader>t= :Tabularize /=<CR>
   vmap <Leader>t= :Tabularize /=<CR>
