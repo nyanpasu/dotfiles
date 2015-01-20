@@ -8,6 +8,14 @@ promptinit
 
 # }}}
 # {{{ Aliases 
+# Navigation
+alias ..='cd ..'
+alias .2='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+# TYPO BEGONE
+alias cd..='cd ..'
+
 # Programming
 alias mk='make'
 alias mkc='make clean'
@@ -18,7 +26,10 @@ alias c11="gcc --std=c11"
 
 # Editors
 alias vi='vim'
+alias ivm='vim'
 alias vmi='vim'
+# vim is lief
+alias v='vim'
 alias emacsc='emacsclient -c'
 alias em='emacs'
 
@@ -37,6 +48,11 @@ alias pc='pacman'
 alias pcs='pacman -S'
 alias pcss='pacman -Ss'
 alias pcsyu='pacman -Syu'
+
+# grep aliases
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
 alias x='startx'
 
@@ -65,6 +81,7 @@ alias gi='git init'
 alias gmum='git merge upstream/master'
 alias gmv='git mv'
 alias gp='git push'
+alias gpull='git pull'
 alias gpom='git push origin master'
 alias gr='git reset'
 alias grao='git remote add origin'
