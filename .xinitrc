@@ -35,4 +35,6 @@ dunst &
 wmname LG3D
 
 # Start window manager
-exec herbstluftwm --locked
+tint2 &
+sxhkd &
+exec bspwm
