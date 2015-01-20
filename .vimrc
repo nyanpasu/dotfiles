@@ -2,8 +2,7 @@
 " vim:set et fdm=marker:
 
 " {{{ Plugins 
-" To install vim-plug: curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
+" To install vim-plug: curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 call plug#begin('~/.vim/plugged')
 
 " Colourschemes
@@ -19,7 +18,7 @@ call plug#begin('~/.vim/plugged')
 " Utility
         Plug 'jiangmiao/auto-pairs'    " Handle pairs
         Plug 'SirVer/ultisnips'        " Superb snippet support
-        Plug 'Valloric/YouCompleteMe'  " Semantic autocompleter and diagnostic server
+        "Plug 'Valloric/YouCompleteMe'  " Semantic autocompleter and diagnostic server
         Plug 'godlygeek/tabular'       " Meh alignment plugin (TODO replace with vim-easy-align)
         Plug 'honza/vim-snippets'      " Complement to ultisnips that provide actual snippets (TODO fork and apply own snippets)
         Plug 'kien/ctrlp.vim'          " Fuzzy based file search
@@ -32,6 +31,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'tpope/vim-commentary'    " Commenting on steroids
         Plug 'michaeljsmith/vim-indent-object'
         Plug 'Lokaltog/vim-easymotion' " Lightning fast movement
+        Plug 'klen/python-mode'        " Feature rich python development
 
 " Miscellaneous
         Plug 'wlue/vim-dm-syntax' " Dream maker syntax
@@ -120,6 +120,53 @@ let Tlist_Use_Right_Window = 1
 let g:airline_powerline_fonts            = 1
 let g:airline#extensions#tabline#enabled = 1
 
+" {{{ Python-mode
+" Activate rope
+" Keys:
+" K             Show python docs
+" <Ctrl-Space>  Rope autocomplete
+" <Ctrl-c>g     Rope goto definition
+" <Ctrl-c>d     Rope show documentation
+" <Ctrl-c>f     Rope find occurrences
+" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
+" [[            Jump on previous class or function (normal, visual, operator modes)
+" ]]            Jump on next class or function (normal, visual, operator modes)
+" [M            Jump on previous class or method (normal, visual, operator modes)
+" ]M            Jump on next class or method (normal, visual, operator modes)
+let g:pymode_rope = 1
+
+" Documentation
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+
+" Linting
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+" Auto check on save
+let g:pymode_lint_write = 1
+
+" Support virtualenv
+let g:pymode_virtualenv = 1
+
+" Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_key = '<leader>b'
+
+"" syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" Don't autofold code
+let g:pymode_folding = 0
+
+" General
+let g:pymode                  = 1
+let g:pymode_warnings         = 1
+let g:pymode_trim_whitespaces = 1
+let g:pymode_options          = 1
+" }}}
 " }}}
 " {{{ Rice
 
