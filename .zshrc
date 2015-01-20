@@ -16,19 +16,23 @@ alias cc99='gcc -O3 -std=c99 -Wall -Wno-unused-parameter -Wextra'
 alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
 alias c11="gcc --std=c11"
 
+# Editors
 alias vi='vim'
 alias vmi='vim'
 alias emacsc='emacsclient -c'
 alias em='emacs'
 
+# Common configs
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 
+# ls aliases
 alias l='ls'
 alias lg='ls | grep'
 alias ll='ls -l'
 alias la='ls -al'
 
+# pacman aliases
 alias pc='pacman'
 alias pcs='pacman -S'
 alias pcss='pacman -Ss'
@@ -36,13 +40,18 @@ alias pcsyu='pacman -Syu'
 
 alias x='startx'
 
+# Archive
 alias tart="tar -tvf"
 alias tarx="tar -xvf"
 
 alias uz="unzip"
 
+# zsh things
 alias clr="clear"
 
+alias reload='source ~/.zshrc'
+
+# Git
 alias ga='git add'
 alias gb='git branch'
 alias gci='git commit'
@@ -62,6 +71,8 @@ alias grao='git remote add origin'
 alias grau='git remote add upstream'
 alias gst='git status'
 
+# Systemd
+alias sctl='systemctl'
 # }}}
 # {{{ Keybinds
 # create a zkbd compatible hash;
