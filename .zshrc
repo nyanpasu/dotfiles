@@ -9,10 +9,12 @@ promptinit
 # }}}
 # {{{ Aliases 
 # Navigation
+alias c='cd'
+alias u='cd ..'
 alias ..='cd ..'
-alias .2='cd ../../'
-alias .3='cd ../../../'
-alias .4='cd ../../../../'
+alias u2='cd ../../'
+alias u3='cd ../../../'
+alias u4='cd ../../../../'
 # TYPO BEGONE
 alias cd..='cd ..'
 
