@@ -31,8 +31,8 @@ eval $(cat ~/.fehbg)
 numlockx &
 dunst &
 
-# Hack to run jvm related programs
-wmname LG3D
+# Set positions
+xrandr --output DVI-D-0 --right-of HDMI-0
 
 # Start window manager
 tint2 &
