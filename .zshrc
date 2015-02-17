@@ -48,8 +48,11 @@ alias la='ls -al'
 # pacman aliases
 alias pc='pacman'
 alias pcs='pacman -S'
+alias pcu='pacman -U'
 alias pcss='pacman -Ss'
+alias pcsy='pacman -Sy'
 alias pcsyu='pacman -Syu'
+alias pcr='pacman -R'
 
 # grep aliases
 alias grep='grep --color=auto'
