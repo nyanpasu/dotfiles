@@ -5,6 +5,7 @@ autoload -U compinit promptinit
 compinit
 zstyle ':completion:*' menu select
 promptinit
+source /etc/profile.d/rvm.sh
 
 # }}}
 # {{{ Aliases 
@@ -69,8 +70,11 @@ alias uz="unzip"
 
 # zsh things
 alias clr="clear"
-
 alias reload='source ~/.zshrc'
+
+# Relative shortcuts (TMP)
+alias gopkg="cd ./packaging/standalone/target"
+alias gocfg="cd ./webapps/ROOT/WEB-INF/classes/"
 
 # Git
 alias ga='git add'
@@ -95,6 +99,10 @@ alias gst='git status'
 
 # Systemd
 alias sctl='systemctl'
+
+# Werk
+alias tf='tail -f'
+alias clipboard='VBoxClient --clipboard'
 # }}}
 # {{{ Keybinds
 # create a zkbd compatible hash;
