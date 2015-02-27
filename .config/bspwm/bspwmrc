@@ -1,5 +1,20 @@
 #! /bin/sh
 
+# Customisation
+bspc config active_border_color   "#224455"
+bspc config focused_border_color  "#AA88CC"
+bspc config normal_border_color   "#224455"
+bspc config presel_border_color   "#BB9988"
+
+bspc config border_width          3
+bspc config top_padding           22
+bspc config window_gap            8
+
+bspc config adaptative_raise      true
+bspc config borderless_monocle    false
+bspc config focus_follows_pointer true
+bspc config gapless_monocle       false
+
 # Main config
 bspc monitor VBOX0 --add-desktops 1 2 3 4
 bspc monitor VBOX1 --add-desktops 5 6 7 8 9
@@ -13,32 +28,16 @@ bspc monitor VGA-1 --add-desktops 5 6 7 8 9
 bspc monitor VGA-0 --remove-desktops Desktop1
 bspc monitor VGA-1 --remove-desktops Desktop2
 
-bspc config border_width        1
-bspc config window_gap          16
-
-bspc config borderless_monocle  false
-bspc config gapless_monocle     false
-bspc config adaptative_raise    true
-
-bspc config focus_follows_pointer true
-
-bspc config top_padding 22
-
 # Default desktop rules
-bspc rule -a Chromium desktop=^2
+bspc rule -a Chromium   desktop=^2
 bspc rule -a Clementine desktop=^9
-bspc rule -a Eclipse desktop=^3
-bspc rule -a Firefox desktop=^2
+bspc rule -a Eclipse    desktop=^3
+bspc rule -a Firefox    desktop=^2
 
 # Default floating rules
-bspc rule -a Dwarf\ Fortress floating=on
-bspc rule -a Gimp desktop=^8 floating=on
+bspc rule -a Dwarf\ Fortress  floating=on
+bspc rule -a Gimp             floating=on
 bspc rule -a No$gba\ Emulator floating=on
-bspc rule -a spring desktop=5 floating=on
-bspc rule -a mplayer2 floating=on
-bspc rule -a mpv floating=on
-
-# Colour config
-bspc config active_border_color #12333C
-bspc config normal_border_color #12333C
-bspc config focused_border_color #2F4D54
+bspc rule -a spring           floating=on
+bspc rule -a mplayer2         floating=on
+bspc rule -a mpv              floating=on
