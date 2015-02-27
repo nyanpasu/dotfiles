@@ -1,191 +1,117 @@
+# {{{ Options
 [options]
-resize_grip         = false
-scroll_on_output    = false
+
+font = Source Code Pro for Powerline 10
+#font = Literation Mono Powerline 10
+#font = Anonymice Powerline 10
+#font = Monaco for Powerline 9
+#font = Oxygen Mono 10
+#font = PragmataPro 9
+#font = SourceCodePro 9
+#font = Consolas 9
+#font = FantasqueSansMono 10
+#font = M+1p 10
+
+allow_bold = true
+audible_bell = false
+clickable_url = true
+dynamic_title = true
+geometry = 635x347
+icon_name = terminal
+mouse_autohide = false
+resize_grip = false
 scroll_on_keystroke = true
-audible_bell        = false
-visible_bell        = false
-mouse_autohide      = false
-allow_bold          = true
-dynamic_title       = true
-urgent_on_bell      = true
-clickable_url       = true
-scrollback_lines    = 1000
-search_wrap         = true
-icon_name           = terminal
-geometry            = 635x347
-font                = DejaVuSansMono 9
-#font               = Literation Mono Powerline 10
-#font               = Anonymice Powerline 10
-#font               = Monaco for Powerline 9
-#font               = Oxygen Mono 10
-#font               = PragmataPro 9
-#font               = SourceCodePro 9
-#font               = Consolas 9
-#font               = FantasqueSansMono 10
-#font               = M+1p 10
+scroll_on_output = false
+scrollback_lines = 1000
+search_wrap = true
+urgent_on_bell = true
+visible_bell = false
 
-# 0.0: opaque, 1.0: transparent
-transparency        = 0.0
-pseudo_transparency = false
-
-# "system", "on" or "off"
-cursor_blink = system
-
-# "block", "underline" or "ibeam"
-cursor_shape = block
-
-# $BROWSER is used by default
 browser = firefox
+cursor_blink = system
+cursor_shape = block
+pseudo_transparency = false
+transparency = 0.0
+word_chars = -A-Za-z0-9,./?%&#:_ =+@~
 
-# word characters used for word selection
-# (default if unset: all graphic non-punctuation/space characters)
-#word_chars                                                        = -A-Za-z0-9,./?%&#:_ = +@~
+# }}}
+# {{{ Colours
+# {{{ Solarized
 
-# COLOURS
+foreground = #839496
+foreground_bold = #657b83
+foreground_dim = #002b36
 
-#
-# SOLARIZED
-#
+# Light
+background = #eee8d5
+# Dark
+background = #002b36
 
-###########
-# SOLARIZED REF.
-#
-#S_base03        #002b36
-#S_base02        #073642
-#S_base01        #586e75
-#S_base00        #657b83
-#S_base0         #839496
-#S_base1         #93a1a1
-#S_base2         #eee8d5
-#S_base3         #fdf6e3
-
-#background:            S_base03
-#foreground:            S_base00
-#####
-
-[colors]
-foreground                                                         = #839496
-foreground_bold                                                    = #657b83
-foreground_dim                                                     = #002b36
-# Light.
-#background                                                         = #eee8d5
-# Dark.
-background                                                         = #002b36
-cursor                                                             = #93a1a1
-
-# if unset, will reverse foreground and background
-highlight                                                         = #2f2f2f
-
-# colors from color0 to color254 can be set
-color0                                                             = #073642
-color1                                                             = #dc322f
-color2                                                             = #859900
-color3                                                             = #b58900
-color4                                                             = #268bd2
-color5                                                             = #d33682
-color6                                                             = #2aa198
-color7                                                             = #eee8d5
-color8                                                             = #002b36
-color9                                                             = #cb4b16
-color10                                                            = #586e75
-color11                                                            = #657b83
-color12                                                            = #839496
-color13                                                            = #6c71c4
-color14                                                            = #93a1a1
-color15                                                            = #fdf6e3
-
-#
-# END SOLARIZED
-#
-
-#
-# MOLOKAI
-#
+cursor = #93a1a1
+color0 = #073642
+color1 = #dc322f
+color2 = #859900
+color3 = #b58900
+color4 = #268bd2
+color5 = #d33682
+color6 = #2aa198
+color7 = #eee8d5
+color8 = #002b36
+color9 = #cb4b16
+color10 = #586e75
+color11 = #657b83
+color12 = #839496
+color13 = #6c71c4
+color14 = #93a1a1
+color15 = #fdf6e3
+# }}}
+# {{{ Molokai
 
 # terminal colours
-foreground           = #CCCCCC
-background           = #272721
+foreground = #CCCCCC
+background = #272721
 
-#black darkgray
-color0               = #1B1D1E
-color8               = #808080
-#darkred red
-color1               = #FF0044
-color9               = #F92672
-#darkgreen green
-color2               = #82B414
-color10              = #A6E22E
-#darkyellow yellow
-color3               = #FD971F
-color11              = #E6DB74
-#darkblue blue
-color4               = #266C98
-color12              = #7070F0
-#darkmagenta magenta
-color5               = #AC0CB1
-color13              = #D63AE1
-#darkcyan cyan
-color6               = #AE81FF
-color14              = #66D9EF
-#gray white
-color7               = #CCCCCC
-color15              = #F8F8F2
-
-#
-# END MOLOKAI
-#
-
-#
-# SUWAKO
-#
+color0 = #1B1D1E
+color1 = #FF0044
+color2 = #82B414
+color3 = #FD971F
+color4 = #266C98
+color5 = #AC0CB1
+color6 = #AE81FF
+color7 = #CCCCCC
+color8 = #808080
+color9 = #F92672
+color10 = #A6E22E
+color11 = #E6DB74
+color12 = #7070F0
+color13 = #D63AE1
+color14 = #66D9EF
+color15 = #F8F8F2
+# }}}
+# {{{ Suwako (current)
 
 [colors]
 
-# special
-foreground      = #3e2b62
-foreground_bold = #3e2b62
-cursor          = #3e2b62
-background      = #e0dde0
-
-# black
-color0  = #1c1c24
-color8  = #303030
-
-# red
-color1  = #e22828
-color9  = #e24444
-
-# green
-color2  = #066006
-color10 = #44b811
-
-# yellow
-color3  = #704433
-color11 = #907766
-
-# blue
-color4  = #007bb9
-color12 = #3795d2
-
-# magenta
-color5  = #7733aa
-color13 = #6e5283
-
-# cyan
-color6  = #1b8374
-color14 = #22cccc
-
-# white
-color7  = #aa88dd
-color15 = #ccbbee
-
+cursor = #3e2b62
 highlight = #2f2149
-
-[hints]
-#font                                                              = PragmataPro
-#foreground                                                        = #dcdccc
-#background                                                        = #3f3f3f
-#padding                                                           = 2
-#border                                                            = #3f3f3f
-#border_width                                                      = 0.5
-#roundness                                                         = 2.0
+foreground = #3e2b62
+background = #e0dde0
+color0 = #1c1c24
+color1 = #e22828
+color2 = #066006
+color3 = #704433
+color4 = #007bb9
+color5 = #7733aa
+color6 = #1b8374
+color7 = #aa88dd
+color8 = #303030
+color9 = #e24444
+color10 = #44b811
+color11 = #907766
+color12 = #3795d2
+color13 = #6e5283
+color14 = #22cccc
+color15 = #ccbbee
+# }}}
+# }}}
+# vim: ft=config fdm=marker
