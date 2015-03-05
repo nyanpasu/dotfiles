@@ -5,8 +5,10 @@ import argparse
 import os
 import sys
 
+
 def warn(msg):
     print '[powerline-bash] ', msg
+
 
 class Powerline:
     symbols = {
@@ -15,8 +17,8 @@ class Powerline:
             'separator_thin': u'\u276F'
         },
         'patched': {
-            #'separator': u'\u2B80',
-            #'separator_thin': u'\u2B81'
+            # 'separator': u'\u2B80',
+            # 'separator_thin': u'\u2B81'
             'separator': u'',
             'separator_thin': u''
         },
@@ -53,11 +55,12 @@ class Powerline:
 
     def append(self, content, fg, bg, separator=None, separator_fg=None):
         self.segments.append((content, fg, bg, separator or self.separator,
-            separator_fg or bg))
+                              separator_fg or bg))
 
     def draw(self):
-        return (''.join(self.draw_segment(i) for i in range(len(self.segments)))
-                + self.reset).encode('utf-8')
+        return (''.join(self.draw_segment(i) for i in
+                        range(len(self.segments))) +
+                self.reset).encode('utf-8')
 
     def draw_segment(self, idx):
         segment = self.segments[idx]
@@ -70,6 +73,7 @@ class Powerline:
             self.bgcolor(next_segment[2]) if next_segment else self.reset,
             self.fgcolor(segment[4]),
             segment[3]))
+
 
 def get_valid_cwd():
     """ We check if the current working directory is valid or not. Typically
@@ -92,23 +96,24 @@ def get_valid_cwd():
         except:
             warn("Your current directory is invalid.")
             sys.exit(1)
-        warn("Your current directory is invalid. Lowest valid directory: " + up)
+        warn("Your current directory is invalid. Lowest valid directory: " +
+             up)
     return cwd
 
 
 if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument('--cwd-only', action='store_true',
-            help='Only show the current directory')
+                            help='Only show the current directory')
     arg_parser.add_argument('--cwd-max-depth', action='store', type=int,
-            default=5, help='Maximum number of directories to show in path')
+                            default=5, help='Maximum number of directories to show in path')
     arg_parser.add_argument('--mode', action='store', default='patched',
-            help='The characters used to make separators between segments',
-            choices=['patched', 'compatible', 'flat'])
+                            help='The characters used to make separators between segments',
+                            choices=['patched', 'compatible', 'flat'])
     arg_parser.add_argument('--shell', action='store', default='bash',
-            help='Set this to your shell type', choices=['bash', 'zsh'])
+                            help='Set this to your shell type', choices=['bash', 'zsh'])
     arg_parser.add_argument('prev_error', nargs='?', type=int, default=0,
-            help='Error code returned by the last command')
+                            help='Error code returned by the last command')
     args = arg_parser.parse_args()
 
     powerline = Powerline(args, get_valid_cwd())
@@ -119,7 +124,7 @@ class Color:
     USERNAME_BG = 240
 
     HOSTNAME_FG = 250
-    HOSTNAME_BG = 3 # dark yellow
+    HOSTNAME_BG = 3  # dark yellow
 
     PATH_BG = 11  # light yellow
     PATH_FG = 250  # light grey
@@ -143,8 +148,6 @@ class Color:
     VIRTUAL_ENV_FG = 00
 
 
-import os
-
 def add_virtual_env_segment():
     env = os.getenv('VIRTUAL_ENV')
     if env is None:
@@ -164,10 +167,10 @@ def add_username_segment():
         'zsh': ' %n'
     }
     powerline.append(user_prompts[powerline.args.shell], Color.USERNAME_FG,
-            Color.USERNAME_BG)
+                     Color.USERNAME_BG)
 
 # Disabled on 25 July 2014
-#add_username_segment()
+# add_username_segment()
 
 
 def add_hostname_segment():
@@ -176,12 +179,11 @@ def add_hostname_segment():
         'zsh': ' %m'
     }
     powerline.append(host_prompts[powerline.args.shell], Color.HOSTNAME_FG,
-            Color.HOSTNAME_BG)
+                     Color.HOSTNAME_BG)
 
-add_hostname_segment()
+# Disabled on 4th March 2015
+# add_hostname_segment()
 
-
-import os
 
 def get_short_path(cwd):
     home = os.getenv('HOME')
@@ -206,7 +208,7 @@ def add_cwd_segment():
     if not powerline.args.cwd_only:
         for n in names[:-1]:
             powerline.append(' %s ' % n, Color.PATH_FG, Color.PATH_BG,
-                    powerline.separator_thin, Color.SEPARATOR_FG)
+                             powerline.separator_thin, Color.SEPARATOR_FG)
     powerline.append(' %s ' % names[-1], Color.CWD_FG, Color.PATH_BG)
 
 add_cwd_segment()
@@ -215,15 +217,16 @@ add_cwd_segment()
 import re
 import subprocess
 
+
 def get_git_status():
     has_pending_commits = True
     has_untracked_files = False
     origin_position = ""
     output = subprocess.Popen(['git', 'status', '--ignore-submodules'],
-            stdout=subprocess.PIPE).communicate()[0]
+                              stdout=subprocess.PIPE).communicate()[0]
     for line in output.split('\n'):
         origin_status = re.findall(
-                r"Your branch is (ahead|behind).*?(\d+) comm", line)
+            r"Your branch is (ahead|behind).*?(\d+) comm", line)
         if origin_status:
             origin_position = " %d" % int(origin_status[0][1])
             if origin_status[0][0] == 'behind':
@@ -239,9 +242,11 @@ def get_git_status():
 
 
 def add_git_segment():
-    #cmd = "git branch 2> /dev/null | grep -e '\\*'"
-    p1 = subprocess.Popen(['git', 'branch', '--no-color'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    p2 = subprocess.Popen(['grep', '-e', '\\*'], stdin=p1.stdout, stdout=subprocess.PIPE)
+    # cmd = "git branch 2> /dev/null | grep -e '\\*'"
+    p1 = subprocess.Popen(['git', 'branch', '--no-color'],
+                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    p2 = subprocess.Popen(['grep', '-e', '\\*'], stdin=p1.stdout,
+                          stdout=subprocess.PIPE)
     output = p2.communicate()[0].strip()
     if not output:
         return
@@ -268,15 +273,15 @@ except subprocess.CalledProcessError:
     pass
 
 
-import os
 import subprocess
+
 
 def get_hg_status():
     has_modified_files = False
     has_untracked_files = False
     has_missing_files = False
     output = subprocess.Popen(['hg', 'status'],
-            stdout=subprocess.PIPE).communicate()[0]
+                              stdout=subprocess.PIPE).communicate()[0]
     for line in output.split('\n'):
         if line == '':
             continue
@@ -287,6 +292,7 @@ def get_hg_status():
         else:
             has_modified_files = True
     return has_modified_files, has_untracked_files, has_missing_files
+
 
 def add_hg_segment():
     branch = os.popen('hg branch 2> /dev/null').read().rstrip()
@@ -309,23 +315,23 @@ def add_hg_segment():
 add_hg_segment()
 
 
-import subprocess
-
 def add_svn_segment():
-    is_svn = subprocess.Popen(['svn', 'status'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    is_svn = subprocess.Popen(['svn', 'status'], stdout=subprocess.PIPE,
+                              stderr=subprocess.PIPE)
     is_svn_output = is_svn.communicate()[1].strip()
     if len(is_svn_output) != 0:
         return
 
-    #"svn status | grep -c "^[ACDIMRX\\!\\~]"
+    # "svn status | grep -c "^[ACDIMRX\\!\\~]"
     p1 = subprocess.Popen(['svn', 'status'], stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE)
+                          stderr=subprocess.PIPE)
     p2 = subprocess.Popen(['grep', '-c', '^[ACDIMR\\!\\~]'],
-            stdin=p1.stdout, stdout=subprocess.PIPE)
+                          stdin=p1.stdout, stdout=subprocess.PIPE)
     output = p2.communicate()[0].strip()
     if len(output) > 0 and int(output) > 0:
         changes = output.strip()
-        powerline.append(' %s ' % changes, Color.SVN_CHANGES_FG, Color.SVN_CHANGES_BG)
+        powerline.append(' %s ' % changes, Color.SVN_CHANGES_FG,
+                         Color.SVN_CHANGES_BG)
 
 try:
     add_svn_segment()
@@ -335,8 +341,8 @@ except subprocess.CalledProcessError:
     pass
 
 
-import os
 import subprocess
+
 
 def get_fossil_status():
     has_modified_files = False
@@ -348,6 +354,7 @@ def get_fossil_status():
     has_modified_files = 'EDITED' in output
 
     return has_modified_files, has_untracked_files, has_missing_files
+
 
 def add_fossil_segment():
     subprocess.Popen(['fossil'], stdout=subprocess.PIPE).communicate()[0]
@@ -390,7 +397,7 @@ def add_root_indicator_segment():
         bg = Color.CMD_FAILED_BG
     powerline.append(root_indicators[powerline.args.shell], fg, bg)
 
-#add_root_indicator_segment()
+# add_root_indicator_segment()
 
 
 sys.stdout.write(powerline.draw())
