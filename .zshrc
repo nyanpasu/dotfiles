@@ -12,6 +12,7 @@ source /etc/profile.d/rvm.sh
 # Navigation
 alias c='cd'
 alias u='cd ..'
+alias b='cd -'
 alias ..='cd ..'
 alias u2='cd ../../'
 alias u3='cd ../../../'
@@ -28,11 +29,12 @@ alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
 alias c11="gcc --std=c11"
 
 # Editors
-alias vi='vim'
-alias ivm='vim'
-alias vmi='vim'
+alias vi='emacsclient -nw'
+alias ivm='emacsclient -nw'
+alias vmi='emacsclient -nw'
+alias vim='emacsclient -nw'
 # vim is lief
-alias v='vim'
+alias v='emacsclient -nw'
 alias emacsc='emacsclient -c'
 alias em='emacs'
 
@@ -103,6 +105,7 @@ alias sctl='systemctl'
 # Werk
 alias tf='tail -f'
 alias clipboard='VBoxClient --clipboard'
+alias compfast='mvn install -Dmaven.test.skip=true -Dmaven.findbugs.skip=true'
 # }}}
 # {{{ Keybinds
 # create a zkbd compatible hash;
