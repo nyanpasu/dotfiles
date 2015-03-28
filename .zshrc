@@ -1,10 +1,13 @@
-# 2014
+# 2014 - 2015
 # vim:set et fdm=marker:
 # {{{ Initialisation 
 autoload -U compinit promptinit
 compinit
 zstyle ':completion:*' menu select
 promptinit
+
+# TMP Work
+# Comment to disable rvm
 source /etc/profile.d/rvm.sh
 
 # }}}
@@ -29,14 +32,15 @@ alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
 alias c11="gcc --std=c11"
 
 # Editors
-alias vi='emacsclient -nw'
-alias ivm='emacsclient -nw'
-alias vmi='emacsclient -nw'
-alias vim='emacsclient -nw'
-# vim is lief
-alias v='emacsclient -nw'
-alias emacsc='emacsclient -c'
+alias vi='emacsclient -a "" -t'
+alias ivm='emacsclient -a "" -t'
+alias vmi='emacsclient -a "" -t'
+alias vim='emacsclient -a "" -t'
+# emacs is lief
+alias v='emacsclient -a "" -t'
 alias em='emacs'
+alias emacs='emacsclient -a "" -c'
+alias emacsc='emacsclient -a "" -c'
 
 # Common configs
 alias vimrc='vim ~/.vimrc'
@@ -104,12 +108,12 @@ alias sctl='systemctl'
 
 # Werk
 alias tf='tail -f'
-alias clipboard='VBoxClient --clipboard'
+alias clip='VBoxClient --clipboard'
 alias compfast='mvn install -Dmaven.test.skip=true -Dmaven.findbugs.skip=true'
 # }}}
 # {{{ Keybinds
-# create a zkbd compatible hash;
-# to add other keys to this hash, see: man 5 terminfo
+# Create a zkbd compatible hash;
+# To add other keys to this hash, see: man 5 terminfo
 typeset -A key
 
 # Get the following keys to actually work.
@@ -152,6 +156,7 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
+# TODO Maybe ls only if dir is less than CONFIG_CHPWD_LS_MAX or similar
 # # Other aliases of poweruse
 # # ls -a immediately after cd
 # function chpwd() {
@@ -204,22 +209,22 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 # Disable mapping for pausing/suspending term output
+# 2015: Because it conflicted with something I don't remember
 stty stop undef
 stty start undef
 
 # Only use powerline if X is running (Environment variable should be set in .xinitrc)
 # Defaults to displaying walters unless the precmd has been run.
 # Note: Not enough bash-foo and time to get this werking.
-
 #if [ $X_RUNNING ]; then
         install_powerline_precmd
 #else
 #prompt walters
 #fi
 
-# Set vim as default editor
-export EDITOR=vim
-export VISUAL=vim
+# Set emacs as default editor
+export EDITOR="emacsclient -a "" -t"
+export VISUAL="emacsclient -a "" -t"
 
 # Automatically cd into a dir if typed without anything.
 setopt AUTO_CD
@@ -227,10 +232,6 @@ setopt AUTO_CD
 # History search
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
-
-# "Command not found" hook
-# Removed: Incredibly slow.
-# source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # }}}
 # {{{ Custom functions 
