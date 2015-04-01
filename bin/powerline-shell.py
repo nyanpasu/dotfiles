@@ -158,8 +158,6 @@ def add_virtual_env_segment():
     fg = Color.VIRTUAL_ENV_FG
     powerline.append(' %s ' % env_name, fg, bg)
 
-add_virtual_env_segment()
-
 
 def add_username_segment():
     user_prompts = {
@@ -169,9 +167,6 @@ def add_username_segment():
     powerline.append(user_prompts[powerline.args.shell], Color.USERNAME_FG,
                      Color.USERNAME_BG)
 
-# Disabled on 25 July 2014
-# add_username_segment()
-
 
 def add_hostname_segment():
     host_prompts = {
@@ -180,9 +175,6 @@ def add_hostname_segment():
     }
     powerline.append(host_prompts[powerline.args.shell], Color.HOSTNAME_FG,
                      Color.HOSTNAME_BG)
-
-# Disabled on 4th March 2015
-# add_hostname_segment()
 
 
 def get_short_path(cwd):
@@ -210,8 +202,6 @@ def add_cwd_segment():
             powerline.append(' %s ' % n, Color.PATH_FG, Color.PATH_BG,
                              powerline.separator_thin, Color.SEPARATOR_FG)
     powerline.append(' %s ' % names[-1], Color.CWD_FG, Color.PATH_BG)
-
-add_cwd_segment()
 
 
 import re
@@ -265,13 +255,6 @@ def add_git_segment():
 
     powerline.append(' %s ' % branch, fg, bg)
 
-try:
-    add_git_segment()
-except OSError:
-    pass
-except subprocess.CalledProcessError:
-    pass
-
 
 import subprocess
 
@@ -312,8 +295,6 @@ def add_hg_segment():
         branch += (' ' + extra if extra != '' else '')
     return powerline.append(' %s ' % branch, fg, bg)
 
-add_hg_segment()
-
 
 def add_svn_segment():
     is_svn = subprocess.Popen(['svn', 'status'], stdout=subprocess.PIPE,
@@ -332,13 +313,6 @@ def add_svn_segment():
         changes = output.strip()
         powerline.append(' %s ' % changes, Color.SVN_CHANGES_FG,
                          Color.SVN_CHANGES_BG)
-
-try:
-    add_svn_segment()
-except OSError:
-    pass
-except subprocess.CalledProcessError:
-    pass
 
 
 import subprocess
@@ -376,13 +350,6 @@ def add_fossil_segment():
         branch += (' ' + extra if extra != '' else '')
     powerline.append(' %s ' % branch, fg, bg)
 
-try:
-    add_fossil_segment()
-except OSError:
-    pass
-except subprocess.CalledProcessError:
-    pass
-
 
 def add_root_indicator_segment():
     root_indicators = {
@@ -397,7 +364,31 @@ def add_root_indicator_segment():
         bg = Color.CMD_FAILED_BG
     powerline.append(root_indicators[powerline.args.shell], fg, bg)
 
+
+add_hg_segment()
+
+add_cwd_segment()
+
+add_virtual_env_segment()
+
+# Disabled 4th March 2015
+# add_hostname_segment()
+
+# Disabled 25 July 2014
+# add_username_segment()
+
 # add_root_indicator_segment()
+
+try:
+    add_git_segment()
+
+    add_svn_segment()
+
+    add_fossil_segment()
+except OSError:
+    pass
+except subprocess.CalledProcessError:
+    pass
 
 
 sys.stdout.write(powerline.draw())
