@@ -78,9 +78,11 @@ alias uz="unzip"
 alias clr="clear"
 alias reload='source ~/.zshrc'
 
-# Relative shortcuts (TMP)
+# Relative shortcuts 
 alias gopkg="cd ./packaging/standalone/target"
 alias gocfg="cd ./webapps/ROOT/WEB-INF/classes/"
+alias train="~/bin/onapp/setupmontrain"
+alias office="~/bin/onapp/setupmonoffice"
 
 # Git
 alias ga='git add'
