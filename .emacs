@@ -1,6 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 
+; Plugins
 (evil-mode 1)
 (ido-mode 1)
 (winner-mode 1)
@@ -20,5 +21,15 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; Org-mode
+; Org-mode
 (setq org-log-done 'time)
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+(setq org-todo-keywords
+    '((sequence "TODO" "|" "DONE")
+	(sequence "REPORT" "BUG" "KNOWNCAUSE" "|" "FIXED")
+	(sequence "|" "CANCELED")))
+
