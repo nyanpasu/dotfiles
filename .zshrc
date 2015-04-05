@@ -31,6 +31,8 @@ alias cc99='gcc -O3 -std=c99 -Wall -Wno-unused-parameter -Wextra'
 alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
 alias c11="gcc --std=c11"
 
+alias compile='./configure --p=/usr && make && make install'
+
 # Editors
 alias vi='emacsclient -a "" -t'
 alias ivm='emacsclient -a "" -t'
