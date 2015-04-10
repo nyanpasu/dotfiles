@@ -31,30 +31,30 @@ alias cc99='gcc -O3 -std=c99 -Wall -Wno-unused-parameter -Wextra'
 alias cc89='gcc -O3 -std=c89 -Wall -Wno-unused-parameter -Wextra'
 alias c11="gcc --std=c11"
 
-alias compile='./configure --p=/usr && make && make install'
+alias comp='./configure --p=/usr && make && make install'
 
 # Editors
 alias vi='emacsclient -a "" -t'
 alias ivm='emacsclient -a "" -t'
 alias vmi='emacsclient -a "" -t'
 alias vim='emacsclient -a "" -t'
-# emacs is lief
+# eeemags iz lief
 alias v='emacsclient -a "" -t'
 alias em='emacs'
 alias emacs='emacsclient -a "" -c'
 alias emacsc='emacsclient -a "" -c'
 
-# Common configs
+# config acces
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 
-# ls aliases
+# ls
 alias l='ls'
 alias lg='ls | grep'
 alias ll='ls -l'
 alias la='ls -al'
 
-# pacman aliases
+# pacman
 alias pc='pacman'
 alias pcs='pacman -S'
 alias pcu='pacman -U'
@@ -63,7 +63,7 @@ alias pcsy='pacman -Sy'
 alias pcsyu='pacman -Syu'
 alias pcr='pacman -R'
 
-# grep aliases
+# grep
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -114,6 +114,7 @@ alias sctl='systemctl'
 alias tf='tail -f'
 alias clip='VBoxClient --clipboard'
 alias compfast='mvn install -Dmaven.test.skip=true -Dmaven.findbugs.skip=true'
+alias mountwin='mount -tvboxsf user /mnt'
 # }}}
 # {{{ Keybinds
 # Create a zkbd compatible hash;
