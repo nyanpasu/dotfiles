@@ -12,18 +12,18 @@ source /etc/profile.d/rvm.sh
 
 # }}}
 # {{{ Aliases 
-# Navigation
+# system
 alias c='cd'
 alias u='cd ..'
 alias b='cd -'
-alias ..='cd ..'
 alias u2='cd ../../'
 alias u3='cd ../../../'
 alias u4='cd ../../../../'
-# TYPO BEGONE
-alias cd..='cd ..'
 
-# Programming
+alias mnt='mount'
+alias umnt='umount'
+
+# programming
 alias mk='make'
 alias mkc='make clean'
 
@@ -33,16 +33,9 @@ alias c11="gcc --std=c11"
 
 alias comp='./configure --p=/usr && make && make install'
 
-# Editors
-alias vi='emacsclient -a "" -t'
-alias ivm='emacsclient -a "" -t'
-alias vmi='emacsclient -a "" -t'
-alias vim='emacsclient -a "" -t'
-# eeemags iz lief
+# editors
 alias v='emacsclient -a "" -t'
-alias em='emacs'
-alias emacs='emacsclient -a "" -c'
-alias emacsc='emacsclient -a "" -c'
+alias em='emacsclient -a "" -t'
 
 # config acces
 alias vimrc='vim ~/.vimrc'
@@ -70,7 +63,7 @@ alias fgrep='fgrep --color=auto'
 
 alias x='startx'
 
-# Archive
+# archives
 alias tart="tar -tvf"
 alias tarx="tar -xvf"
 
@@ -80,9 +73,14 @@ alias uz="unzip"
 alias clr="clear"
 alias reload='source ~/.zshrc'
 
-# Relative shortcuts 
+# shortcuts 
+# TODO Replace these with functions that a ~/.marks directory for
+# storing shortcuts, a la vim
+# i.e:  m pkg # Stores cwd to ~/.marks/pkg
+#       g pkg # cd to ~/.marks/pkg
 alias gopkg="cd ./packaging/standalone/target"
 alias gocfg="cd ./webapps/ROOT/WEB-INF/classes/"
+
 alias train="~/bin/onapp/setupmontrain"
 alias office="~/bin/onapp/setupmonoffice"
 
@@ -115,6 +113,7 @@ alias tf='tail -f'
 alias clip='VBoxClient --clipboard'
 alias compfast='mvn install -Dmaven.test.skip=true -Dmaven.findbugs.skip=true'
 alias mountwin='mount -tvboxsf user /mnt'
+
 # }}}
 # {{{ Keybinds
 # Create a zkbd compatible hash;
@@ -171,11 +170,11 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # Powerline config
 autoload -U colors && colors
-function powerline_precmd() {
+powerline_precmd() {
    export PS1="$(~/bin/powerline-shell.py $? --shell zsh --cwd-only)"
 }
 
-function install_powerline_precmd() {
+install_powerline_precmd() {
    for s in "${precmd_functions[@]}"; do
 	if [ "$s" = "powerline_precmd" ]; then
              return
@@ -190,6 +189,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # }}}
 # {{{ Configuration 
 # Add PATH variables
+# Note: This should go to /etc/profile or somewhere else.
 export PATH=$PATH:/root/.gem/ruby/2.1.0/bin
 export PATH=$PATH:.
 
@@ -202,6 +202,7 @@ bindkey "^[[3^" forward-delete-word
 
 # Make sure the terminal is in application mode
 # active. Only then are the values from $terminfo valid.
+# 2015: What was this for, again?
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 	function zle-line-init () {
 		printf '%s' "${terminfo[smkx]}"
@@ -214,18 +215,17 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 # Disable mapping for pausing/suspending term output
-# 2015: Because it conflicted with something I don't remember
+# To work with rtorrent's mappings.
 stty stop undef
 stty start undef
 
-# Only use powerline if X is running (Environment variable should be set in .xinitrc)
-# Defaults to displaying walters unless the precmd has been run.
-# Note: Not enough bash-foo and time to get this werking.
-#if [ $X_RUNNING ]; then
-        install_powerline_precmd
-#else
-#prompt walters
-#fi
+# Use powerline only if X is running
+# (Environment variable should be set in .xinitrc)
+if [ $X_RUNNING ]; then
+    install_powerline_precmd
+else
+    prompt walters
+fi
 
 # Set emacs as default editor
 export EDITOR="emacsclient -a "" -t"
