@@ -31,10 +31,5 @@ eval $(cat ~/.fehbg)
 numlockx &
 dunst &
 
-# Set positions
-xrandr --output DVI-D-0 --right-of HDMI-0
-
 # Start window manager
-tint2 &
-sxhkd &
-exec bspwm
+exec herbstluftwm
