@@ -64,9 +64,6 @@ alias fgrep='fgrep --color=auto'
 alias x='startx'
 
 # archives
-alias tart="tar -tvf"
-alias tarx="tar -xvf"
-
 alias uz="unzip"
 
 # zsh things
