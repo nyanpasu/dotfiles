@@ -110,6 +110,20 @@ alias tf='tail -f'
 alias clip='VBoxClient --clipboard'
 alias compfast='mvn install -Dmaven.test.skip=true -Dmaven.findbugs.skip=true'
 alias mountwin='mount -tvboxsf user /mnt'
+alias killgm='jps | grep Bootstrap >/dev/null && kill -9 $(jps | grep Bootstrap | cut -f 1 -d" ")'
+
+startgm() {
+    gocfg
+    rm aflexi.properties
+    cp ~/onapp/target/aflexi.properties .
+    b
+    cd bin
+    cp ~/onapp/target/setenv.sh .
+    chmod +x setenv.sh
+    ./setenv.sh
+    ./startup.sh
+    b
+}
 
 # }}}
 # {{{ Keybinds
