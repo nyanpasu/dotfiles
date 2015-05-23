@@ -239,8 +239,8 @@ else
 fi
 
 # Set emacs as default editor
-export EDITOR="emacsclient -a "" -t"
-export VISUAL="emacsclient -a "" -t"
+export EDITOR="vim"
+export VISUAL="vim"
 
 # Automatically cd into a dir if typed without anything.
 setopt AUTO_CD
