@@ -182,7 +182,7 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 # Powerline config
 autoload -U colors && colors
 powerline_precmd() {
-   export PS1="$(~/bin/powerline-shell.py $? --shell zsh --cwd-only)"
+   #export PS1="$(~/bin/powerline-shell.py $? --shell zsh --cwd-only)"
 }
 
 install_powerline_precmd() {
@@ -235,7 +235,7 @@ stty start undef
 if [ $X_RUNNING ]; then
     install_powerline_precmd
 else
-    prompt walters
+    prompt suse
 fi
 
 # Set emacs as default editor
