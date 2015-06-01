@@ -31,13 +31,13 @@ hc keybind $Mod-Right focus right
 hc keybind $Mod-h     focus left
 hc keybind $Mod-j     focus down
 hc keybind $Mod-k     focus up
+
 hc keybind $Mod-l     focus right
 
 # Focus
 hc keybind $Mod-BackSpace   cycle_monitor
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
-hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
 
 # Cycle through tags
@@ -55,9 +55,12 @@ hc keybind $Mod-Shift-k     shift up
 hc keybind $Mod-Shift-l     shift right
 
 # Splitting frames
+# j - u; l - o
 hc keybind $Mod-u             split bottom  0.5
 hc keybind $Mod-o             split right   0.5
 hc keybind $Mod-Control-space split explode
+
+hc keybind $Mod-Control-w     remove
 
 # Resizing frames
 resizestep=0.05
@@ -70,13 +73,11 @@ hc keybind $Mod-Control-Down    resize down  +$resizestep
 hc keybind $Mod-Control-Up      resize up    +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
-hc keybind $Mod-Control-w remove
-
 # Toggle layout
 hc keybind $Mod-Shift-space  cycle_layout 1
-hc keybind $Mod-a floating   toggle
-hc keybind $Mod-s fullscreen toggle
-hc keybind $Mod-d pseudotile toggle
+hc keybind $Mod-a            floating   toggle
+hc keybind $Mod-s            fullscreen toggle
+hc keybind $Mod-d            pseudotile toggle
 
 # mouse
 hc mouseunbind --all
@@ -159,14 +160,13 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 # Unlock, just to be sure
 hc unlock
 
-herbstclient set tree_style '╾│ ├└╼─┐'
+hc set tree_style '╾│ ├└╼─┐'
 
 # do multi monitor setup here, e.g.:
 # hc set_monitors 1280x1024+0+0 1280x1024+1280+0
 # or simply:
-# hc detect_monitors
+hc detect_monitors
 
-# {{{ Panel
+# Panel
 tint2 &
-# }}}
 # }}}
