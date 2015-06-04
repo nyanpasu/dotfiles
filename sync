@@ -1,0 +1,67 @@
+#!/bin/python
+
+import os
+import shutil
+
+configs = {
+    '.config/.ncmpcpp/error.log': '~/.config/.ncmpcpp/error.log',
+    '.config/Clementine/clementine.db': '~/.config/Clementine/clementine.db',
+    '.config/Thunar/accels.scm': '~/.config/Thunar/accels.scm',
+    '.config/Thunar/uca.xml': '~/.config/Thunar/uca.xml',
+    '.config/bspwm/bspwmrc': '~/.config/bspwm/bspwmrc',
+    '.config/dconf/user': '~/.config/dconf/user',
+    '.config/dunst/dunstrc': '~/.config/dunst/dunstrc',
+    '.config/gconf/desktop/%gconf.xml': '~/.config/gconf/desktop/%gconf.xml',
+    '.config/gconf/desktop/gnome/%gconf.xml': '~/.config/gconf/desktop/gnome/%gconf.xml',
+    '.config/gconf/desktop/gnome/url-handlers/%gconf.xml': '~/.config/gconf/desktop/gnome/url-handlers/%gconf.xml',
+    '.config/gconf/desktop/gnome/url-handlers/chrome/%gconf.xml': '~/.config/gconf/desktop/gnome/url-handlers/chrome/%gconf.xml',
+    '.config/gconf/desktop/gnome/url-handlers/ftp/%gconf.xml': '~/.config/gconf/desktop/gnome/url-handlers/ftp/%gconf.xml',
+    '.config/gconf/desktop/gnome/url-handlers/http/%gconf.xml': '~/.config/gconf/desktop/gnome/url-handlers/http/%gconf.xml',
+    '.config/gconf/desktop/gnome/url-handlers/https/%gconf.xml': '~/.config/gconf/desktop/gnome/url-handlers/https/%gconf.xml',
+    '.config/gtk-2.0/gtkfilechooser.ini': '~/.config/gtk-2.0/gtkfilechooser.ini',
+    '.config/gtk-3.0/bookmarks': '~/.config/gtk-3.0/bookmarks',
+    '.config/gtk-3.0/settings.ini': '~/.config/gtk-3.0/settings.ini',
+    '.config/herbstluftwm/autostart': '~/.config/herbstluftwm/autostart',
+    '.config/herbstluftwm/panel.sh': '~/.config/herbstluftwm/panel.sh',
+    '.config/htop/htoprc': '~/.config/htop/htoprc',
+    '.config/mirage/accel_map': '~/.config/mirage/accel_map',
+    '.config/mirage/miragerc': '~/.config/mirage/miragerc',
+    '.config/nitrogen/bg-saved.cfg': '~/.config/nitrogen/bg-saved.cfg',
+    '.config/nitrogen/nitrogen.cfg': '~/.config/nitrogen/nitrogen.cfg',
+    '.config/sxhkd/sxhkdrc': '~/.config/sxhkd/sxhkdrc',
+    '.config/termite/config': '~/.config/termite/config',
+    '.config/tint2/default.tint2rc': '~/.config/tint2/default.tint2rc',
+    '.config/tint2/snap.jpg': '~/.config/tint2/snap.jpg',
+    '.config/tint2/tint2confrc': '~/.config/tint2/tint2confrc',
+    '.config/tint2/tint2rc': '~/.config/tint2/tint2rc',
+    '.config/tint2/tintwizard.conf': '~/.config/tint2/tintwizard.conf',
+    'bin/powerline-shell.py': '~/bin/powerline-shell.py',
+    'bin/puush': '~/bin/puush',
+    'bin/sshot': '~/bin/sshot',
+    '.ctags': '~/.ctags',
+    '.emacs': '~/.emacs',
+    '.gimp-2.8/fonts.conf': '~/.gimp-2.8/fonts.conf',
+    '.gtkrc-2.0': '~/.gtkrc-2.0',
+    '.rtorrent.rc': '~/.rtorrent.rc',
+    '.tmux.conf': '~/.tmux.conf',
+    '.vimrc': '~/.vimrc',
+    '.weechat/alias.conf': '~/.weechat/alias.conf',
+    '.weechat/buffers.conf': '~/.weechat/buffers.conf',
+    '.weechat/irc.conf': '~/.weechat/irc.conf',
+    '.weechat/iset.conf': '~/.weechat/iset.conf',
+    '.weechat/weechat.conf': '~/.weechat/weechat.conf',
+    '.xinitrc': '~/.xinitrc',
+    '.zprofile': '~/.zprofile',
+    '.zshrc': '~/.zshrc',
+    'infinality-settings': '/etc/X11/xinit/xinitrc.d/infinality-settings.sh',
+    '.Xresources': '~/.Xresources',
+}
+
+for file_dot, file_home in configs.items():
+    home_path = os.path.expanduser(file_home)
+    if (os.access(home_path, os.F_OK)):
+        try:
+            shutil.copyfile(home_path, file_dot)
+        except Exception:
+            pass
+       
