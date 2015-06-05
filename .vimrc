@@ -12,7 +12,6 @@ call plug#begin('~/.vim/plugged')
 
 " Rice
         Plug 'bling/vim-airline'             " Status line
-        Plug 'jaxbot/semantic-highlight.vim' " Highlight variables with rainbow diarrhea
         Plug 'vim-scripts/TagHighlight'      " Hightlight functions and class variables
 
 " Utility
@@ -173,10 +172,6 @@ let g:pymode_options          = 1
 " {{{ Rice
 
 let g:rehash256 = 1
-colorscheme suwako
-"let g:molokai_original = 1
-"let g:semanticColors = { 0x00: '72d572', 0x01: 'c5e1a5', 0x02: 'e6ee9c', 0x03: 'fff59d', 0x04: 'ffe082', 0x05: 'ffcc80', 0x06: 'ffab91', 0x07: 'bcaaa4', 0x08: 'b0bec5', 0x09: 'ffa726', 0x0a: 'ff8a65', 0x0b: 'f9bdbb', 0x0c: 'f9bdbb', 0x0d: 'f8bbd0', 0x0e: 'e1bee7', 0x0f: 'd1c4e9', 0x10: 'ffe0b2', 0x11: 'c5cae9', 0x12: 'd0d9ff', 0x13: 'b3e5fc', 0x14: 'b2ebf2', 0x15: 'b2dfdb', 0x16: 'a3e9a4', 0x17: 'dcedc8' , 0x18: 'f0f4c3', 0x19: 'ffb74d' }
-"set bg=dark
 
 set cursorline
 set encoding=utf-8
