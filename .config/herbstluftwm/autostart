@@ -75,6 +75,8 @@ hc keybind $Mod-Control-Right   resize right +$resizestep
 
 # Toggle layout
 hc keybind $Mod-Shift-space  cycle_layout 1
+hc keybind $Mod-Control-v    set_layout vertical
+hc keybind $Mod-Control-h    set_layout horizontal
 hc keybind $Mod-a            floating   toggle
 hc keybind $Mod-s            fullscreen toggle
 hc keybind $Mod-d            pseudotile toggle
