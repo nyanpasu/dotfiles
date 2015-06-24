@@ -12,7 +12,8 @@ export BSPWM_SOCKET="/tmp/bspwm-socket"
 export X_RUNNING=true
 
 # Keyboard layout
-setxkbmap -option ctrl:swapcaps
+# (Disabled because on VM)
+#setxkbmap -option ctrl:swapcaps
 
 # Keyboard repeat rate
 xset r rate 200 30
