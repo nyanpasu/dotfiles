@@ -8,12 +8,11 @@ fi
 
 # Some missing env variables
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-export BSPWM_SOCKET="/tmp/bspwm-socket"
 export X_RUNNING=true
 
 # Keyboard layout
-# (Disabled because on VM)
-#setxkbmap -option ctrl:swapcaps
+# (Disable on VM)
+setxkbmap -option ctrl:swapcaps
 
 # Keyboard repeat rate
 xset r rate 200 30
@@ -27,8 +26,10 @@ xset m 0 0
 # Set the cursor
 xsetroot -cursor_name left_ptr &
 
-# Run start up programs
-eval $(cat ~/.fehbg)
+# Wallpaper
+sh ~/.fehbg
+
+# Other programs
 numlockx &
 dunst &
 
