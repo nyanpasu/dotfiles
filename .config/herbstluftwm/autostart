@@ -21,7 +21,7 @@ hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-w       close
 hc keybind $Mod-Return  spawn terminology
-hc keybind $Mod-space   spawn dmenu_run
+hc keybind $Mod-space   spawn dmenu_run -fn "Open Sans Condensed-9:Bold" -nb "#6E5283" -sb "#AA7462"
 
 # Focusing clients
 hc keybind $Mod-Left  focus left
