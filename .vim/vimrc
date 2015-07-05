@@ -10,31 +10,22 @@ call plug#begin('~/.vim/plugged')
         Plug 'nyanpasu/suwako'
         Plug 'tomasr/molokai'
 
-" Rice
-        Plug 'bling/vim-airline'             " Status line
-        Plug 'vim-scripts/TagHighlight'      " Hightlight functions and class variables
+        Plug 'bling/vim-airline'
 
-" Utility
-        Plug 'jiangmiao/auto-pairs'    " Handle pairs
-        Plug 'SirVer/ultisnips'        " Superb snippet support
-        "Plug 'Valloric/YouCompleteMe'  " Semantic autocompleter and diagnostic server
-        Plug 'godlygeek/tabular'       " Meh alignment plugin (TODO replace with vim-easy-align)
-        Plug 'honza/vim-snippets'      " Complement to ultisnips that provide actual snippets (TODO fork and apply own snippets)
-        Plug 'kien/ctrlp.vim'          " Fuzzy based file search
-        Plug 'majutsushi/tagbar'       " Display buffer tags in window
-        Plug 'scrooloose/nerdtree'     " Neato file browser for when ctrl-P and file explorer suck
-        Plug 'steffanc/cscopemaps.vim' " cscope vim key mappings
-        Plug 'tmhedberg/matchit'       " Superb extension for % commands
-        Plug 'tpope/vim-fugitive'      " Best vim git wrapper
-        Plug 'tpope/vim-surround'      " Powerful plugin to man handle surroundings
-        Plug 'tpope/vim-commentary'    " Commenting on steroids
+        Plug 'SirVer/ultisnips'
+        Plug 'honza/vim-snippets'  " ultisnips snippets (TODO fork and apply own snippets)
+        Plug 'godlygeek/tabular'   " (TODO replace with vim-easy-align)
+        Plug 'kien/ctrlp.vim'      " Fuzzy based file search
+        Plug 'majutsushi/tagbar'   " Display buffer tags in window
+        Plug 'scrooloose/nerdtree'
+        Plug 'tmhedberg/matchit'   " Extension for % commands
+        Plug 'tpope/vim-fugitive'
+        Plug 'tpope/vim-surround'
+        Plug 'tpope/vim-commentary'
         Plug 'michaeljsmith/vim-indent-object'
-        Plug 'Lokaltog/vim-easymotion' " Lightning fast movement
-        Plug 'klen/python-mode'        " Feature rich python development
 
-" Miscellaneous
-        Plug 'wlue/vim-dm-syntax' " Dream maker syntax
-
+        Plug 'klen/python-mode'
+        Plug 'fatih/vim-go'
 call plug#end()
 
 " }}}
@@ -50,14 +41,13 @@ set expandtab      " Use spaces instead of tabs
 set shiftwidth=8   " How large an indent is
 set tabstop=8      " How large a tab is displayed
 set softtabstop=8  " Use a mix of tab/spaces rounded to this value
-set smarttab       " Use tabs at the start of a line, spaces elsewhere
-set autoindent     " Copy indent from current line when starting new line
 set smartindent    " Indent inserted after: line ending in {, keyword, before line starting with
 set shortmess+=|   " Disable hit-enter prompts
 set t_Co=256       " Enable 256-color mode
 set smartcase      " Smart searching. Lowercase -> case insensitive search; Uppercase -> case sensitive search
 set ignorecase     " So that smart searching works
 set modeline       " Enabled modeline
+set hidden         " Hidden buffers
 
 set tags +=/usr/include
 
@@ -70,10 +60,10 @@ map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
                         \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
                         \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 map <F4> :bd<CR>
-map <F5> :bprev!<CR>
-map <F6> :bnext!<CR>
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
+map <Leader>n :bprev!<CR>
+map <Leader>p :bnext!<CR>
 
 map <F9> :NERDTreeToggle<CR>
 map <F10> :TagbarToggle<CR>
