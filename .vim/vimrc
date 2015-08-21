@@ -25,7 +25,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'michaeljsmith/vim-indent-object'
 
         Plug 'klen/python-mode'
-        Plug 'fatih/vim-go'
+        Plug 'fatih/vim-go.git'
 call plug#end()
 
 " }}}
@@ -48,6 +48,7 @@ set smartcase      " Smart searching. Lowercase -> case insensitive search; Uppe
 set ignorecase     " So that smart searching works
 set modeline       " Enabled modeline
 set hidden         " Hidden buffers
+set backupdir=~/swp
 
 set tags +=/usr/include
 
@@ -64,6 +65,9 @@ map <F7> :tabp<CR>
 map <F8> :tabn<CR>
 map <Leader>n :bprev!<CR>
 map <Leader>p :bnext!<CR>
+map <Leader>l ?,\\|(<CR>wd/,\\|)<CR>?,\\|(<CR>"_dw?,\\|(<CR>a, <C-c>?,<CR>P/,<CR>w
+map <Leader>h ?,\\|(<CR>wv/,<CR>d"_dw/\\,\\|)<CR>i, <C-r>"<C-c>?,<CR>?,\\|(<CR>w
+
 
 map <F9> :NERDTreeToggle<CR>
 map <F10> :TagbarToggle<CR>

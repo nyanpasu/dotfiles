@@ -80,6 +80,7 @@ hc keybind $Mod-Control-h    set_layout horizontal
 hc keybind $Mod-a            floating   toggle
 hc keybind $Mod-s            fullscreen toggle
 hc keybind $Mod-d            pseudotile toggle
+hc keybind $Mod-d            max        toggle
 
 # mouse
 hc mouseunbind --all
@@ -141,6 +142,8 @@ hc set_attr theme.border_width 2
 hc set_attr theme.inner_color black
 hc set_attr theme.inner_width 0
 
+hc pad 0 20
+
 # }}}
 # {{{ Rules
 
@@ -164,8 +167,6 @@ hc set tree_style '╾│ ├└╼─┐'
 
 # do multi monitor setup here, e.g.:
 hc set_monitors 1920x1080+0+0 1920x1080+1920+0
-hc pad 0 20
-hc pad 1 20
 # or simply:
 #hc detect_monitors
 

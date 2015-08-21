@@ -12,7 +12,7 @@ export X_RUNNING=true
 
 # Keyboard layout
 # (Disable on VM)
-setxkbmap -option ctrl:swapcaps
+#setxkbmap -option ctrl:swapcaps
 
 # Keyboard repeat rate
 xset r rate 200 30
