@@ -25,7 +25,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'michaeljsmith/vim-indent-object'
 
         Plug 'klen/python-mode'
-        Plug 'fatih/vim-go.git'
+        Plug 'fatih/vim-go'
 call plug#end()
 
 " }}}
@@ -38,7 +38,7 @@ set relativenumber " Relative number line
 set mouse=a        " Enable mouse
 set incsearch      " Highlight as you type your search
 set expandtab      " Use spaces instead of tabs
-set shiftwidth=8   " How large an indent is
+set shiftwidth=4   " How large an indent is
 set tabstop=8      " How large a tab is displayed
 set softtabstop=8  " Use a mix of tab/spaces rounded to this value
 set smartindent    " Indent inserted after: line ending in {, keyword, before line starting with
@@ -65,9 +65,6 @@ map <F7> :tabp<CR>
 map <F8> :tabn<CR>
 map <Leader>n :bprev!<CR>
 map <Leader>p :bnext!<CR>
-map <Leader>l ?,\\|(<CR>wd/,\\|)<CR>?,\\|(<CR>"_dw?,\\|(<CR>a, <C-c>?,<CR>P/,<CR>w
-map <Leader>h ?,\\|(<CR>wv/,<CR>d"_dw/\\,\\|)<CR>i, <C-r>"<C-c>?,<CR>?,\\|(<CR>w
-
 
 map <F9> :NERDTreeToggle<CR>
 map <F10> :TagbarToggle<CR>
