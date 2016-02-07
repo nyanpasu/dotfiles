@@ -12,18 +12,19 @@ clickable_url       = true
 scrollback_lines    = 1000
 search_wrap         = true
 icon_name           = terminal
-geometry            = 635x347
+#geometry            = 635x347
+
 #font                = Monaco for Powerline 9
 #font                = Deja Vu Sans Mono 9
 #font                = Literation Mono Powerline 10
 #font                = Anonymice Powerline 10
 #font                = Monaco for Powerline 9
 #font                = Oxygen Mono 10
-font                = PragmataPro 12
 #font                = SourceCodePro 9
 #font                = Consolas 9
 #font                = FantasqueSansMono 10
 #font                = M+1p 10
+font                = Tewi 8
 
 # 0.0: opaque, 1.0: transparent
 transparency        = 0.0
@@ -42,7 +43,135 @@ browser = firefox
 # (default if unset: all graphic non-punctuation/space characters)
 #word_chars                                                        = -A-Za-z0-9,./?%&#:_ = +@~
 
+[hints]
+font                                                              = PragmataPro
+padding                                                           = 2
+border                                                            = #3f3f3f
+border_width                                                      = 20
+roundness                                                         = 2.0
+
 # COLOURS
+
+#
+# SUWAKO
+#
+
+[colors]
+
+# special
+foreground      = #3e2b62
+foreground_bold = #3e2b62
+cursor          = #3e2b62
+background      = #e0dde0
+
+# black
+color0  = #1c1c24
+color8  = #303030
+
+# red
+color1  = #e22828
+color9  = #e24444
+
+# green
+color2  = #066006
+color10 = #44b811
+
+# yellow
+color3  = #704433
+color11 = #907766
+
+# blue
+color4  = #007bb9
+color12 = #3795d2
+
+# magenta
+color5  = #7733aa
+color13 = #6e52e6
+
+# cyan
+color6  = #1b8374
+color14 = #28aaaa
+
+# white
+color7  = #aa88dd
+color15 = #6b44b6
+
+[colors]
+
+# special
+foreground      = #cdc3d3
+foreground_bold = #cdc3d3
+cursor          = #cdc3d3
+background      = #140f17
+
+# black
+color0  = #201924
+color8  = #c99445
+
+# red
+color1  = #2a212f
+color9  = #ce994f
+
+# green
+color2  = #3c3144
+color10 = #60afd7
+
+# yellow
+color3  = #564760
+color11 = #ae74cc
+
+# blue
+color4  = #776283
+color12 = #52a4cc
+
+# magenta
+color5  = #9985a6
+color13 = #bc6de1
+
+# cyan
+color6  = #bdb0c6
+color14 = #ed7da5
+
+# white
+color7  = #e6e1e9
+color15 = #5593b3
+
+# #
+# # MOLOKAI
+# #
+# 
+# # terminal colours
+# foreground           = #CCCCCC
+# background           = #272721
+# 
+# #black darkgray
+# color0               = #1B1D1E
+# color8               = #808080
+# #darkred red
+# color1               = #FF0044
+# color9               = #F92672
+# #darkgreen green
+# color2               = #82B414
+# color10              = #A6E22E
+# #darkyellow yellow
+# color3               = #FD971F
+# color11              = #E6DB74
+# #darkblue blue
+# color4               = #266C98
+# color12              = #7070F0
+# #darkmagenta magenta
+# color5               = #AC0CB1
+# color13              = #D63AE1
+# #darkcyan cyan
+# color6               = #AE81FF
+# color14              = #66D9EF
+# #gray white
+# color7               = #CCCCCC
+# color15              = #F8F8F2
+# 
+# #
+# # END MOLOKAI
+# #
 
 #
 # SOLARIZED
@@ -99,94 +228,3 @@ color15                                                            = #fdf6e3
 # END SOLARIZED
 #
 
-#
-# MOLOKAI
-#
-
-# terminal colours
-foreground           = #CCCCCC
-background           = #272721
-
-#black darkgray
-color0               = #1B1D1E
-color8               = #808080
-#darkred red
-color1               = #FF0044
-color9               = #F92672
-#darkgreen green
-color2               = #82B414
-color10              = #A6E22E
-#darkyellow yellow
-color3               = #FD971F
-color11              = #E6DB74
-#darkblue blue
-color4               = #266C98
-color12              = #7070F0
-#darkmagenta magenta
-color5               = #AC0CB1
-color13              = #D63AE1
-#darkcyan cyan
-color6               = #AE81FF
-color14              = #66D9EF
-#gray white
-color7               = #CCCCCC
-color15              = #F8F8F2
-
-#
-# END MOLOKAI
-#
-
-#
-# SUWAKO
-#
-
-[colors]
-
-# special
-foreground      = #3e2b62
-foreground_bold = #3e2b62
-cursor          = #3e2b62
-background      = #e0dde0
-
-# black
-color0  = #1c1c24
-color8  = #303030
-
-# red
-color1  = #e22828
-color9  = #e24444
-
-# green
-color2  = #066006
-color10 = #44b811
-
-# yellow
-color3  = #704433
-color11 = #907766
-
-# blue
-color4  = #007bb9
-color12 = #3795d2
-
-# magenta
-color5  = #7733aa
-color13 = #6e5283
-
-# cyan
-color6  = #1b8374
-color14 = #22cccc
-
-# white
-color7  = #aa88dd
-color15 = #ccbbee
-
-highlight = #2f2149
-
-[hints]
-#font                                                              = PragmataPro
-#foreground                                                        = #dcdccc
-#background                                                        = #3f3f3f
-#padding                                                           = 2
-#border                                                            = #3f3f3f
-#border_width                                                      = 0.5
-#roundness                                                         = 2.0

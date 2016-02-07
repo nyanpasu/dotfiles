@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+echo test
+
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
@@ -23,7 +25,7 @@ xset m 0 0
 # Load Xresources
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-# Set the cursor
+# Set cursor
 xsetroot -cursor_name left_ptr &
 
 # Wallpaper

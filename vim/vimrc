@@ -1,4 +1,4 @@
-" 2014
+" 2015
 " vim:set et fdm=marker:
 
 " {{{ Plugins 
@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'tpope/vim-surround'
         Plug 'tpope/vim-commentary'
         Plug 'michaeljsmith/vim-indent-object'
+        Plug 'vim-scripts/cscope.vim'
 
         Plug 'klen/python-mode'
         Plug 'fatih/vim-go'
@@ -33,8 +34,7 @@ call plug#end()
 set nocompatible   " Get rid of vi compatibility mode
 syntax on          " Enable syntax highlighting
 set nowrap         " Don't wrap text
-set number         " Show current line number
-set relativenumber " Relative number line
+set nonumber       " Don't show current line number
 set mouse=a        " Enable mouse
 set incsearch      " Highlight as you type your search
 set expandtab      " Use spaces instead of tabs
@@ -48,7 +48,8 @@ set smartcase      " Smart searching. Lowercase -> case insensitive search; Uppe
 set ignorecase     " So that smart searching works
 set modeline       " Enabled modeline
 set hidden         " Hidden buffers
-set backupdir=~/swp
+set backupdir=~/.swp
+set directory=~/.swp
 
 set tags +=/usr/include
 

@@ -37,6 +37,7 @@ for (file_dot, file_home) in configs:
     home_path = os.path.expanduser(file_home)
     if (os.access(home_path, os.F_OK)):
         try:
+            #shutil.copyfile(file_dot, home_path)
             shutil.copyfile(home_path, file_dot)
         except Exception:
             print "Could not find %s" % home_path
