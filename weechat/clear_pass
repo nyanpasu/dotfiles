@@ -1,0 +1,10 @@
+#!/bin/env bash
+# Clear passwords from weechat's irc.conf
+# Usage: ./clear_pass password
+
+if [[ $# -ge 1 ]]
+then
+    sed -i "s/$1//g" irc.conf
+else
+    echo "Usage: $0 password"
+fi

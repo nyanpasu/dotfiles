@@ -1,9 +1,9 @@
 #!/bin/env bash
 
-while read file
+while read files
 do
     IFS=" "
-    set $file
+    set $files
     file_from="${2/#\~/$HOME}"
     file_to="${1/#\~/$HOME}"
 

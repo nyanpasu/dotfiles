@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
 
         Plug 'klen/python-mode'
         Plug 'fatih/vim-go'
+        Plug 'vim-scripts/forth.vim'
 call plug#end()
 
 " }}}
@@ -103,7 +104,7 @@ let g:ycm_seed_identifiers_with_syntax              = 1
 let g:ycm_use_ultisnips_completer                   = 1
 let g:ycm_filepath_completion_use_working_dir       = 0
 
-let g:UltiSnipsUsePythonVersion    = 2 " Holy shit, I spent two hours trying to get this to just werk.
+let g:UltiSnipsUsePythonVersion    = 2
 let g:UltiSnipsExpandTrigger       = "<c-y>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-y>"
 let g:UltiSnipsJumpBackwardTrigger = "<c_u>"
@@ -176,6 +177,8 @@ set listchars=tab:┊\ ,eol:¬,extends:>,precedes:<
 
 set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{\{{\\d\\=','','g')
 set fillchars+=fold:\ 
+
+colorscheme solarized
 
 " }}}
 " {{{ Custom functions
