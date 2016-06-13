@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 
 " Colourschemes
         Plug 'altercation/vim-colors-solarized'
+        Plug 'NLKNguyen/papercolor-theme'
         Plug 'nyanpasu/suwako'
         Plug 'tomasr/molokai'
 
@@ -22,8 +23,12 @@ call plug#begin('~/.vim/plugged')
         Plug 'tpope/vim-fugitive'
         Plug 'tpope/vim-surround'
         Plug 'tpope/vim-commentary'
+        Plug 'tpope/vim-repeat'    " Fixes . for many plugins (i.e vim-surround)
+        Plug 'tpope/vim-rails'
+        Plug 'tpope/vim-unimpaired'
         Plug 'michaeljsmith/vim-indent-object'
-        Plug 'vim-scripts/cscope.vim'
+        "Plug 'vim-scripts/cscope.vim'
+        Plug 'kchmck/vim-coffee-script'
 
         Plug 'klen/python-mode'
         Plug 'fatih/vim-go'
@@ -39,7 +44,7 @@ set nonumber       " Don't show current line number
 set mouse=a        " Enable mouse
 set incsearch      " Highlight as you type your search
 set expandtab      " Use spaces instead of tabs
-set shiftwidth=4   " How large an indent is
+set shiftwidth=2   " How large an indent is
 set tabstop=8      " How large a tab is displayed
 set softtabstop=8  " Use a mix of tab/spaces rounded to this value
 set smartindent    " Indent inserted after: line ending in {, keyword, before line starting with
@@ -67,6 +72,7 @@ map <F7> :tabp<CR>
 map <F8> :tabn<CR>
 map <Leader>n :bprev!<CR>
 map <Leader>p :bnext!<CR>
+map <Leader>c :bp\|bd! #<CR>
 
 map <F9> :NERDTreeToggle<CR>
 map <F10> :TagbarToggle<CR>
@@ -113,6 +119,23 @@ let Tlist_Use_Right_Window = 1
 
 let g:airline_powerline_fonts            = 1
 let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_right_sep = '«'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.readonly = '🔒'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'
+
 
 " {{{ Python-mode
 " Activate rope
@@ -178,7 +201,8 @@ set listchars=tab:┊\ ,eol:¬,extends:>,precedes:<
 set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{\{{\\d\\=','','g')
 set fillchars+=fold:\ 
 
-colorscheme solarized
+set background=light
+colorscheme PaperColor
 
 " }}}
 " {{{ Custom functions

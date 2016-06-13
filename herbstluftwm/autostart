@@ -68,10 +68,10 @@ hc keybind $Mod-Control-h       resize left  +$resizestep
 hc keybind $Mod-Control-j       resize down  +$resizestep
 hc keybind $Mod-Control-k       resize up    +$resizestep
 hc keybind $Mod-Control-l       resize right +$resizestep
-hc keybind $Mod-Control-Left    resize left  +$resizestep
-hc keybind $Mod-Control-Down    resize down  +$resizestep
-hc keybind $Mod-Control-Up      resize up    +$resizestep
-hc keybind $Mod-Control-Right   resize right +$resizestep
+hc keybind $Mod-Control-Left    resize right -$resizestep
+hc keybind $Mod-Control-Down    resize up    -$resizestep
+hc keybind $Mod-Control-Up      resize down  -$resizestep
+hc keybind $Mod-Control-Right   resize left  -$resizestep
 
 # Toggle layout
 hc keybind $Mod-Shift-space  cycle_layout 1
@@ -110,11 +110,11 @@ hc set update_dragged_clients 0
 # default layout: monocle/max
 hc set default_frame_layout 2
 
-hc set window_gap 5
-hc set frame_padding 10
-hc set window_gap 0
-hc set frame_padding 0
-hc set frame_gap 0
+herbstclient set window_gap 5
+herbstclient set frame_padding 10
+#herbstclient set window_gap 0
+#herbstclient set frame_padding 0
+#herbstclient set frame_gap 0
 
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 0
@@ -178,12 +178,19 @@ hc unlock
 hc set tree_style '╾│ ├└╼─┐'
 
 # do multi monitor setup here, e.g.:
-hc set_monitors 1920x1080+0+0 1920x1080+1920+0
+#hc set_monitors 1920x1080+0+0 1920x1080+1920+0
 hc pad 0 20
-hc pad 1 20
+#hc pad 1 20
 # or simply:
 #hc detect_monitors
 
 # Panel
 tint2 &
+
+# Keyboard (for when .xinitrc isn't called)
+setxkbmap -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
+
+# Wallpaper (for when .xinitrc isn't called)
+~/.fehbg
+
 # }}}
