@@ -35,7 +35,7 @@ hc keybind $Mod-k     focus up
 hc keybind $Mod-l     focus right
 
 # Focus
-hc keybind $Mod-BackSpace   cycle_monitor
+hc keybind $Mod-slash   cycle_monitor
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-i jumpto urgent
@@ -43,6 +43,8 @@ hc keybind $Mod-i jumpto urgent
 # Cycle through tags
 hc keybind $Mod-period use_index +1 --skip-visible
 hc keybind $Mod-comma  use_index -1 --skip-visible
+hc keybind $Mod-Shift-period move_index +1 --skip-visible
+hc keybind $Mod-Shift-comma  move_index -1 --skip-visible
 
 # Moving clients
 hc keybind $Mod-Shift-Left  shift left
@@ -107,14 +109,12 @@ done
 hc set autodetect_monitors 1
 hc set update_dragged_clients 0
 
-# default layout: monocle/max
+# default layout for new frame: monocle/max
 hc set default_frame_layout 2
 
 herbstclient set window_gap 5
-herbstclient set frame_padding 10
-#herbstclient set window_gap 0
-#herbstclient set frame_padding 0
-#herbstclient set frame_gap 0
+herbstclient set frame_padding 0
+herbstclient set frame_gap 5
 
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 0
@@ -144,12 +144,12 @@ hc set_attr theme.normal.color '#454545'
 
 hc set_attr theme.urgent.color orange
 
-hc set_attr theme.floating.border_width 2
+hc set_attr theme.floating.border_width 0
 hc set_attr theme.floating.outer_color black
-hc set_attr theme.floating.outer_width 2
+hc set_attr theme.floating.outer_width 0
 
 hc set_attr theme.background_color '#141414'
-hc set_attr theme.border_width 2
+hc set_attr theme.border_width 0
 hc set_attr theme.inner_color black
 hc set_attr theme.inner_width 0
 
@@ -180,7 +180,7 @@ hc set tree_style '╾│ ├└╼─┐'
 # do multi monitor setup here, e.g.:
 #hc set_monitors 1920x1080+0+0 1920x1080+1920+0
 hc pad 0 20
-#hc pad 1 20
+hc pad 1 20
 # or simply:
 #hc detect_monitors
 
