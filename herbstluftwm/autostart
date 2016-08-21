@@ -35,10 +35,11 @@ hc keybind $Mod-k     focus up
 hc keybind $Mod-l     focus right
 
 # Focus
-hc keybind $Mod-slash   cycle_monitor
+hc keybind $Mod-slash       cycle_monitor
+hc keybind $Mod-Shift-slash shift_to_monitor +1
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
-hc keybind $Mod-i jumpto urgent
+hc keybind $Mod-i           jumpto urgent
 
 # Cycle through tags
 hc keybind $Mod-period use_index +1 --skip-visible
@@ -112,9 +113,9 @@ hc set update_dragged_clients 0
 # default layout for new frame: monocle/max
 hc set default_frame_layout 2
 
-herbstclient set window_gap 5
-herbstclient set frame_padding 0
-herbstclient set frame_gap 5
+hc set window_gap 5
+hc set frame_padding 0
+hc set frame_gap 5
 
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 0
