@@ -12,6 +12,7 @@ do
     if [[ -f $file_from ]]
     then
         echo "cp $file_from $file_to"
+        echo "cp $file_to $file_from"
     fi
 
     unset IFS
