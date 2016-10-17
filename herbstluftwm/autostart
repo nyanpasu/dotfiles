@@ -39,6 +39,8 @@ hc keybind $Mod-slash       cycle_monitor
 hc keybind $Mod-Shift-slash shift_to_monitor +1
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
+hc keybind $Mod-q           cycle +1
+hc keybind $Mod-Shift-q     cycle -1
 hc keybind $Mod-i           jumpto urgent
 
 # Cycle through tags
@@ -63,7 +65,7 @@ hc keybind $Mod-u             split bottom  0.5
 hc keybind $Mod-o             split right   0.5
 hc keybind $Mod-Control-space split explode
 
-hc keybind $Mod-Control-w     remove
+hc keybind $Mod-e     remove
 
 # Resizing frames
 resizestep=0.05
