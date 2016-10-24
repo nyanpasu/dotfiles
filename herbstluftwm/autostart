@@ -63,7 +63,7 @@ hc keybind $Mod-Shift-l     shift right
 # j - u; l - o
 hc keybind $Mod-u             split bottom  0.5
 hc keybind $Mod-o             split right   0.5
-hc keybind $Mod-Control-space split explode
+hc keybind $Mod-i             split explode
 
 hc keybind $Mod-e     remove
 
