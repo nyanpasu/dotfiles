@@ -6,14 +6,14 @@ hc() {
         herbstclient "$@"
 }
 
-# {{{ Initialise
+#  Initialise
 hc emit_hook reload
 
 # Remove all existing keybindings
 hc keyunbind --all
 
-# }}}
-# {{{ Keybindings
+# 
+#  Keybindings
 # Super key as the main modifier
 Mod=Mod4
 
@@ -21,7 +21,7 @@ hc keybind $Mod-Ctrl-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-w       close
 hc keybind $Mod-Return  spawn termite
-hc keybind $Mod-space   spawn dmenu_run -fn "Open Sans Condensed-9:Bold" -nb "#6E5283" -sb "#AA7462"
+hc keybind $Mod-space   spawn dmenu_run -i -p "Run: " -fn "Roboto-10:Bold" -nb "#333333" -sb "#696969"
 
 # Focusing clients
 hc keybind $Mod-Left  focus left
@@ -94,8 +94,8 @@ hc mousebind $Mod-Button1 move
 hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
 
-# }}}
-# {{{ Tag configs
+# 
+#  Tag configs
 tag_names=( {1..9} )
 tag_keys=( {1..9} 0 )
 
@@ -109,8 +109,8 @@ for i in ${!tag_names[@]} ; do
     fi
 done
 
-# }}}
-# {{{ General
+# 
+#  General
 hc set autodetect_monitors 1
 hc set update_dragged_clients 0
 
@@ -132,8 +132,8 @@ hc set raise_on_focus_temporarily 1
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
 
-# }}}
-# {{{ Theme
+# 
+#  Theme
 hc set frame_border_active_color '#222222'
 hc set frame_border_normal_color '#101010'
 hc set frame_bg_normal_color '#ffffff'
@@ -168,8 +168,8 @@ hc set_attr theme.background_color '#141414'
 hc set_attr theme.inner_color black
 # hc set_attr theme.inner_width 0
 
-# }}}
-# {{{ Rules
+# 
+#  Rules
 
 hc unrule -F
 #hc rule class=XTerm tag=3 # move all xterms to tag 3
@@ -184,8 +184,8 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 
 hc rule title='Untitled' floating=on
 
-# }}}
-# {{{ Miscellaneous
+# 
+#  Miscellaneous
 
 # Unlock, just to be sure
 hc unlock
@@ -194,8 +194,8 @@ hc set tree_style '╾│ ├└╼─┐'
 
 # do multi monitor setup here, e.g.:
 #hc set_monitors 1920x1080+0+0 1920x1080+1920+0
-hc pad 0 20
-hc pad 1 20
+hc pad 0 25
+hc pad 1 25
 # or simply:
 hc detect_monitors
 
@@ -208,4 +208,4 @@ setxkbmap -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
 # Wallpaper (for when .xinitrc isn't called)
 ~/.fehbg
 
-# }}}
+# 

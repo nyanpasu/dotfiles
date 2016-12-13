@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'NLKNguyen/papercolor-theme'
         Plug 'nyanpasu/suwako'
         Plug 'tomasr/molokai'
+        Plug 'crusoexia/vim-monokai'
 
         Plug 'bling/vim-airline'
 
@@ -214,7 +215,7 @@ set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{\{{\
 set fillchars+=fold:\ 
 
 set background=light
-colorscheme PaperColor
+colorscheme monokai
 
 " }}}
 " {{{ Custom functions

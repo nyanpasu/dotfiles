@@ -138,138 +138,138 @@ color14 = #ed7da5
 color7  = #e6e1e9
 color15 = #5593b3
 
+#
+# MOLOKAI
+#
+
+# terminal colours
+foreground           = #CCCCCC
+background           = #272721
+
+#black darkgray
+color0               = #1B1D1E
+color8               = #808080
+#darkred red
+color1               = #FF0044
+color9               = #F92672
+#darkgreen green
+color2               = #82B414
+color10              = #A6E22E
+#darkyellow yellow
+color3               = #FD971F
+color11              = #E6DB74
+#darkblue blue
+color4               = #266C98
+color12              = #7070F0
+#darkmagenta magenta
+color5               = #AC0CB1
+color13              = #D63AE1
+#darkcyan cyan
+color6               = #AE81FF
+color14              = #66D9EF
+#gray white
+color7               = #CCCCCC
+color15              = #F8F8F2
+
+#
+# END MOLOKAI
+#
+
 # #
-# # MOLOKAI
+# # SOLARIZED
 # #
 # 
-# # terminal colours
-# foreground           = #CCCCCC
-# background           = #272721
+# ###########
+# # SOLARIZED REF.
+# #
+# #S_base03        #002b36
+# #S_base02        #073642
+# #S_base01        #586e75
+# #S_base00        #657b83
+# #S_base0         #839496
+# #S_base1         #93a1a1
+# #S_base2         #eee8d5
+# #S_base3         #fdf6e3
 # 
-# #black darkgray
-# color0               = #1B1D1E
-# color8               = #808080
-# #darkred red
-# color1               = #FF0044
-# color9               = #F92672
-# #darkgreen green
-# color2               = #82B414
-# color10              = #A6E22E
-# #darkyellow yellow
-# color3               = #FD971F
-# color11              = #E6DB74
-# #darkblue blue
-# color4               = #266C98
-# color12              = #7070F0
-# #darkmagenta magenta
-# color5               = #AC0CB1
-# color13              = #D63AE1
-# #darkcyan cyan
-# color6               = #AE81FF
-# color14              = #66D9EF
-# #gray white
-# color7               = #CCCCCC
-# color15              = #F8F8F2
+# #background:            S_base03
+# #foreground:            S_base00
+# #####
+# 
+# [colors]
+# foreground                                                         = #839496
+# foreground_bold                                                    = #657b83
+# foreground_dim                                                     = #002b36
+# # Light.
+# #background                                                         = #eee8d5
+# # Dark.
+# background                                                         = #002b36
+# cursor                                                             = #93a1a1
+# 
+# # if unset, will reverse foreground and background
+# highlight                                                         = #2f2f2f
+# 
+# # colors from color0 to color254 can be set
+# color0                                                             = #073642
+# color1                                                             = #dc322f
+# color2                                                             = #859900
+# color3                                                             = #b58900
+# color4                                                             = #268bd2
+# color5                                                             = #d33682
+# color6                                                             = #2aa198
+# color7                                                             = #eee8d5
+# color8                                                             = #002b36
+# color9                                                             = #cb4b16
+# color10                                                            = #586e75
+# color11                                                            = #657b83
+# color12                                                            = #839496
+# color13                                                            = #6c71c4
+# color14                                                            = #93a1a1
+# color15                                                            = #fdf6e3
 # 
 # #
-# # END MOLOKAI
+# # END SOLARIZED
 # #
 
-#
-# SOLARIZED
-#
-
-###########
-# SOLARIZED REF.
-#
-#S_base03        #002b36
-#S_base02        #073642
-#S_base01        #586e75
-#S_base00        #657b83
-#S_base0         #839496
-#S_base1         #93a1a1
-#S_base2         #eee8d5
-#S_base3         #fdf6e3
-
-#background:            S_base03
-#foreground:            S_base00
-#####
-
-[colors]
-foreground                                                         = #839496
-foreground_bold                                                    = #657b83
-foreground_dim                                                     = #002b36
-# Light.
-#background                                                         = #eee8d5
-# Dark.
-background                                                         = #002b36
-cursor                                                             = #93a1a1
-
-# if unset, will reverse foreground and background
-highlight                                                         = #2f2f2f
-
-# colors from color0 to color254 can be set
-color0                                                             = #073642
-color1                                                             = #dc322f
-color2                                                             = #859900
-color3                                                             = #b58900
-color4                                                             = #268bd2
-color5                                                             = #d33682
-color6                                                             = #2aa198
-color7                                                             = #eee8d5
-color8                                                             = #002b36
-color9                                                             = #cb4b16
-color10                                                            = #586e75
-color11                                                            = #657b83
-color12                                                            = #839496
-color13                                                            = #6c71c4
-color14                                                            = #93a1a1
-color15                                                            = #fdf6e3
-
-#
-# END SOLARIZED
-#
-
-#
-# PAPERCOLOR
-#
-
-[colors]
-
-# special
-foreground      = #4d4d4c
-foreground_bold = #4d4d4c
-cursor          = #4d4d4c
-background      = #eeeeee
-
-# black
-color0  = #ededed
-color8  = #969694
-
-# red
-color1  = #d7005f
-color9  = #d7005f
-
-# green
-color2  = #718c00
-color10 = #718c00
-
-# yellow
-color3  = #d75f00
-color11 = #d75f00
-
-# blue
-color4  = #4271ae
-color12 = #4271ae
-
-# magenta
-color5  = #8959a8
-color13 = #8959a8
-
-# cyan
-color6  = #3e999f
-color14 = #3e999f
-
-# white
-color7  = #4d4d4c
-color15 = #f5f5f5
+# #
+# # PAPERCOLOR
+# #
+# 
+# [colors]
+# 
+# # special
+# foreground      = #4d4d4c
+# foreground_bold = #4d4d4c
+# cursor          = #4d4d4c
+# background      = #eeeeee
+# 
+# # black
+# color0  = #ededed
+# color8  = #969694
+# 
+# # red
+# color1  = #d7005f
+# color9  = #d7005f
+# 
+# # green
+# color2  = #718c00
+# color10 = #718c00
+# 
+# # yellow
+# color3  = #d75f00
+# color11 = #d75f00
+# 
+# # blue
+# color4  = #4271ae
+# color12 = #4271ae
+# 
+# # magenta
+# color5  = #8959a8
+# color13 = #8959a8
+# 
+# # cyan
+# color6  = #3e999f
+# color14 = #3e999f
+# 
+# # white
+# color7  = #4d4d4c
+# color15 = #f5f5f5
