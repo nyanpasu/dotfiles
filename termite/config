@@ -1,3 +1,4 @@
+# vim: ft=config
 [options]
 resize_grip         = false
 scroll_on_output    = false
@@ -8,27 +9,24 @@ mouse_autohide      = false
 allow_bold          = true
 dynamic_title       = true
 urgent_on_bell      = true
-clickable_url       = false
+clickable_url       = true
 scrollback_lines    = 1000
 search_wrap         = true
 icon_name           = terminal
-#geometry            = 635x347
+geometry            = 635x347
 
-#font                = Monaco for Powerline 12
+#font                = Monaco for Powerline 9
 #font                = Deja Vu Sans Mono 9
-#font                = DejaVu Sans Mono for Powerline 9
 #font                = Literation Mono Powerline 10
 #font                = Anonymice Powerline 10
 #font                = Monaco for Powerline 9
-#font                = Inconsolata for Powerline 12
 #font                = Oxygen Mono 10
 #font                = SourceCodePro 9
-#font                = Sauce Code Powerline 10
 #font                = Consolas 9
 #font                = FantasqueSansMono 10
 #font                = M+1p 10
-#font                = Tewi 9
-font                = PragmataPro 12
+#font                = Tewi 8
+font                = PragmataPro 8
 
 # 0.0: opaque, 1.0: transparent
 transparency        = 0.0
@@ -49,10 +47,10 @@ browser = firefox
 
 [hints]
 font                                                              = PragmataPro
-padding                                                           = 0
+padding                                                           = 2
 border                                                            = #3f3f3f
-border_width                                                      = 4
-roundness                                                         = 0
+border_width                                                      = 20
+roundness                                                         = 2.0
 
 # COLOURS
 
@@ -177,60 +175,60 @@ color15 = #5593b3
 # # END MOLOKAI
 # #
 
-# #
-# # SOLARIZED
-# #
-# 
-# ###########
-# # SOLARIZED REF.
-# #
-# #S_base03        #002b36
-# #S_base02        #073642
-# #S_base01        #586e75
-# #S_base00        #657b83
-# #S_base0         #839496
-# #S_base1         #93a1a1
-# #S_base2         #eee8d5
-# #S_base3         #fdf6e3
-# 
-# #background:            S_base03
-# #foreground:            S_base00
-# #####
-# 
-# [colors]
-# foreground                                                         = #839496
-# foreground_bold                                                    = #657b83
-# foreground_dim                                                     = #002b36
-# # Light.
-# #background                                                         = #eee8d5
-# # Dark.
-# background                                                         = #002b36
-# cursor                                                             = #93a1a1
-# 
-# # if unset, will reverse foreground and background
-# highlight                                                         = #2f2f2f
-# 
-# # colors from color0 to color254 can be set
-# color0                                                             = #073642
-# color1                                                             = #dc322f
-# color2                                                             = #859900
-# color3                                                             = #b58900
-# color4                                                             = #268bd2
-# color5                                                             = #d33682
-# color6                                                             = #2aa198
-# color7                                                             = #eee8d5
-# color8                                                             = #002b36
-# color9                                                             = #cb4b16
-# color10                                                            = #586e75
-# color11                                                            = #657b83
-# color12                                                            = #839496
-# color13                                                            = #6c71c4
-# color14                                                            = #93a1a1
-# color15                                                            = #fdf6e3
-# 
-# #
-# # END SOLARIZED
-# #
+#
+# SOLARIZED
+#
+
+###########
+# SOLARIZED REF.
+#
+#S_base03        #002b36
+#S_base02        #073642
+#S_base01        #586e75
+#S_base00        #657b83
+#S_base0         #839496
+#S_base1         #93a1a1
+#S_base2         #eee8d5
+#S_base3         #fdf6e3
+
+#background:            S_base03
+#foreground:            S_base00
+#####
+
+[colors]
+foreground                                                         = #839496
+foreground_bold                                                    = #657b83
+foreground_dim                                                     = #002b36
+# Light.
+#background                                                         = #eee8d5
+# Dark.
+background                                                         = #002b36
+cursor                                                             = #93a1a1
+
+# if unset, will reverse foreground and background
+highlight                                                         = #2f2f2f
+
+# colors from color0 to color254 can be set
+color0                                                             = #073642
+color1                                                             = #dc322f
+color2                                                             = #859900
+color3                                                             = #b58900
+color4                                                             = #268bd2
+color5                                                             = #d33682
+color6                                                             = #2aa198
+color7                                                             = #eee8d5
+color8                                                             = #002b36
+color9                                                             = #cb4b16
+color10                                                            = #586e75
+color11                                                            = #657b83
+color12                                                            = #839496
+color13                                                            = #6c71c4
+color14                                                            = #93a1a1
+color15                                                            = #fdf6e3
+
+#
+# END SOLARIZED
+#
 
 #
 # PAPERCOLOR

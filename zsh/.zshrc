@@ -272,3 +272,5 @@ function streaming() {
 }
 
 # }}}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

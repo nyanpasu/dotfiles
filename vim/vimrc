@@ -18,7 +18,9 @@ call plug#begin('~/.vim/plugged')
         Plug 'SirVer/ultisnips'
         Plug 'honza/vim-snippets'  " ultisnips snippets (TODO fork and apply own snippets)
         Plug 'godlygeek/tabular'   " (TODO replace with vim-easy-align)
-        Plug 'kien/ctrlp.vim'      " Fuzzy based file search
+        " Plug 'kien/ctrlp.vim'      " Fuzzy based file search
+        Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+        Plug 'junegunn/fzf.vim'
         Plug 'majutsushi/tagbar'   " Display buffer tags in window
         Plug 'scrooloose/nerdtree'
         Plug 'tmhedberg/matchit'   " Extension for % commands
@@ -31,10 +33,13 @@ call plug#begin('~/.vim/plugged')
         Plug 'michaeljsmith/vim-indent-object'
         "Plug 'vim-scripts/cscope.vim'
         Plug 'kchmck/vim-coffee-script'
+        Plug 'airblade/vim-gitgutter'
+        Plug 'mattn/emmet-vim'
 
         Plug 'klen/python-mode'
         Plug 'fatih/vim-go'
         Plug 'vim-scripts/forth.vim'
+        Plug 'metakirby5/codi.vim'
 call plug#end()
 
 " }}}
@@ -75,6 +80,11 @@ map <F8> :tabn<CR>
 map <Leader>n :bprev!<CR>
 map <Leader>p :bnext!<CR>
 map <Leader>c :bp\|bd! #<CR>
+
+map <Leader>q :Files<CR>
+map <Leader>w :GFiles<CR>
+map <Leader>e :Commits<CR>
+map <Leader>r :Ag<CR>
 
 map <F9> :NERDTreeToggle<CR>
 map <F10> :TagbarToggle<CR>

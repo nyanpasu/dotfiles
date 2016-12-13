@@ -1,6 +1,4 @@
 #!/bin/bash
-echo test
-
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
@@ -14,10 +12,10 @@ export X_RUNNING=true
 
 # Keyboard layout
 # (Disable on VM)
-setxkbmap -option ctrl:swapcaps
+setxkbmap -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
 
 # Keyboard repeat rate
-xset r rate 200 30
+# xset r rate 300 30
 
 # Set mouse acceleration to 0
 xset m 0 0
@@ -34,6 +32,8 @@ sh ~/.fehbg
 # Other programs
 numlockx &
 dunst &
+tint2 &
 
 # Start window manager
 exec herbstluftwm
+

@@ -1,6 +1,9 @@
 # Config
 
-set fish_greeting Pomf!
+# function fish_greeting
+#   fortune | tewisay
+# end
+
 set -x EDITOR vim
 set -x TERM xterm-256color
 
@@ -15,7 +18,7 @@ alias v vim
 alias vimrc "vim ~/.vimrc"
 alias zshrc "vim ~/.zshrc"
 
-alias ls "ls --color=auto --group-directories-first"
+alias ls "ls --color=auto --group-directories-first -v"
 alias l "ls"
 alias lg "ls | grep"
 alias ll "ls -l"
@@ -49,21 +52,6 @@ set -x LS_COLORS 'no=00:fi=00:di=34:ow=34;40:ln=35:pi=30;44:so=35;44:do=35;44:bd
 # - gcc colours
 set -x GCC_COLORS 1
 
+# Shims
 
-function m
-        set target ~/mark/$argv[1]
-        if test -e $target
-                rm $target
-        end
-        ln -s (pwd) $target
-end
-
-function g
-        set target ~/mark/$argv[1]
-        if test -e $target
-                cd ~/mark/$mark
-        else
-                echo "No mark $mark"
-        end
-end
-
+status --is-interactive; and . (rbenv init -|psub)
