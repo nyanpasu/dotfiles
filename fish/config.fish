@@ -54,4 +54,4 @@ set -x GCC_COLORS 1
 
 # Shims
 
-status --is-interactive; and . (rbenv init -|psub)
+# status --is-interactive; and . (rbenv init -|psub)

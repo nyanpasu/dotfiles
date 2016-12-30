@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'nyanpasu/suwako'
         Plug 'tomasr/molokai'
         Plug 'crusoexia/vim-monokai'
+        Plug 'morhetz/gruvbox'
 
         Plug 'bling/vim-airline'
 
@@ -214,8 +215,8 @@ set listchars=tab:┊\ ,eol:¬,extends:>,precedes:<
 set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{\{{\\d\\=','','g')
 set fillchars+=fold:\ 
 
-set background=light
-colorscheme monokai
+set background=dark
+colorscheme gruvbox
 
 " }}}
 " {{{ Custom functions
