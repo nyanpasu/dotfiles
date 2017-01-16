@@ -9,7 +9,8 @@ do
 
     if [[ -f $file_from ]]
     then
-        echo cp $file_from $file_to
+	mkdir -p $(dirname $file_to)
+        # echo "cp $file_to $file_from"
     fi
 
     unset IFS
@@ -24,7 +25,6 @@ done <<EOF
 ./fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
 ./fish/functions/mark.fish        ~/.config/fish/functions/mark.fish
 ./gimp/fonts.conf                 ~/.gimp-2.8/fonts.conf
-./git/.gitconfig                  ~/.gitconfig
 ./herbstluftwm/autostart          ~/.config/herbstluftwm/autostart
 ./herbstluftwm/panel.sh           ~/.config/herbstluftwm/panel.sh
 ./infinality/infinality-settings  /etc/X11/xinit/xinitrc.d/infinality-settings.sh
