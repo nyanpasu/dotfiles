@@ -1,0 +1,15 @@
+[user]
+	name = nyanpasu
+	email = nekomune@comfy.moe
+[credential]
+	helper = cache --timeout=3600
+[push]
+	default = current
+[alias]
+	ci = commit
+	co = checkout
+	st = status
+	br = branch
+	last = log -1 HEAD
+[core]
+	autocrlf = input
