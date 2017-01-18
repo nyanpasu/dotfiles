@@ -32,7 +32,6 @@ sh ~/.fehbg
 # Other programs
 numlockx &
 dunst &
-tint2 &
 
 # Start window manager
 exec herbstluftwm
