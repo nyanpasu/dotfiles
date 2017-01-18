@@ -42,6 +42,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'fatih/vim-go'
         Plug 'vim-scripts/forth.vim'
         Plug 'metakirby5/codi.vim'
+        Plug 'pangloss/vim-javascript'
+        Plug 'mxw/vim-jsx'
 call plug#end()
 
 " }}}
@@ -149,6 +151,10 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
+
+" By default, JSX syntax highlighting and indenting will be enabled only for
+" files with the .jsx extension. If you would like JSX in .js files, add
+let g:jsx_ext_required = 0
 
 
 " {{{ Python-mode
