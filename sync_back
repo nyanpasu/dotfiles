@@ -24,11 +24,9 @@ done <<EOF
 ./fish/config.fish                ~/.config/fish/config.fish
 ./fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
 ./fish/functions/mark.fish        ~/.config/fish/functions/mark.fish
-./gimp/fonts.conf                 ~/.gimp-2.8/fonts.conf
 ./git/.gitconfig                  ~/.gitconfig
 ./herbstluftwm/autostart          ~/.config/herbstluftwm/autostart
 ./herbstluftwm/panel.sh           ~/.config/herbstluftwm/panel.sh
-./infinality/infinality-settings  /etc/X11/xinit/xinitrc.d/infinality-settings.sh
 ./sxhkd/sxhkdrc                   ~/.config/sxhkd/sxhkdrc
 ./termite/config                  ~/.config/termite/config
 ./tint2/tint2rc                   ~/.config/tint2/tint2rc
