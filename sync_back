@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+while read files
+do
+    IFS=" "
+    set $files
+    file_from="${1/#\~/$HOME}"
+    file_to="${2/#\~/$HOME}"
+
+    if [[ -f $file_from ]]
+    then
+        echo cp $file_to $file_from
+        cp $file_to $file_from
+    fi
+
+    unset IFS
+done <<EOF
+./bin/powerline-shell.py          ~/bin/powerline-shell.py
+./bin/puush                       ~/bin/puush
+./bin/sshot                       ~/bin/sshot
+./bspwm/bspwmrc                   ~/.config/bspwm/bspwmrc
+./dunst/dunstrc                   ~/.config/dunst/dunstrc
+./emacs/.spacemacs                ~/.spacemacs
+./fish/config.fish                ~/.config/fish/config.fish
+./fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+./fish/functions/mark.fish        ~/.config/fish/functions/mark.fish
+./gimp/fonts.conf                 ~/.gimp-2.8/fonts.conf
+./git/.gitconfig                  ~/.gitconfig
+./herbstluftwm/autostart          ~/.config/herbstluftwm/autostart
+./herbstluftwm/panel.sh           ~/.config/herbstluftwm/panel.sh
+./infinality/infinality-settings  /etc/X11/xinit/xinitrc.d/infinality-settings.sh
+./sxhkd/sxhkdrc                   ~/.config/sxhkd/sxhkdrc
+./termite/config                  ~/.config/termite/config
+./tint2/tint2rc                   ~/.config/tint2/tint2rc
+./tmux/.tmux.conf                 ~/.tmux.conf
+./vim/vimrc                       ~/.vim/vimrc
+./weechat/alias.conf              ~/.weechat/alias.conf
+./weechat/buffers.conf            ~/.weechat/buffers.conf
+./weechat/irc.conf                ~/.weechat/irc.conf
+./weechat/iset.conf               ~/.weechat/iset.conf
+./weechat/weechat.conf            ~/.weechat/weechat.conf
+./xorg/.xResources                ~/.xResources
+./xorg/.xinitrc                   ~/.xinitrc
+./zsh/.zshrc                      ~/.zshrc
+EOF
+

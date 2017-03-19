@@ -15,28 +15,26 @@ call plug#begin('~/.vim/plugged')
         Plug 'crusoexia/vim-monokai'
         Plug 'morhetz/gruvbox'
 
-        Plug 'bling/vim-airline'
-
         Plug 'SirVer/ultisnips'
         Plug 'honza/vim-snippets'  " ultisnips snippets (TODO fork and apply own snippets)
         Plug 'godlygeek/tabular'   " (TODO replace with vim-easy-align)
-        " Plug 'kien/ctrlp.vim'      " Fuzzy based file search
         Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
         Plug 'junegunn/fzf.vim'
-        Plug 'majutsushi/tagbar'   " Display buffer tags in window
-        Plug 'scrooloose/nerdtree'
         Plug 'tmhedberg/matchit'   " Extension for % commands
         Plug 'tpope/vim-fugitive'
         Plug 'tpope/vim-surround'
         Plug 'tpope/vim-commentary'
-        Plug 'tpope/vim-repeat'    " Fixes . for many plugins (i.e vim-surround)
+        Plug 'tpope/vim-repeat'    " Fixes . command for many tpope plugins (e.g vim-surround)
         Plug 'tpope/vim-rails'
         Plug 'tpope/vim-unimpaired'
-        Plug 'michaeljsmith/vim-indent-object'
         "Plug 'vim-scripts/cscope.vim'
         Plug 'kchmck/vim-coffee-script'
-        Plug 'airblade/vim-gitgutter'
         Plug 'mattn/emmet-vim'
+
+        Plug 'bling/vim-airline'
+        Plug 'airblade/vim-gitgutter'
+        Plug 'majutsushi/tagbar'   " Display buffer tags in window
+        Plug 'scrooloose/nerdtree'
 
         Plug 'klen/python-mode'
         Plug 'fatih/vim-go'
@@ -86,9 +84,10 @@ map <Leader>p :bnext!<CR>
 map <Leader>c :bp\|bd! #<CR>
 
 map <Leader>q :Files<CR>
-map <Leader>w :GFiles<CR>
-map <Leader>e :Commits<CR>
+map <Leader>w :Lines<CR>
+map <Leader>e :Buffers<CR>
 map <Leader>r :Ag<CR>
+map <Leader>t :Commits<CR>
 
 map <F9> :NERDTreeToggle<CR>
 map <F10> :TagbarToggle<CR>
@@ -127,9 +126,10 @@ let g:ycm_use_ultisnips_completer                   = 1
 let g:ycm_filepath_completion_use_working_dir       = 0
 
 let g:UltiSnipsUsePythonVersion    = 2
-let g:UltiSnipsExpandTrigger       = "<c-y>"
-let g:UltiSnipsJumpForwardTrigger  = "<c-y>"
-let g:UltiSnipsJumpBackwardTrigger = "<c_u>"
+let g:UltiSnipsExpandTrigger       = "<c-i>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-i>"
+let g:UltiSnipsJumpBackwardTrigger = "<c_t>"
+
 
 let Tlist_Use_Right_Window = 1
 
