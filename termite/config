@@ -25,8 +25,8 @@ geometry            = 635x347
 #font                = Consolas 9
 #font                = FantasqueSansMono 10
 #font                = M+1p 10
-#font                = Tewi 8
-font                = PragmataPro 8
+# font                = Tewi 8
+font                = PragmataPro 14
 
 # 0.0: opaque, 1.0: transparent
 transparency        = 0.0
