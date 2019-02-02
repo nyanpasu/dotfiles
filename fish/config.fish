@@ -14,6 +14,7 @@ alias u "cd .."
 alias b "cd -"
 
 alias v vim
+alias vim nvim
 
 alias vimrc "vim ~/.vimrc"
 alias zshrc "vim ~/.zshrc"
@@ -42,8 +43,8 @@ alias sctl "systemctl"
 
 alias tf "tail -f"
 
-alias p8 "ping 8.8.8.8"
-alias p84 "ping 8.8.4.4"
+alias p8 "ping -c 1 8.8.8.8"
+alias p84 "ping -c 1 8.8.4.4"
 
 # Rice
 # - ls colours
@@ -55,3 +56,13 @@ set -x GCC_COLORS 1
 # Shims
 
 # status --is-interactive; and . (rbenv init -|psub)
+
+# Android development
+
+set -x ANDROID_HOME $HOME/Android/Sdk
+set -x PATH $PATH $ANDROID_HOME/tools
+set -x PATH $PATH $ANDROID_HOME/platform-tools
+
+# JS development
+
+set -x PATH $PATH ~/bin/n/bin

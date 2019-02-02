@@ -1,4 +1,4 @@
-" 2015 - 2017
+" 2015 - 2018
 " vim:set et fdm=marker:
 " To use this file ootb:
 "  curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'crusoexia/vim-monokai'
         Plug 'morhetz/gruvbox'
 
+" Tools/Extensions
         Plug 'SirVer/ultisnips'
         Plug 'honza/vim-snippets'  " ultisnips snippets (TODO fork and apply own snippets)
         Plug 'godlygeek/tabular'   " (TODO replace with vim-easy-align)
@@ -28,20 +29,40 @@ call plug#begin('~/.vim/plugged')
         Plug 'tpope/vim-rails'
         Plug 'tpope/vim-unimpaired'
         "Plug 'vim-scripts/cscope.vim'
-        Plug 'kchmck/vim-coffee-script'
         Plug 'mattn/emmet-vim'
+        Plug 'ternjs/tern_for_vim'
+        Plug 'kshenoy/vim-signature'
 
+        "Plug 'roxma/nvim-completion-manager'
+
+        " Plug 'roxma/python-support.nvim'
+        " " for python completions
+        " let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'jedi')
+        " " language specific completions on markdown file
+        " let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'mistune')
+        " " utils, optional
+        " let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'psutil')
+        " let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'setproctitle')
+
+        " Plug 'roxma/nvim-cm-tern',  {'do': 'yarn'}
+
+" Rice
         Plug 'bling/vim-airline'
         Plug 'airblade/vim-gitgutter'
         Plug 'majutsushi/tagbar'   " Display buffer tags in window
         Plug 'scrooloose/nerdtree'
+        Plug 'junegunn/goyo.vim'
 
-        Plug 'klen/python-mode'
+" Language support
+        Plug 'kchmck/vim-coffee-script'
+        "Plug 'klen/python-mode'
         Plug 'fatih/vim-go'
         Plug 'vim-scripts/forth.vim'
         Plug 'metakirby5/codi.vim'
         Plug 'pangloss/vim-javascript'
+        Plug 'leafgarland/typescript-vim'
         Plug 'mxw/vim-jsx'
+        Plug 'elixir-lang/vim-elixir'
 call plug#end()
 
 " }}}
@@ -65,6 +86,7 @@ set modeline       " Enabled modeline
 set hidden         " Hidden buffers
 set backupdir=~/.swp
 set directory=~/.swp
+set backupcopy=yes " when saving, make a copy of the file and overwrite the original one
 
 set tags +=/usr/include
 
@@ -88,6 +110,14 @@ map <Leader>w :Lines<CR>
 map <Leader>e :Buffers<CR>
 map <Leader>r :Ag<CR>
 map <Leader>t :Commits<CR>
+
+map <Leader>a :TernDef<CR>
+map <Leader>s :TernDoc<CR>
+map <Leader>d :TernType<CR>
+map <Leader>f :TernRefs<CR>
+map <Leader>g :TernRename<CR>
+
+map + }
 
 map <F9> :NERDTreeToggle<CR>
 map <F10> :TagbarToggle<CR>
@@ -170,7 +200,7 @@ let g:jsx_ext_required = 0
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 
 " Documentation
 let g:pymode_doc = 1

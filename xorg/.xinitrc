@@ -21,7 +21,7 @@ setxkbmap -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
 xset m 0 0
 
 # Load Xresources
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+# [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # Set cursor
 xsetroot -cursor_name left_ptr &
