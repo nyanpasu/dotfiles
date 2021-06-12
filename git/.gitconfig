@@ -5,6 +5,8 @@
 	helper = cache --timeout=3600
 [push]
 	default = current
+[pull]
+	rebase = false
 [alias]
 	ci = commit
 	co = checkout

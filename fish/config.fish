@@ -14,7 +14,11 @@ alias u "cd .."
 alias b "cd -"
 
 alias v vim
-alias vim nvim
+# alias vim nvim
+function vim --description 'alias vim=neovim'
+   env TERM='xterm-color' nvim $argv
+end
+
 
 alias vimrc "vim ~/.vimrc"
 alias zshrc "vim ~/.zshrc"
@@ -63,6 +67,31 @@ set -x ANDROID_HOME $HOME/Android/Sdk
 set -x PATH $PATH $ANDROID_HOME/tools
 set -x PATH $PATH $ANDROID_HOME/platform-tools
 
-# JS development
+# Flutter dev
+set -x PATH $PATH ~/bin/flutter/bin
 
+# JS development
+set -x N_PREFIX ~/bin/n
 set -x PATH $PATH ~/bin/n/bin
+
+# Python
+set -x PATH $PATH ~/.local/bin/
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /root/bin/n/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /root/bin/n/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /root/bin/n/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /root/bin/n/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /root/bin/n/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish ]; and . /root/bin/n/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish
+
+# Ruby
+set -x PATH $PATH /usr/local/lib64/ruby/gems/2.6.0/bin
+
+# AWS ElasticBeanstalk
+set -x PATH $PATH /root/.ebcli-virtual-env/executables
+
+# Heroku
+set -x PATH $PATH /opt/heroku/bin

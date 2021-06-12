@@ -1,4 +1,4 @@
-" 2015 - 2018
+" 2015 - 2020
 " vim:set et fdm=marker:
 " To use this file ootb:
 "  curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -63,6 +63,11 @@ call plug#begin('~/.vim/plugged')
         Plug 'leafgarland/typescript-vim'
         Plug 'mxw/vim-jsx'
         Plug 'elixir-lang/vim-elixir'
+        Plug 'dart-lang/dart-vim-plugin'
+        Plug 'neoclide/coc.nvim', {'branch': 'release'} " VSCode like completion
+        " :CocInstall coc-eslint coc-tsserver
+        Plug 'habamax/vim-godot'
+        Plug 'evanleck/vim-svelte'
 call plug#end()
 
 " }}}
@@ -94,6 +99,9 @@ filetype indent plugin on
 
 " }}}
 " {{{ Keybinds
+
+let mapleader=" "
+
 " View Highlight group under cursor
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
                         \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -104,6 +112,8 @@ map <F8> :tabn<CR>
 map <Leader>n :bprev!<CR>
 map <Leader>p :bnext!<CR>
 map <Leader>c :bp\|bd! #<CR>
+map <Leader>b :cprev<CR>
+map <Leader>f :cnext<CR>
 
 map <Leader>q :Files<CR>
 map <Leader>w :Lines<CR>
@@ -111,11 +121,11 @@ map <Leader>e :Buffers<CR>
 map <Leader>r :Ag<CR>
 map <Leader>t :Commits<CR>
 
-map <Leader>a :TernDef<CR>
-map <Leader>s :TernDoc<CR>
-map <Leader>d :TernType<CR>
-map <Leader>f :TernRefs<CR>
-map <Leader>g :TernRename<CR>
+" map <Leader>a :TernDef<CR>
+" map <Leader>s :TernDoc<CR>
+" map <Leader>d :TernType<CR>
+" map <Leader>f :TernRefs<CR>
+" map <Leader>g :TernRename<CR>
 
 map + }
 
@@ -155,7 +165,7 @@ let g:ycm_seed_identifiers_with_syntax              = 1
 let g:ycm_use_ultisnips_completer                   = 1
 let g:ycm_filepath_completion_use_working_dir       = 0
 
-let g:UltiSnipsUsePythonVersion    = 2
+let g:UltiSnipsUsePythonVersion    = 3
 let g:UltiSnipsExpandTrigger       = "<c-i>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-i>"
 let g:UltiSnipsJumpBackwardTrigger = "<c_t>"
@@ -186,6 +196,8 @@ let g:airline_symbols.whitespace = 'Ξ'
 " files with the .jsx extension. If you would like JSX in .js files, add
 let g:jsx_ext_required = 0
 
+" Make vim-fzf only search file content when calling Ag
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " {{{ Python-mode
 " Activate rope
@@ -257,6 +269,18 @@ let g:gruvbox_italic=1
 
 set background=dark
 colorscheme gruvbox
+
+" So that fdm=syntax works
+
+" let javaScript_fold=1         " JavaScript
+" let perl_fold=1               " Perl
+" let php_folding=1             " PHP
+" let r_syntax_folding=1        " R
+" let ruby_fold=1               " Ruby
+" let sh_fold_enabled=1         " sh
+" let vimsyn_folding='af'       " Vim script
+" let xml_syntax_folding=1      " XML
+" set fdm=manual " so that we can enable it if wanted
 
 " }}}
 " {{{ Custom functions

@@ -55,126 +55,126 @@ roundness                                                         = 2.0
 
 # COLOURS
 
-#
-# SUWAKO
-#
+ ##
+ ## SUWAKO
+ ##
+ 
+ #[colors]
+ 
+ ## special
+ #foreground      = #3e2b62
+ #foreground_bold = #3e2b62
+ #cursor          = #3e2b62
+ #background      = #e0dde0
+ 
+ ## black
+ #color0  = #1c1c24
+ #color8  = #303030
+ 
+ ## red
+ #color1  = #e22828
+ #color9  = #e24444
+ 
+ ## green
+ #color2  = #066006
+ #color10 = #44b811
+ 
+ ## yellow
+ #color3  = #704433
+ #color11 = #907766
+ 
+ ## blue
+ #color4  = #007bb9
+ #color12 = #3795d2
+ 
+ ## magenta
+ #color5  = #7733aa
+ #color13 = #6e52e6
+ 
+ ## cyan
+ #color6  = #1b8374
+ #color14 = #28aaaa
+ 
+ ## white
+ #color7  = #aa88dd
+ #color15 = #6b44b6
 
-[colors]
+# [colors]
+# 
+# # special
+# foreground      = #cdc3d3
+# foreground_bold = #cdc3d3
+# cursor          = #cdc3d3
+# background      = #140f17
+# 
+# # black
+# color0  = #201924
+# color8  = #c99445
+# 
+# # red
+# color1  = #2a212f
+# color9  = #ce994f
+# 
+# # green
+# color2  = #3c3144
+# color10 = #60afd7
+# 
+# # yellow
+# color3  = #564760
+# color11 = #ae74cc
+# 
+# # blue
+# color4  = #776283
+# color12 = #52a4cc
+# 
+# # magenta
+# color5  = #9985a6
+# color13 = #bc6de1
+# 
+# # cyan
+# color6  = #bdb0c6
+# color14 = #ed7da5
+# 
+# # white
+# color7  = #e6e1e9
+# color15 = #5593b3
 
-# special
-foreground      = #3e2b62
-foreground_bold = #3e2b62
-cursor          = #3e2b62
-background      = #e0dde0
-
-# black
-color0  = #1c1c24
-color8  = #303030
-
-# red
-color1  = #e22828
-color9  = #e24444
-
-# green
-color2  = #066006
-color10 = #44b811
-
-# yellow
-color3  = #704433
-color11 = #907766
-
-# blue
-color4  = #007bb9
-color12 = #3795d2
-
-# magenta
-color5  = #7733aa
-color13 = #6e52e6
-
-# cyan
-color6  = #1b8374
-color14 = #28aaaa
-
-# white
-color7  = #aa88dd
-color15 = #6b44b6
-
-[colors]
-
-# special
-foreground      = #cdc3d3
-foreground_bold = #cdc3d3
-cursor          = #cdc3d3
-background      = #140f17
-
-# black
-color0  = #201924
-color8  = #c99445
-
-# red
-color1  = #2a212f
-color9  = #ce994f
-
-# green
-color2  = #3c3144
-color10 = #60afd7
-
-# yellow
-color3  = #564760
-color11 = #ae74cc
-
-# blue
-color4  = #776283
-color12 = #52a4cc
-
-# magenta
-color5  = #9985a6
-color13 = #bc6de1
-
-# cyan
-color6  = #bdb0c6
-color14 = #ed7da5
-
-# white
-color7  = #e6e1e9
-color15 = #5593b3
-
-#
-# MOLOKAI
-#
-
-# terminal colours
-foreground           = #CCCCCC
-background           = #272721
-
-#black darkgray
-color0               = #1B1D1E
-color8               = #808080
-#darkred red
-color1               = #FF0044
-color9               = #F92672
-#darkgreen green
-color2               = #82B414
-color10              = #A6E22E
-#darkyellow yellow
-color3               = #FD971F
-color11              = #E6DB74
-#darkblue blue
-color4               = #266C98
-color12              = #7070F0
-#darkmagenta magenta
-color5               = #AC0CB1
-color13              = #D63AE1
-#darkcyan cyan
-color6               = #AE81FF
-color14              = #66D9EF
-#gray white
-color7               = #CCCCCC
-color15              = #F8F8F2
-
-#
-# END MOLOKAI
-#
+# #
+# # MOLOKAI
+# #
+# 
+# # terminal colours
+# foreground           = #CCCCCC
+# background           = #272721
+# 
+# #black darkgray
+# color0               = #1B1D1E
+# color8               = #808080
+# #darkred red
+# color1               = #FF0044
+# color9               = #F92672
+# #darkgreen green
+# color2               = #82B414
+# color10              = #A6E22E
+# #darkyellow yellow
+# color3               = #FD971F
+# color11              = #E6DB74
+# #darkblue blue
+# color4               = #266C98
+# color12              = #7070F0
+# #darkmagenta magenta
+# color5               = #AC0CB1
+# color13              = #D63AE1
+# #darkcyan cyan
+# color6               = #AE81FF
+# color14              = #66D9EF
+# #gray white
+# color7               = #CCCCCC
+# color15              = #F8F8F2
+# 
+# #
+# # END MOLOKAI
+# #
 
 # #
 # # SOLARIZED
@@ -280,8 +280,9 @@ color15              = #F8F8F2
 #
 [colors]
 # hard contrast: background = #1d2021
-background = #282828
 # soft contrast: background = #32302f
+# background = #282828
+background = #32302f
 foreground = #ebdbb2
 foreground_bold = #ebdbb2
 
