@@ -62,9 +62,9 @@ dev-util/strace
 dev-util/vulkan-tools
 dev-vcs/git
 dev-vcs/subversion
-games-util/springlobby
 mail-client/thunderbird-bin
 media-fonts/noto-cjk
+media-fonts/noto-emoji
 media-gfx/exif
 media-gfx/feh
 media-gfx/gimp
@@ -150,6 +150,8 @@ x11-misc/tint2
 x11-misc/xcompmgr
 x11-misc/xdg-user-dirs
 x11-misc/xdotool
+x11-misc/xsel
+x11-terms/alacritty
 x11-terms/termite
 x11-terms/xterm
 x11-wm/herbstluftwm

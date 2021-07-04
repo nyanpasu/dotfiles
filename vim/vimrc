@@ -3,6 +3,7 @@
 " To use this file ootb:
 "  curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "  mkdir ~/.swp
+"  :PlugInstall
 
 " {{{ Plugins
 call plug#begin('~/.vim/plugged')
@@ -52,6 +53,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'majutsushi/tagbar'   " Display buffer tags in window
         Plug 'scrooloose/nerdtree'
         Plug 'junegunn/goyo.vim'
+        Plug 'ryanoasis/vim-devicons'
 
 " Language support
         "Plug 'klen/python-mode'

@@ -14,6 +14,7 @@ do
 
     unset IFS
 done <<EOF
+./alacritty/alacritty.yml         ~/.config/alacritty/alacritty.yml
 ./bin/powerline-shell.py          ~/bin/powerline-shell.py
 ./bin/puush                       ~/bin/puush
 ./bin/sshot                       ~/bin/sshot
