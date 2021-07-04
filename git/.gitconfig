@@ -1,6 +1,9 @@
 [user]
 	name = nyanpasu
 	email = nekomune@comfy.moe
+[includeIf "gitdir:~/code/work/surialabs/"]
+	path = .gitconfig-surialabs
+
 [credential]
 	helper = cache --timeout=3600
 [push]

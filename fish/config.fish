@@ -4,7 +4,7 @@
 #   fortune | tewisay
 # end
 
-set -x EDITOR vim
+set -x EDITOR nvim
 set -x TERM xterm-256color
 
 # Aliases
