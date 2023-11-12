@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+while read files
+do
+    IFS=" "
+    set $files
+    file_from="${1/#\~/$HOME}"
+    file_to="${2/#\~/$HOME}"
+
+    if [[ -f $file_from ]]
+    then
+        echo cp $file_from $file_to
+    fi
+
+    unset IFS
+done < ./FILEMAP
