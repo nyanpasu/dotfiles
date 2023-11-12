@@ -26,7 +26,8 @@ hc keybind $Mod-Alt-a  adb shell input keyevent 82
 hc keybind $Mod-Ctrl-q  quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-w       close
-hc keybind $Mod-Return  spawn termite
+hc keybind $Mod-Return  spawn alacritty
+hc keybind $Mod-Shift-Return  spawn /root/bin/winselect
 hc keybind $Mod-space   spawn dmenu_run -i -p "Run: " -fn "Roboto-10:Bold" -nb "#333333" -sb "#696969"
 hc keybind $Mod-Ctrl-s  systemctl suspend
 
@@ -84,6 +85,14 @@ hc keybind $Mod-Control-Left    resize right -$resizestep
 hc keybind $Mod-Control-Down    resize up    -$resizestep
 hc keybind $Mod-Control-Up      resize down  -$resizestep
 hc keybind $Mod-Control-Right   resize left  -$resizestep
+
+hc keybind XF86AudioRaiseVolume spawn sh -c "~/bin/adjustvolume up; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+hc keybind XF86AudioLowerVolume spawn sh -c "~/bin/adjustvolume down; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+hc keybind XF86AudioMute spawn sh -c "~/bin/adjustvolume mute; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+
+hc keybind XF86MonBrightnessUp spawn sh -c "~/bin/adjustbright up"
+hc keybind XF86MonBrightnessDown spawn sh -c "~/bin/adjustbright down"
+
 
 # Toggle layout
 hc keybind $Mod-Shift-space cycle_layout 1
@@ -217,5 +226,3 @@ xinput set-prop "SynPS/2 Synaptics TouchPad" 'Synaptics Scrolling Distance' -200
 
 # Wallpaper (for when .xinitrc isn't called)
 ~/.fehbg
-
-# 

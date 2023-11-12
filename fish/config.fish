@@ -5,7 +5,8 @@
 # end
 
 set -x EDITOR nvim
-#set -x TERM xterm-256color
+set -x TERM xterm-256color
+set -x FZF_DEFAULT_COMMAND 'ag --nocolor --ignore node_modules --ignore dist -g ""'
 
 # Aliases
 
@@ -69,6 +70,7 @@ set -x PATH $PATH $ANDROID_HOME/platform-tools
 
 # Flutter dev
 set -x PATH $PATH ~/bin/flutter/bin
+set -x PATH $PATH ~/.pub-cache/bin
 
 # JS development
 set -x N_PREFIX ~/bin/n
@@ -76,6 +78,10 @@ set -x PATH $PATH ~/bin/n/bin
 
 # Python
 set -x PATH $PATH ~/.local/bin/
+
+# Go
+set -x PATH $PATH ~/go/bin/
+direnv hook fish | source
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -95,3 +101,10 @@ set -x PATH $PATH /root/.ebcli-virtual-env/executables
 
 # Heroku
 set -x PATH $PATH /opt/heroku/bin
+
+# emscripten
+# bash /root/code/all/emsdk/emsdk_env.sh
+set -x PATH $PATH /root/code/all/emsdk /root/code/all/emsdk/node/14.15.5_64bit/bin /root/code/all/emsdk/upstream/emscripten
+
+# Sets PATH for the Google Cloud SDK.
+if [ -f '/opt/google-cloud-sdk/path.fish.inc' ]; . '/opt/google-cloud-sdk/path.fish.inc'; end

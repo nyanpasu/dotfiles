@@ -37,3 +37,5 @@
 [diff-so-fancy]
 	markEmptyLines = false
 	useUnicodeRuler = false
+[safe]
+	directory = /root/bin/flutter
