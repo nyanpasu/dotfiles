@@ -96,11 +96,13 @@ hc keybind XF86MonBrightnessDown spawn sh -c "~/bin/adjustbright down"
 
 # Toggle layout
 hc keybind $Mod-Shift-space cycle_layout 1
-hc keybind $Mod-Shift-a     set_layout grid
+# hc keybind $Mod-Shift-a     set_layout grid
 hc keybind $Mod-Shift-s     set_layout max
 hc keybind $Mod-Shift-d     set_layout vertical
 hc keybind $Mod-Shift-f     set_layout horizontal
-hc keybind $Mod-a           floating   toggle
+hc keybind $Mod-Shift-a           floating   toggle
+# 2024-01-05 found a way to do it for just the focused client. been wanting this for ages
+hc keybind $Mod-a           attr clients.focus.floating toggle
 hc keybind $Mod-s           fullscreen toggle
 hc keybind $Mod-d           pseudotile toggle
 

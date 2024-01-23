@@ -108,3 +108,5 @@ set -x PATH $PATH /root/code/all/emsdk /root/code/all/emsdk/node/14.15.5_64bit/b
 
 # Sets PATH for the Google Cloud SDK.
 if [ -f '/opt/google-cloud-sdk/path.fish.inc' ]; . '/opt/google-cloud-sdk/path.fish.inc'; end
+
+set -x PATH $PATH /root/.maestro/bin
