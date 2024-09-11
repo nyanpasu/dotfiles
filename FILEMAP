@@ -9,6 +9,7 @@
 ./fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
 ./fish/functions/mark.fish        ~/.config/fish/functions/mark.fish
 ./git/.gitconfig                  ~/.gitconfig
+./mpv/mpv.conf                    ~/.config/mpv/mpv.conf
 ./herbstluftwm/autostart          ~/.config/herbstluftwm/autostart
 ./herbstluftwm/panel.sh           ~/.config/herbstluftwm/panel.sh
 ./sxhkd/sxhkdrc                   ~/.config/sxhkd/sxhkdrc

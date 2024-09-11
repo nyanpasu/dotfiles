@@ -9,7 +9,8 @@ do
 
     if [[ -f $file_from ]]
     then
-        echo cp $file_from $file_to
+        mkdir -p $(dirname "$file_to")
+        cp -v $file_from $file_to
     fi
 
     unset IFS

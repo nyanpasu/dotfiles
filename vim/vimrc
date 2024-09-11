@@ -1,4 +1,4 @@
-" 2015 - 2022
+" 2015 - 2024
 " vim:set et fdm=marker:
 " To use this file ootb:
 "  curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

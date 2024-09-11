@@ -36,8 +36,8 @@
 # echo ----
 # xrandr --listproviders
 # echo ----
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
+# xrandr --setprovideroutputsource modesetting NVIDIA-0
+# xrandr --auto
 
 # Start window manager
 exec herbstluftwm

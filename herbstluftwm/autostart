@@ -12,14 +12,13 @@ hc emit_hook reload
 # Remove all existing keybindings
 hc keyunbind --all
 
-# 
-#  Keybindings
 # Super key as the main modifier
 Mod=Mod4
 
 # General keybinds
 
-hc keybind $Mod-Alt-a  adb shell input keyevent 82
+# hc keybind $Mod-Alt-a  adb shell input keyevent 82
+# hc keybind $Mod-Ctrl-s  systemctl suspend
 
 # WM keybinds
 
@@ -29,7 +28,6 @@ hc keybind $Mod-w       close
 hc keybind $Mod-Return  spawn alacritty
 hc keybind $Mod-Shift-Return  spawn /root/bin/winselect
 hc keybind $Mod-space   spawn dmenu_run -i -p "Run: " -fn "Roboto-10:Bold" -nb "#333333" -sb "#696969"
-hc keybind $Mod-Ctrl-s  systemctl suspend
 
 # Focusing clients
 hc keybind $Mod-Left  focus left
@@ -163,8 +161,8 @@ hc set always_show_frame 0
 
 hc set window_border_active_color '#222222'
 hc set window_border_normal_color '#101010'
-hc set window_bg_normal_color '#565656'
-hc set window_bg_active_color '#345F0C'
+# hc set window_bg_normal_color '#565656'
+# hc set window_bg_active_color '#345F0C'
 hc set window_border_width 1
 
 hc set gapless_grid 0
@@ -213,9 +211,9 @@ hc set tree_style '╾│ ├└╼─┐'
 # do multi monitor setup here, e.g.:
 #hc set_monitors 1920x1080+0+0 1920x1080+1920+0
 hc pad 0 25
-hc pad 1 25
+# hc pad 1 25
 # or simply:
-hc detect_monitors
+# hc detect_monitors
 
 # Panel
 tint2 &
@@ -224,7 +222,10 @@ tint2 &
 setxkbmap -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
 
 # Touchpad (for when .xinitrc isn't called)
-xinput set-prop "SynPS/2 Synaptics TouchPad" 'Synaptics Scrolling Distance' -200 -200
+xinput set-prop 'ELAN067B:00 04F3:31F8 Touchpad' 'Synaptics Scrolling Distance' -200 -200
+
+# Sound
+pulseaudio &
 
 # Wallpaper (for when .xinitrc isn't called)
 ~/.fehbg

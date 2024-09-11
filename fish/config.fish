@@ -80,8 +80,8 @@ set -x PATH $PATH ~/bin/n/bin
 set -x PATH $PATH ~/.local/bin/
 
 # Go
-set -x PATH $PATH ~/go/bin/
-direnv hook fish | source
+# set -x PATH $PATH ~/go/bin/
+# direnv hook fish | source
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -107,6 +107,9 @@ set -x PATH $PATH /opt/heroku/bin
 set -x PATH $PATH /root/code/all/emsdk /root/code/all/emsdk/node/14.15.5_64bit/bin /root/code/all/emsdk/upstream/emscripten
 
 # Sets PATH for the Google Cloud SDK.
-if [ -f '/opt/google-cloud-sdk/path.fish.inc' ]; . '/opt/google-cloud-sdk/path.fish.inc'; end
+# if [ -f '/opt/google-cloud-sdk/path.fish.inc' ]; . '/opt/google-cloud-sdk/path.fish.inc'; end
 
 set -x PATH $PATH /root/.maestro/bin
+
+# Gentoo wine
+# set -x PATH $PATH /etc/eselect/wine/bin
