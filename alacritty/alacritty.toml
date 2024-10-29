@@ -1,0 +1,21 @@
+[bell]
+animation = "EaseOutExpo"
+
+[font]
+size = 15.0
+
+[font.bold]
+family = "ComicMono"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "ComicMono"
+style = "Regular"
+
+[font.offset]
+x = 1
+y = 0

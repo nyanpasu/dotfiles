@@ -216,7 +216,8 @@ hc pad 0 25
 # hc detect_monitors
 
 # Panel
-tint2 &
+#tint2 &
+polybar &
 
 # Keyboard (for when .xinitrc isn't called)
 setxkbmap -variant altgr-intl -option compose:rctrl -option ctrl:nocaps

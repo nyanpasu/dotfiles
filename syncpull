@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Sync files from system to dot
 
 while read files
 do
@@ -7,8 +8,8 @@ do
     file_from="${1/#\~/$HOME}"
     file_to="${2/#\~/$HOME}"
 
-    echo cp $file_to $file_from
-    cp $file_to $file_from
+    #echo cp $file_to $file_from
+    cp -v $file_to $file_from
 
     unset IFS
 done < ./FILEMAP
