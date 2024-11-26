@@ -107,9 +107,18 @@ set -x PATH $PATH /opt/heroku/bin
 set -x PATH $PATH /root/code/all/emsdk /root/code/all/emsdk/node/14.15.5_64bit/bin /root/code/all/emsdk/upstream/emscripten
 
 # Sets PATH for the Google Cloud SDK.
-# if [ -f '/opt/google-cloud-sdk/path.fish.inc' ]; . '/opt/google-cloud-sdk/path.fish.inc'; end
+if test -f '/opt/google-cloud-sdk/path.fish.inc'
+  source '/opt/google-cloud-sdk/path.fish.inc'
+end
 
 set -x PATH $PATH /root/.maestro/bin
 
+# Godot
+# set -x GDScript_Port 6008 # Godot 3
+set -x GDScript_Port 6005 # Godot 4
+
 # Gentoo wine
 # set -x PATH $PATH /etc/eselect/wine/bin
+
+# Added by Radicle.
+export PATH="$PATH:/root/.radicle/bin"

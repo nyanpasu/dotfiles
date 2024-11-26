@@ -216,7 +216,6 @@ hc pad 0 25
 # hc detect_monitors
 
 # Panel
-#tint2 &
 polybar &
 
 # Keyboard (for when .xinitrc isn't called)
@@ -230,3 +229,6 @@ pulseaudio &
 
 # Wallpaper (for when .xinitrc isn't called)
 ~/.fehbg
+
+# Compositor to prevent screen tearing on intel
+picom --vsync --daemon
